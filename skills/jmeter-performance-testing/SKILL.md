@@ -35,7 +35,7 @@ scripts/    prepare-data.mjs          tạo tài khoản test qua API (không tr
 ## Quy trình (P1–P8). Mỗi bước ghi vào `audit/` và commit riêng
 **P1. Phân tích workflow.** Lập bảng: endpoint → nhóm → lý do nằm trong workflow; workflow end-to-end một VU đi qua đủ các nhóm (ví dụ: đăng nhập → xem danh sách → tìm → chi tiết → thêm giỏ → xem giỏ → đặt hàng). Ghi nhánh đặc biệt (ví dụ đăng nhập sai để đo hành vi khóa tài khoản) chạy trên tài khoản riêng. Đặt nhãn sampler có tiền tố nhóm (`AUTH`, `READ`, `TXN`) để phân tích theo nhóm. **DỪNG: gửi người dùng duyệt.**
 
-**P2. Khảo sát API.** Đọc mã nguồn/tài liệu: body, mã trạng thái thành công và từ chối, cách gửi token, dữ liệu lưu ở đâu (DB hay bộ nhớ tiến trình), cơ chế khóa tài khoản (ngưỡng, thời gian khóa, mã trả về), dữ liệu tích lũy theo tải (đơn hàng, giỏ hàng). Ghi `audit/P2-api-survey.md`; chỗ chưa xác nhận ghi là dự đoán.
+**P2. Khảo sát API.** Đọc mã nguồn/tài liệu: body, mã trạng thái thành công và từ chối, cách gửi token, dữ liệu lưu ở đâu (DB hay bộ nhớ tiến trình), cơ chế khóa tài khoản (ngưỡng, thời gian khóa, mã trả về), dữ liệu tích lũy theo tải (đơn hàng, giỏ hàng), **SUT có tự xóa/tạo lại DB khi khởi động không** (quyết định cách reset và việc có phải tạo lại tài khoản test sau mỗi lần khởi động), chỗ nối chuỗi vào SQL (dữ liệu CSV không được chứa ký tự làm hỏng câu lệnh). Ghi `audit/P2-api-survey.md`; chỗ chưa xác nhận ghi là dự đoán.
 
 **P3. Dữ liệu.** `prepare-data.mjs` tạo tài khoản test (mặc định `perfNNN@test.local`, `lockNN@test.local`) và CSV; `db-snapshot.mjs save` lưu DB sạch sau khi seed. CSV đủ dòng để mỗi VU một tài khoản (tránh nhiều VU dùng chung một tài khoản nếu SUT có trạng thái theo người dùng).
 
@@ -43,7 +43,7 @@ scripts/    prepare-data.mjs          tạo tài khoản test qua API (không tr
 
 **P5. Review và sửa.** Đi qua `review-checklist.md`; ghi `audit/P5-review-findings.md`: AI sai/thiếu gì, vì sao (prompt, giới hạn model, đặc tính endpoint), sửa thế nào. Commit bản AI sinh và bản đã sửa thành hai commit riêng.
 
-**P6. Chạy.** Thứ tự: smoke (1–2 VU, 1 phút) → kịch bản thật. Trước mỗi lượt: dừng backend → `db-snapshot.mjs restore` → khởi động lại backend (xóa trạng thái trong bộ nhớ) → `reset-lockout.mjs`. Chạy bằng `run-scenario.mjs` (non-GUI). Người dùng chụp JMeter/terminal **cùng khung** với Task Manager (tab Details, tiến trình `node` của backend). Không chạy hai lượt song song.
+**P6. Chạy.** Thứ tự: smoke (1–2 VU, 1 phút) → kịch bản thật. Trước mỗi lượt: dừng backend → `db-snapshot.mjs restore` → khởi động lại backend (xóa trạng thái trong bộ nhớ) → `reset-lockout.mjs`. Nếu SUT tự tạo lại DB khi khởi động (xem P2): chỉ cần khởi động lại backend → `prepare-data.mjs --accounts-only` (tài khoản test đã mất cùng DB cũ), bỏ bước restore. Chạy bằng `run-scenario.mjs` (non-GUI). Người dùng chụp JMeter/terminal **cùng khung** với Task Manager (tab Details, tiến trình `node` của backend). Không chạy hai lượt song song.
 
 **P7. Ngưỡng bền (Soak 10–15 phút).** Tải ổn định khoảng 70–80% mức tải ở điểm gãy tìm được từ Stress. Báo cáo bằng số lấy từ `jtl-summary.mjs` và `node-usage.csv`: RPS ổn định tối đa, p95, tỉ lệ lỗi, RAM đỉnh và xu hướng RAM của backend.
 
@@ -66,3 +66,7 @@ scripts/    prepare-data.mjs          tạo tài khoản test qua API (không tr
 
 ## Giới hạn
 Skill không chạy được JMeter hay trình duyệt thay người dùng khi môi trường không có SUT; P6–P7 do người dùng chạy và chụp. `monitor-node.ps1` chỉ cho Windows (trên Linux/macOS dùng `pidstat`/`top` và ghi chú). Plan mẫu không dùng plugin; tải bậc thang dựng bằng nhiều Thread Group có độ trễ.
+
+## Lịch sử phiên bản
+- v1 (2026-11-18): bản đầu, đã review.
+- v1.1 (2026-11-18): từ P2 trên EShop: thêm kiểm tra "SUT tự tạo lại DB khi khởi động" và "nối chuỗi vào SQL" vào P2; `prepare-data.mjs --accounts-only`; bỏ dấu nháy đơn khỏi dữ liệu CSV.

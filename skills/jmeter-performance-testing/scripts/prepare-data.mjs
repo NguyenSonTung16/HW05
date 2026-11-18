@@ -1,19 +1,20 @@
 #!/usr/bin/env node
 // Tạo tài khoản test qua API (không tạo trùng) và xuất CSV cho plan JMeter.
 // Dùng: node prepare-data.mjs --out perf/data [--base http://localhost:3000] [--users 100] [--lock 10]
-//                             [--password Perf@12345] [--wrong SaiMatKhau!] [--domain test.local] [--force]
+//                             [--password Perf@12345] [--wrong SaiMatKhau!] [--domain test.local] [--force] [--accounts-only]
+// --accounts-only: chỉ bảo đảm tài khoản tồn tại, không ghi CSV (dùng sau mỗi lần SUT khởi động lại mà tự tạo lại DB).
 // Kiểm tra tồn tại bằng đăng nhập đúng mật khẩu: 200 = đã có; 403 = đã có nhưng đang khóa (chạy reset-lockout);
 // 401 = chưa có (hoặc có với mật khẩu khác, không phân biệt được qua API) → đăng ký rồi đăng nhập lại để xác nhận.
 import fs from 'node:fs';
 import path from 'node:path';
 
 const a = process.argv.slice(2); const o = {};
-for (let i = 0; i < a.length; i++) { const k = a[i].replace(/^--/, ''); if (k === 'force') o.force = true; else o[k] = a[++i]; }
-if (!o.out) { console.error('Thiếu --out <thư mục data>'); process.exit(2); }
+for (let i = 0; i < a.length; i++) { const k = a[i].replace(/^--/, ''); if (k === 'force' || k === 'accounts-only') o[k] = true; else o[k] = a[++i]; }
+if (!o.out && !o['accounts-only']) { console.error('Thiếu --out <thư mục data>'); process.exit(2); }
 const base = o.base ?? 'http://localhost:3000';
 const nUsers = Number(o.users ?? 100); const nLock = Number(o.lock ?? 10);
 const pw = o.password ?? 'Perf@12345'; const wrong = o.wrong ?? 'SaiMatKhau!'; const domain = o.domain ?? 'test.local';
-const clean = (s) => String(s).replace(/["\\,\r\n]/g, ' ').replace(/\s+/g, ' ').trim();
+const clean = (s) => String(s).replace(/["'\\,\r\n]/g, ' ').replace(/\s+/g, ' ').trim();
 
 async function post(p, body) {
   const r = await fetch(base + p, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
@@ -31,8 +32,8 @@ async function ensure(email, password, name) {
   return 'mới tạo';
 }
 
-const files = ['users.csv', 'lock-users.csv', 'products.csv', 'orders.csv'].map((f) => path.join(o.out, f));
-const existing = files.filter((f) => fs.existsSync(f));
+const files = ['users.csv', 'lock-users.csv', 'products.csv', 'orders.csv'].map((f) => path.join(o.out ?? '.', f));
+const existing = o['accounts-only'] ? [] : files.filter((f) => fs.existsSync(f));
 if (existing.length && !o.force) { console.error(`Đã có: ${existing.join(', ')} (thêm --force để ghi đè)`); process.exit(1); }
 
 const pr = await fetch(base + '/api/products');
@@ -51,6 +52,10 @@ for (let i = 1; i <= nLock; i++) {
   const st = await ensure(email, pw, `Lock Probe ${i}`); tally[st] = (tally[st] ?? 0) + 1; locks.push(`${email},${wrong}`);
 }
 
+if (o['accounts-only']) {
+  console.log(`Tài khoản: ${JSON.stringify(tally)} (chỉ bảo đảm tài khoản, không ghi CSV) lúc ${new Date().toISOString()}`);
+  process.exit(0);
+}
 fs.mkdirSync(o.out, { recursive: true });
 fs.writeFileSync(files[0], ['email,password', ...users].join('\n') + '\n');
 fs.writeFileSync(files[1], ['lock_email,wrong_password', ...locks].join('\n') + '\n');
