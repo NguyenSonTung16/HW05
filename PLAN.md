@@ -16,7 +16,7 @@
 | D1 | 3 nhóm endpoint | auth-heavy = `POST /api/login`; read-heavy = `GET /api/products`, `GET /api/products?search=`, `GET /api/products/:id`; transactional = `POST /api/cart`, `POST /api/checkout` (+ `GET /api/cart` kiểm tra) | Đã chốt: phù hợp, không trùng |
 | D2 | Công cụ | JMeter (mặc định của đề); k6 chỉ là điểm cộng, không làm | Đã chốt: máy đã có Java và JMeter |
 | D3 | SUT | backend `localhost:3000` (SQLite) như HW04; test gọi thẳng API, không qua web | |
-| D4 | Repo | https://github.com/NguyenSonTung16/HW05.git | Đã tạo; vị trí gốc repo trong máy chờ chốt (xem mục 3, A5) |
+| D4 | Repo | https://github.com/NguyenSonTung16/HW05.git | Gốc repo = cả thư mục `HW05` (chốt 11:05) |
 | D5 | Vị trí skill | `HW05/skills/jmeter-performance-testing/` (nằm trong zip, như HW04) | |
 | D6 | Tài khoản test | tạo `perf001…perf100@test.local` qua `POST /api/register`; tài khoản riêng `lock01…lock10` cho nhánh khóa tài khoản; không đụng admin hay dữ liệu cũ | |
 | D7 | Ngày trong tên plan | ngày chạy thật, ví dụ `23120399_Load_20261119.jmx` | |
@@ -91,8 +91,7 @@ HW05/
 ### A4. Kiểm tra skill
 - Kiểm tra cú pháp/logic script bằng dữ liệu `.jtl` mẫu nhỏ **tự tạo và ghi rõ là dữ liệu giả để test script** (không dùng làm bằng chứng nộp bài).
 - [x] A1–A4 soạn xong 2026-11-18; ghi chú `audit/A-skill-v1-notes.md` (10/10 test + test reset trên bản sao DB; một lỗi tự phát hiện và đã sửa).
-- [ ] A5 Commit "skill v1 (chưa áp dụng)": chờ chốt gốc repo.
-- [ ] **DỪNG: chờ sinh viên review skill.**
+- [x] Sinh viên review skill (10:58), commit skill v1; v1.1 sau P2 (SUT tự tạo lại DB khi khởi động).
 
 ---
 
@@ -106,9 +105,9 @@ HW05/
 | Bước | Việc | Ai | Đầu ra |
 |---|---|---|---|
 | B0 | Báo cáo phần cứng: dxdiag + bảng cấu hình, hostname phải khớp bài trước | **(BẠN)** chụp | `evidence/hardware/` |
-| B1 (P1) | Workflow: login (CSV) → list → search → detail → add cart → get cart → checkout; nhánh phụ đăng nhập sai trên `lock*`. **DỪNG duyệt** | AI đề xuất | `audit/P1-workflow.md` |
-| B2 (P2) | Khảo sát API chi tiết | AI | `audit/P2-api-survey.md` |
-| B3 (P3) | CSV + seed + snapshot DB | AI soạn, **(BẠN)** chạy seed | `perf/data/*.csv` |
+| B1 (P1) ✅ đã duyệt 11:05 | Workflow: login (CSV) → list → search → detail → add cart → get cart → checkout; nhánh phụ đăng nhập sai trên `lock*`. **DỪNG duyệt** | AI đề xuất | `audit/P1-workflow.md` |
+| B2 (P2) ✅ | Khảo sát API chi tiết; reset = khởi động lại backend + `prepare-data --accounts-only` | AI | `audit/P2-api-survey.md` |
+| B3 (P3) | CSV + seed tài khoản (không cần snapshot DB: backend tự tạo lại DB) | AI soạn, **(BẠN)** chạy seed | `perf/data/*.csv` |
 | B4 (P4) | AI sinh 3 plan theo từng prompt riêng. Tham số dự đoán ban đầu (hiệu chỉnh sau smoke): Load ~50 VU, ramp 60 s, giữ 5 phút, think 1–3 s; Stress bậc 25→50→100→200→400 VU đến khi lỗi > 5% hoặc p95 vượt ngưỡng; Spike 10 VU nền → ~300 VU trong 5 s giữ 60 s → về 10 VU. Listener: Load = Summary Report, Stress = Aggregate Report, Spike = View Results Tree (chỉ lỗi). **DỪNG duyệt** | AI | `perf/plans/*.jmx` |
 | B5 (P5) | Review và sửa plan, ghi AI sai gì và vì sao | **(BẠN)** review, AI sửa | `audit/P5-review-findings.md` |
 | B6 (P6) | Smoke → Load → reset → Stress → reset → Spike; mỗi lượt `.jtl` + HTML + ảnh cùng khung + `node-usage.csv` | **(BẠN)** chạy & chụp | `perf/results/`, `evidence/screenshots/` |
