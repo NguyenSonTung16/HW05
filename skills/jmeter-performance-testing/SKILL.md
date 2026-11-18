@@ -70,3 +70,4 @@ Skill không chạy được JMeter hay trình duyệt thay người dùng khi m
 ## Lịch sử phiên bản
 - v1 (2026-11-18): bản đầu, đã review.
 - v1.1 (2026-11-18): từ P2 trên EShop: thêm kiểm tra "SUT tự tạo lại DB khi khởi động" và "nối chuỗi vào SQL" vào P2; `prepare-data.mjs --accounts-only`; bỏ dấu nháy đơn khỏi dữ liệu CSV.
+- v1.2 (2026-11-18): `run-scenario.mjs` bọc ngoặc kép đối số khi gọi `jmeter.bat` qua shell trên Windows (đường dẫn có dấu cách bị cắt).

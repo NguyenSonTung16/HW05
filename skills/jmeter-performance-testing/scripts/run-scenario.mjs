@@ -57,8 +57,11 @@ const args = ['-n', '-t', o.plan, '-l', jtl, '-e', '-o', path.join(o.out, 'html'
   '-Jjmeter.save.saveservice.thread_counts=true', '-Jjmeter.save.saveservice.latency=true', '-Jjmeter.save.saveservice.connect_time=true',
   ...o.J.map((kv) => `-J${kv}`)];
 console.log(`\n=== ${planName} | ${meta.startIso} | host ${meta.hostname} ===\n${o.jmeter ?? 'jmeter'} ${args.join(' ')}\n`);
+// Windows: jmeter.bat phải chạy qua shell, và shell KHÔNG tự bọc đối số có dấu cách (ví dụ "D:\vscode\Software testing\...").
+const win = process.platform === 'win32';
+const q = (s) => (win && /[\s"&|<>^()]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s);
 const code = await new Promise((ok) => {
-  const p = spawn(o.jmeter ?? 'jmeter', args, { stdio: 'inherit', shell: process.platform === 'win32' });
+  const p = spawn(q(o.jmeter ?? 'jmeter'), args.map(q), { stdio: 'inherit', shell: win });
   p.on('exit', (c) => ok(c)); p.on('error', (e) => { console.error(`Không chạy được JMeter: ${e.message}`); ok(-1); });
 });
 
