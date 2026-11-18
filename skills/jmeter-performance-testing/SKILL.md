@@ -39,11 +39,11 @@ scripts/    prepare-data.mjs          tạo tài khoản test qua API (không tr
 
 **P3. Dữ liệu.** `prepare-data.mjs` tạo tài khoản test (mặc định `perfNNN@test.local`, `lockNN@test.local`) và CSV; `db-snapshot.mjs save` lưu DB sạch sau khi seed. CSV đủ dòng để mỗi VU một tài khoản (tránh nhiều VU dùng chung một tài khoản nếu SUT có trạng thái theo người dùng).
 
-**P4. Sinh plan bằng AI, từng bước.** Từ `templates/plan.template.jmx`: thread group, ramp-up, think time, CSV Data Set Config, JSON Extractor lấy token, assertion (mã trạng thái **và** nội dung), mỗi plan một loại listener khác nhau (Summary Report / Aggregate Report / View Results Tree chỉ lỗi). Tham số ban đầu theo `scenario-params.md`, ghi rõ là dự đoán, hiệu chỉnh sau smoke. Tên file `{MSSV}_{Scenario}_{YYYYMMDD}.jmx`. **DỪNG: người dùng review trước khi chạy.**
+**P4. Sinh plan bằng AI, từng bước.** Từ `templates/plan.template.jmx`: thread group, ramp-up, CSV Data Set Config, JSON Extractor lấy token, assertion (mã trạng thái **và** nội dung). Mô hình người dùng mặc định: **đăng nhập một lần/VU, mỗi VU một tài khoản riêng, think time chỉ ở bước xem hàng và trước thanh toán**. Mặc định 2 VU; số VU thật chốt sau smoke. Mỗi plan một loại listener khác nhau (Summary Report / Aggregate Report / View Results Tree chỉ lỗi). Tham số ban đầu theo `scenario-params.md`, ghi rõ là dự đoán, hiệu chỉnh sau smoke. Tên file `{MSSV}_{Scenario}_{YYYYMMDD}.jmx`. **DỪNG: người dùng review trước khi chạy.**
 
 **P5. Review và sửa.** Đi qua `review-checklist.md`; ghi `audit/P5-review-findings.md`: AI sai/thiếu gì, vì sao (prompt, giới hạn model, đặc tính endpoint), sửa thế nào. Commit bản AI sinh và bản đã sửa thành hai commit riêng.
 
-**P6. Chạy.** Thứ tự: smoke (1–2 VU, 1 phút) → kịch bản thật. Trước mỗi lượt: dừng backend → `db-snapshot.mjs restore` → khởi động lại backend (xóa trạng thái trong bộ nhớ) → `reset-lockout.mjs`. Nếu SUT tự tạo lại DB khi khởi động (xem P2): chỉ cần khởi động lại backend → `prepare-data.mjs --accounts-only` (tài khoản test đã mất cùng DB cũ), bỏ bước restore. Chạy bằng `run-scenario.mjs` (non-GUI). Người dùng chụp JMeter/terminal **cùng khung** với Task Manager (tab Details, tiến trình `node` của backend). Không chạy hai lượt song song.
+**P6. Chạy.** Thứ tự: smoke (1–2 VU, 1 phút) → kịch bản thật. Trước mỗi lượt: dừng backend → `db-snapshot.mjs restore` → khởi động lại backend (xóa trạng thái trong bộ nhớ) → `reset-lockout.mjs`. Nếu SUT tự tạo lại DB khi khởi động (xem P2): chỉ cần khởi động lại backend → `prepare-data.mjs --accounts-only` (tài khoản test đã mất cùng DB cũ), bỏ bước restore. Chạy bằng `run-scenario.mjs` (non-GUI), thêm `--verify-db` để đối chiếu số bản ghi được tạo (ví dụ đơn hàng) với số mẫu thành công. Người dùng chụp JMeter/terminal **cùng khung** với Task Manager (tab Details, tiến trình `node` của backend). Không chạy hai lượt song song.
 
 **P7. Ngưỡng bền (Soak 10–15 phút).** Tải ổn định khoảng 70–80% mức tải ở điểm gãy tìm được từ Stress. Báo cáo bằng số lấy từ `jtl-summary.mjs` và `node-usage.csv`: RPS ổn định tối đa, p95, tỉ lệ lỗi, RAM đỉnh và xu hướng RAM của backend.
 
@@ -53,8 +53,8 @@ scripts/    prepare-data.mjs          tạo tài khoản test qua API (không tr
 1. **Không chạy kịch bản trước khi plan được duyệt** (P1, P4 có điểm dừng).
 2. **Không bịa bằng chứng**: không tạo `.jtl`, ảnh, video, số liệu thay cho lượt chạy thật; số chưa chạy ghi "dự đoán". Dữ liệu giả chỉ dùng trong `scripts/test/` và phải ghi rõ là giả.
 3. **Số liệu đối chiếu do script tính từ `.jtl` thô**; AI chỉ diễn giải. Khi trích số vào báo cáo, ghi nguồn (file, label, cửa sổ thời gian).
-4. **Assertion kiểm cả mã trạng thái và nội dung** (ví dụ có `token`, có `orderId`). Nhánh đăng nhập sai chỉ pass với 401/403, không chấp nhận 200 hay 5xx.
-5. **Tài khoản riêng cho từng mục đích**: tài khoản workflow không bao giờ bị nhập sai mật khẩu; nhánh khóa tài khoản dùng tài khoản riêng. Reset theo đúng mẫu email test, không reset rộng.
+4. **Assertion kiểm cả mã trạng thái và nội dung** (ví dụ có `token`, có `orderId`), và **đối chiếu dữ liệu lưu thật** sau khi chạy (`--verify-db`). Nhánh đăng nhập sai chỉ pass với 401/403 và phải bật **Ignore Status** (JMeter tự đánh lỗi mọi mẫu 4xx); không chấp nhận 200 hay 5xx.
+5. **Tài khoản riêng cho từng mục đích và từng VU**: mỗi VU một tài khoản (CSV không recycle, số VU ≤ số tài khoản); tài khoản workflow không bao giờ bị nhập sai mật khẩu; nhánh khóa tài khoản dùng tài khoản riêng. Reset theo đúng mẫu email test, không reset rộng.
 6. **Mỗi lượt một thư mục kết quả mới**; `run-scenario.mjs` từ chối ghi đè. Không xóa hay sửa `.jtl` sau khi chạy.
 7. **Non-GUI để lấy số liệu**; listener trong plan dùng để mở lại `.jtl` làm "report view" khi chụp ảnh. View Results Tree chỉ ghi lỗi.
 8. **Phân biệt** thời gian đáp ứng của mọi mẫu với của mẫu thành công; RPS cả lượt với RPS giai đoạn giữ tải; avg với p95. Ghi rõ cách tính phân vị (nearest-rank) và rằng dashboard JMeter có thể lệch nhẹ do thuật toán khác.
@@ -72,3 +72,4 @@ Skill không chạy được JMeter hay trình duyệt thay người dùng khi m
 - v1.1 (2026-11-18): từ P2 trên EShop: thêm kiểm tra "SUT tự tạo lại DB khi khởi động" và "nối chuỗi vào SQL" vào P2; `prepare-data.mjs --accounts-only`; bỏ dấu nháy đơn khỏi dữ liệu CSV.
 - v1.2 (2026-11-18): `run-scenario.mjs` bọc ngoặc kép đối số khi gọi `jmeter.bat` qua shell trên Windows (đường dẫn có dấu cách bị cắt).
 - v1.3 (2026-11-18): đổi `plan.jmx.template` → `plan.template.jmx` để hộp Open của JMeter (chỉ lọc `.jmx`) thấy được.
+- v1.4 (2026-11-18): từ review P5 của sinh viên: template đăng nhập 1 lần/VU, mỗi VU một tài khoản riêng, think time chỉ trước xem hàng và thanh toán, mặc định 2 VU (smoke trước), nhánh đăng nhập sai bật Ignore Status; `run-scenario.mjs --verify-db`.

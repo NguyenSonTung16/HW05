@@ -48,3 +48,17 @@ test('dừng khi SUT không phản hồi', () => {
   const r = run(['--plan', plan, '--out', path.join(d, 'o'), '--base', 'http://127.0.0.1:1', '--no-monitor']);
   assert.equal(r.status, 2); assert.match(r.stderr, /chưa sẵn sàng/);
 });
+
+test('--verify-db so số mẫu thành công với số dòng trong DB', async () => {
+  const { DatabaseSync } = await import('node:sqlite');
+  const d = tmp(); const plan = path.join(d, '23120399_Load_20261119.jmx'); fs.writeFileSync(plan, '<x/>');
+  const dbf = path.join(d, 'db.sqlite'); const db = new DatabaseSync(dbf);
+  db.exec('CREATE TABLE orders (id INTEGER PRIMARY KEY)'); db.exec('INSERT INTO orders DEFAULT VALUES'); db.close();
+  await withServer(async (base) => {
+    const out = path.join(d, 'res');
+    const r = await runAsync(['--plan', plan, '--out', out, '--base', base, '--jmeter', fakeJ, '--no-monitor', '--verify-db', dbf]);
+    assert.equal(r.status, 0, r.stderr);
+    const sum = JSON.parse(fs.readFileSync(path.join(out, 'summary.json'), 'utf8'));
+    assert.equal(sum.dbCheck.samplesOk, 1); assert.equal(sum.dbCheck.dbCount, 1); assert.equal(sum.dbCheck.verdict, 'KHỚP');
+  });
+});

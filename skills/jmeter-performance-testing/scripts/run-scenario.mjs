@@ -3,6 +3,9 @@
 // Dùng: node run-scenario.mjs --plan <dir>/{MSSV}_{Scenario}_{YYYYMMDD}.jmx --out <thư mục kết quả mới>
 //          [-J threads=50 -J rampup=60 ...] [--base http://localhost:3000] [--health-path /api/products]
 //          [--jmeter jmeter] [--monitor-match server.js] [--no-monitor] [--bucket 10] [--p95-limit 1000] [--err-limit 1]
+//          [--verify-db <database.sqlite> [--verify-label "TXN checkout"] [--verify-sql "SELECT COUNT(*) AS n FROM orders"]]
+// --verify-db: sau khi chạy, so số mẫu THÀNH CÔNG của label với số dòng đếm được trong DB (ví dụ số đơn lưu thật).
+//   Chỉ đúng khi DB sạch lúc bắt đầu lượt (SUT khởi động lại / khôi phục DB trước khi chạy).
 // Không reset DB/khóa tài khoản: làm bằng db-snapshot.mjs + khởi động lại backend + reset-lockout.mjs TRƯỚC khi gọi.
 import fs from 'node:fs';
 import os from 'node:os';
@@ -10,6 +13,7 @@ import path from 'node:path';
 import { spawn } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { readSamples, summarize, toMarkdown } from './jtl-summary.mjs';
+import { openDb } from './sqlite-open.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const a = process.argv.slice(2); const o = { J: [] };
@@ -87,7 +91,25 @@ if (fs.existsSync(usage)) {
     md += `\n## Tài nguyên backend (node-usage.csv, ${u.samples} mẫu)\n- CPU trung bình ${u.cpuAvg}% / tối đa ${u.cpuMax}% (chia theo ${meta.logicalCores} lõi)\n- RAM (working set) đầu ${u.workingSetStartMb} MB, cuối ${u.workingSetEndMb} MB, đỉnh ${u.workingSetMaxMb} MB\n`;
   }
 }
+if (o['verify-db']) {
+  const label = o['verify-label'] ?? 'TXN checkout';
+  const sql = o['verify-sql'] ?? 'SELECT COUNT(*) AS n FROM orders';
+  const ok = samples.filter((s) => s.label === label && s.success).length;
+  const all = samples.filter((s) => s.label === label).length;
+  try {
+    const db = await openDb(o['verify-db'], o['sut-backend']);
+    const rows = await db.all(sql); await db.close();
+    const n = Number(Object.values(rows[0] ?? {})[0]);
+    const verdict = n === ok ? 'KHỚP' : n > ok ? 'DB NHIỀU HƠN (có request thành công ở server nhưng client tính lỗi, hoặc DB không sạch lúc bắt đầu)' : 'DB ÍT HƠN (có phản hồi thành công nhưng dữ liệu không được lưu)';
+    r.dbCheck = { label, sql, samplesOk: ok, samplesAll: all, dbCount: n, verdict, atIso: new Date().toISOString() };
+    md += `\n## Đối chiếu DB\n- \`${label}\` thành công trong .jtl: ${ok}/${all}\n- \`${sql}\` → ${n}\n- Kết luận: **${verdict}**\n`;
+  } catch (e) {
+    r.dbCheck = { label, sql, error: e.message };
+    md += `\n## Đối chiếu DB\n- Không đọc được DB (${e.message})\n`;
+  }
+}
 fs.writeFileSync(path.join(o.out, 'summary.md'), md);
 fs.writeFileSync(path.join(o.out, 'summary.json'), JSON.stringify(r, null, 2));
 console.log(`\nXong. Kết quả: ${o.out} (jtl, html/, jmeter.log, run-meta.json, summary.md${fs.existsSync(usage) ? ', node-usage.csv' : ''})`);
 console.log(`Tổng: ${r.total.samples} mẫu, lỗi ${r.total.errorPct}%, p95 ${r.total.p95} ms, ${r.total.throughput} req/s`);
+if (r.dbCheck) console.log(r.dbCheck.error ? `Đối chiếu DB lỗi: ${r.dbCheck.error}` : `Đối chiếu DB: ${r.dbCheck.label} OK ${r.dbCheck.samplesOk} vs DB ${r.dbCheck.dbCount} → ${r.dbCheck.verdict}`);

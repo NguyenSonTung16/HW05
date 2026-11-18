@@ -4,7 +4,7 @@
 `threads=2 rampup=10 duration=60`. Mục tiêu: mọi sampler pass, không lỗi assertion, biết thời gian một vòng workflow (T_iter ≈ tổng thời gian đáp ứng + tổng think time).
 
 ## Cách ước lượng số VU từ mục tiêu RPS
-RPS_workflow ≈ VU × số_request_mỗi_vòng / T_iter. Ví dụ 7 request/vòng, think 1–3 s (trung bình 2 s × 7 = 14 s), đáp ứng ~0,1 s → T_iter ≈ 15 s; 50 VU ≈ 23 req/s. Ghi phép tính này vào báo cáo khi chọn tham số.
+RPS_workflow ≈ VU × số_request_mỗi_vòng / T_iter. Với template v1.4: đăng nhập 1 lần/VU, mỗi vòng 6 request (3 READ + 3 TXN), think 1–3 s trước 4 bước (trung bình 2 s × 4 = 8 s) → T_iter ≈ 8 s + tổng thời gian đáp ứng đo ở smoke. Ghi phép tính này (với số đo smoke thật) vào báo cáo khi chọn số VU. Số VU ≤ số tài khoản trong users.csv.
 
 ## Load (tải mong đợi)
 - Mục tiêu: hành vi ở tải bình thường. Ramp-up đủ dài để không thành spike (≥ 1 giây/VU với tải nhỏ, thường 60–120 s), giữ tải ≥ 5 phút, think time khác 0.
