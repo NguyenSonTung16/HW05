@@ -21,3 +21,7 @@ Thời gian: 2026-11-18 ~10:35–10:45 (UTC+07:00). Model: Claude Opus 5.5. Chư
 - `monitor-node.ps1` chưa chạy lần nào (máy ảo không có PowerShell/Windows).
 - `sqlite-open.mjs` nhánh dự phòng `sqlite3` chưa chạy (máy ảo dùng `node:sqlite`); cần biết phiên bản Node trên Windows.
 - `prepare-data.mjs` mới test với API giả, chưa chạy với SUT thật.
+
+## Cập nhật sau khi sinh viên kiểm tra trên Windows
+- 2026-11-18 11:36: `jmeter -v` trên máy sinh viên báo JMeter 5.6.3 (lỗi `jmeter.log Access is denied` do chạy ở `C:\WINDOWS\System32`, không liên quan skill).
+- 2026-11-18 11:45: sinh viên mở `templates/plan.template.jmx` (đổi tên ở v1.3) trong JMeter GUI 5.6.3: mở được, không cảnh báo (biểu tượng cảnh báo 0); cây đúng cấu trúc (HTTP Request Defaults, Header: JSON, TG workflow, TG lockout-probe, Summary Report bật, Aggregate Report và View Results Tree tắt).
