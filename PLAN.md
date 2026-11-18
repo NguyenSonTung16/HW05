@@ -107,7 +107,7 @@ HW05/
 | B0 | Báo cáo phần cứng: dxdiag + bảng cấu hình, hostname phải khớp bài trước | **(BẠN)** chụp | `evidence/hardware/` |
 | B1 (P1) ✅ đã duyệt 11:05 | Workflow: login (CSV) → list → search → detail → add cart → get cart → checkout; nhánh phụ đăng nhập sai trên `lock*`. **DỪNG duyệt** | AI đề xuất | `audit/P1-workflow.md` |
 | B2 (P2) ✅ | Khảo sát API chi tiết; reset = khởi động lại backend + `prepare-data --accounts-only` | AI | `audit/P2-api-survey.md` |
-| B3 (P3) | CSV + seed tài khoản (không cần snapshot DB: backend tự tạo lại DB) | AI soạn, **(BẠN)** chạy seed | `perf/data/*.csv` |
+| B3 (P3) ✅ 11:17 (110 tài khoản, 5 sản phẩm) | CSV + seed tài khoản (không cần snapshot DB: backend tự tạo lại DB) | AI soạn, **(BẠN)** chạy seed | `perf/data/*.csv` |
 | B4 (P4) | AI sinh 3 plan theo từng prompt riêng. Tham số dự đoán ban đầu (hiệu chỉnh sau smoke): Load ~50 VU, ramp 60 s, giữ 5 phút, think 1–3 s; Stress bậc 25→50→100→200→400 VU đến khi lỗi > 5% hoặc p95 vượt ngưỡng; Spike 10 VU nền → ~300 VU trong 5 s giữ 60 s → về 10 VU. Listener: Load = Summary Report, Stress = Aggregate Report, Spike = View Results Tree (chỉ lỗi). **DỪNG duyệt** | AI | `perf/plans/*.jmx` |
 | B5 (P5) | Review và sửa plan, ghi AI sai gì và vì sao | **(BẠN)** review, AI sửa | `audit/P5-review-findings.md` |
 | B6 (P6) | Smoke → Load → reset → Stress → reset → Spike; mỗi lượt `.jtl` + HTML + ảnh cùng khung + `node-usage.csv` | **(BẠN)** chạy & chụp | `perf/results/`, `evidence/screenshots/` |
