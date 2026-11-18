@@ -1,0 +1,11 @@
+# Tài liệu khóa học (không đưa lên repo public)
+docs/HW05_Performance_Testing_En.pdf
+docs/AI-02_Audit_Template.docx
+# Sinh ra khi chạy test của skill / máy cục bộ
+skills/jmeter-performance-testing/scripts/test/fake-jmeter.sh
+node_modules/
+.sut-backup/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.stop
