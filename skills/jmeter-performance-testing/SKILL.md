@@ -15,7 +15,7 @@ Skill biến một nhóm endpoint (tài liệu API và/hoặc mã nguồn) thàn
 
 ## Cấu trúc
 ```
-templates/  plan.jmx.template        plan JMeter mẫu, tham số hóa bằng -J (threads, rampup, duration, think time, host, port, data_dir)
+templates/  plan.template.jmx        plan JMeter mẫu, tham số hóa bằng -J (threads, rampup, duration, think time, host, port, data_dir)
             data/*.csv.template       mẫu CSV: users, lock-users, products, orders
             scenario-params.md        cách chọn tham số Load/Stress/Spike/Soak và dựng tải bậc thang không cần plugin
             review-checklist.md       lỗi AI hay mắc khi sinh plan (dùng ở P5)
@@ -39,7 +39,7 @@ scripts/    prepare-data.mjs          tạo tài khoản test qua API (không tr
 
 **P3. Dữ liệu.** `prepare-data.mjs` tạo tài khoản test (mặc định `perfNNN@test.local`, `lockNN@test.local`) và CSV; `db-snapshot.mjs save` lưu DB sạch sau khi seed. CSV đủ dòng để mỗi VU một tài khoản (tránh nhiều VU dùng chung một tài khoản nếu SUT có trạng thái theo người dùng).
 
-**P4. Sinh plan bằng AI, từng bước.** Từ `templates/plan.jmx.template`: thread group, ramp-up, think time, CSV Data Set Config, JSON Extractor lấy token, assertion (mã trạng thái **và** nội dung), mỗi plan một loại listener khác nhau (Summary Report / Aggregate Report / View Results Tree chỉ lỗi). Tham số ban đầu theo `scenario-params.md`, ghi rõ là dự đoán, hiệu chỉnh sau smoke. Tên file `{MSSV}_{Scenario}_{YYYYMMDD}.jmx`. **DỪNG: người dùng review trước khi chạy.**
+**P4. Sinh plan bằng AI, từng bước.** Từ `templates/plan.template.jmx`: thread group, ramp-up, think time, CSV Data Set Config, JSON Extractor lấy token, assertion (mã trạng thái **và** nội dung), mỗi plan một loại listener khác nhau (Summary Report / Aggregate Report / View Results Tree chỉ lỗi). Tham số ban đầu theo `scenario-params.md`, ghi rõ là dự đoán, hiệu chỉnh sau smoke. Tên file `{MSSV}_{Scenario}_{YYYYMMDD}.jmx`. **DỪNG: người dùng review trước khi chạy.**
 
 **P5. Review và sửa.** Đi qua `review-checklist.md`; ghi `audit/P5-review-findings.md`: AI sai/thiếu gì, vì sao (prompt, giới hạn model, đặc tính endpoint), sửa thế nào. Commit bản AI sinh và bản đã sửa thành hai commit riêng.
 
@@ -71,3 +71,4 @@ Skill không chạy được JMeter hay trình duyệt thay người dùng khi m
 - v1 (2026-11-18): bản đầu, đã review.
 - v1.1 (2026-11-18): từ P2 trên EShop: thêm kiểm tra "SUT tự tạo lại DB khi khởi động" và "nối chuỗi vào SQL" vào P2; `prepare-data.mjs --accounts-only`; bỏ dấu nháy đơn khỏi dữ liệu CSV.
 - v1.2 (2026-11-18): `run-scenario.mjs` bọc ngoặc kép đối số khi gọi `jmeter.bat` qua shell trên Windows (đường dẫn có dấu cách bị cắt).
+- v1.3 (2026-11-18): đổi `plan.jmx.template` → `plan.template.jmx` để hộp Open của JMeter (chỉ lọc `.jmx`) thấy được.

@@ -43,7 +43,7 @@ HW05/
 ├─ PLAN.md, README.md (bảng tự chấm + test summary + link video)
 ├─ skills/jmeter-performance-testing/
 │  ├─ SKILL.md
-│  ├─ templates/  plan.jmx.template | users.csv.template | scenario-params.md | review-checklist.md | analysis-prompt.md
+│  ├─ templates/  plan.template.jmx | users.csv.template | scenario-params.md | review-checklist.md | analysis-prompt.md
 │  └─ scripts/    jtl-summary.mjs | prepare-data.mjs | db-snapshot.mjs | reset-lockout.mjs | sqlite-open.mjs | monitor-node.ps1 | run-scenario.mjs | test/
 ├─ perf/                         ← repo GitHub HW05
 │  ├─ plans/  23120399_Load_YYYYMMDD.jmx | 23120399_Stress_YYYYMMDD.jmx | 23120399_Spike_YYYYMMDD.jmx | (soak)
@@ -83,7 +83,7 @@ HW05/
 8. Nêu rõ cái gì chưa kiểm chứng (giới hạn máy, khác biệt môi trường).
 
 ### A3. Templates và scripts
-- `plan.jmx.template`: HTTP Request Defaults, Cookie/Header Manager, CSV Data Set Config, JSON Extractor (token), Response Assertion + JSON Assertion, Uniform Random Timer, biến `${__P(threads)}`, `${__P(rampup)}`, `${__P(duration)}` để cùng một plan đổi tham số qua dòng lệnh.
+- `plan.template.jmx`: HTTP Request Defaults, Cookie/Header Manager, CSV Data Set Config, JSON Extractor (token), Response Assertion + JSON Assertion, Uniform Random Timer, biến `${__P(threads)}`, `${__P(rampup)}`, `${__P(duration)}` để cùng một plan đổi tham số qua dòng lệnh.
 - `jtl-summary.mjs`: đọc `.jtl` CSV → theo từng label: số mẫu, lỗi %, avg, p50/p90/p95/p99, max, throughput (RPS) theo cửa sổ thời gian; xuất Markdown + JSON (là "giá trị đúng" để bắt lỗi AI ở Task 2).
 - `prepare-data.mjs` (tạo tài khoản qua API, không trùng; xuất CSV), `db-snapshot.mjs` (lưu/khôi phục DB, từ chối khi backend còn chạy), `reset-lockout.mjs` (chỉ `perf%`, `lock%`), `monitor-node.ps1` (CPU/RAM tiến trình `node` mỗi giây ra CSV), `run-scenario.mjs` (kiểm tra tên plan + SUT → giám sát → JMeter non-GUI → HTML → tóm tắt). Đổi so với bản đề xuất: `seed-users.mjs` → `prepare-data.mjs`, `run-scenario.bat` → `run-scenario.mjs` (cùng một script chạy được trên Windows), thêm `db-snapshot.mjs`, `sqlite-open.mjs`.
 - `review-checklist.md`, `analysis-prompt.md` (prompt chuẩn cho bước P8), `scenario-params.md` (bảng tham số gợi ý và cách hiệu chỉnh theo máy).
