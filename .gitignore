@@ -9,3 +9,6 @@ node_modules/
 *.sqlite-wal
 *.sqlite-shm
 *.stop
+
+# Log của JMeter GUI khi mở từ thư mục gốc
+/jmeter.log

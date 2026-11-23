@@ -1,0 +1,355 @@
+{
+  "method": {
+    "percentile": "nearest-rank",
+    "throughput": "samples / (lastEnd - firstStart)",
+    "bucketSec": 10,
+    "p95LimitMs": 1000,
+    "errLimitPct": 1,
+    "window": {
+      "fromSec": 0,
+      "toSec": null
+    }
+  },
+  "total": {
+    "samples": 93,
+    "errors": 0,
+    "errorPct": 0,
+    "avg": 2.7,
+    "min": 0,
+    "max": 40,
+    "p50": 2,
+    "p90": 4,
+    "p95": 5,
+    "p99": 40,
+    "avg_ok": 2.7,
+    "p95_ok": 5,
+    "throughput": 1.6,
+    "spanSec": 58.4,
+    "codes": {
+      "200": 82,
+      "401": 11
+    }
+  },
+  "groups": {
+    "AUTH": {
+      "samples": 13,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 4.8,
+      "min": 2,
+      "max": 30,
+      "p50": 3,
+      "p90": 4,
+      "p95": 30,
+      "p99": 30,
+      "avg_ok": 4.8,
+      "p95_ok": 30,
+      "throughput": 0.2,
+      "spanSec": 55,
+      "codes": {
+        "200": 2,
+        "401": 11
+      }
+    },
+    "READ": {
+      "samples": 41,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 1.8,
+      "min": 1,
+      "max": 3,
+      "p50": 2,
+      "p90": 2,
+      "p95": 3,
+      "p99": 3,
+      "avg_ok": 1.8,
+      "p95_ok": 3,
+      "throughput": 0.7,
+      "spanSec": 57.2,
+      "codes": {
+        "200": 41
+      }
+    },
+    "TXN": {
+      "samples": 39,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 2.9,
+      "min": 0,
+      "max": 40,
+      "p50": 1,
+      "p90": 5,
+      "p95": 5,
+      "p99": 40,
+      "avg_ok": 2.9,
+      "p95_ok": 5,
+      "throughput": 0.7,
+      "spanSec": 52.3,
+      "codes": {
+        "200": 39
+      }
+    }
+  },
+  "labels": {
+    "AUTH login": {
+      "samples": 2,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 16.5,
+      "min": 3,
+      "max": 30,
+      "p50": 3,
+      "p90": 30,
+      "p95": 30,
+      "p99": 30,
+      "avg_ok": 16.5,
+      "p95_ok": 30,
+      "throughput": 2.2,
+      "spanSec": 0.9,
+      "codes": {
+        "200": 2
+      }
+    },
+    "AUTH login-wrong": {
+      "samples": 11,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 2.6,
+      "min": 2,
+      "max": 4,
+      "p50": 2,
+      "p90": 4,
+      "p95": 4,
+      "p99": 4,
+      "avg_ok": 2.6,
+      "p95_ok": 4,
+      "throughput": 0.2,
+      "spanSec": 50.1,
+      "codes": {
+        "401": 11
+      }
+    },
+    "READ detail": {
+      "samples": 13,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 1.7,
+      "min": 1,
+      "max": 2,
+      "p50": 2,
+      "p90": 2,
+      "p95": 2,
+      "p99": 2,
+      "avg_ok": 1.7,
+      "p95_ok": 2,
+      "throughput": 0.3,
+      "spanSec": 50.4,
+      "codes": {
+        "200": 13
+      }
+    },
+    "READ list": {
+      "samples": 15,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 1.7,
+      "min": 1,
+      "max": 3,
+      "p50": 2,
+      "p90": 3,
+      "p95": 3,
+      "p99": 3,
+      "avg_ok": 1.7,
+      "p95_ok": 3,
+      "throughput": 0.3,
+      "spanSec": 57.2,
+      "codes": {
+        "200": 15
+      }
+    },
+    "READ search": {
+      "samples": 13,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 1.9,
+      "min": 1,
+      "max": 3,
+      "p50": 2,
+      "p90": 3,
+      "p95": 3,
+      "p99": 3,
+      "avg_ok": 1.9,
+      "p95_ok": 3,
+      "throughput": 0.3,
+      "spanSec": 49.5,
+      "codes": {
+        "200": 13
+      }
+    },
+    "TXN add-cart": {
+      "samples": 13,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 1,
+      "min": 0,
+      "max": 2,
+      "p50": 1,
+      "p90": 1,
+      "p95": 2,
+      "p99": 2,
+      "avg_ok": 1,
+      "p95_ok": 2,
+      "throughput": 0.3,
+      "spanSec": 50.4,
+      "codes": {
+        "200": 13
+      }
+    },
+    "TXN checkout": {
+      "samples": 13,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 7.2,
+      "min": 4,
+      "max": 40,
+      "p50": 4,
+      "p90": 5,
+      "p95": 40,
+      "p99": 40,
+      "avg_ok": 7.2,
+      "p95_ok": 40,
+      "throughput": 0.3,
+      "spanSec": 49.3,
+      "codes": {
+        "200": 13
+      }
+    },
+    "TXN view-cart": {
+      "samples": 13,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 0.5,
+      "min": 0,
+      "max": 1,
+      "p50": 1,
+      "p90": 1,
+      "p95": 1,
+      "p99": 1,
+      "avg_ok": 0.5,
+      "p95_ok": 1,
+      "throughput": 0.3,
+      "spanSec": 50.4,
+      "codes": {
+        "200": 13
+      }
+    }
+  },
+  "series": [
+    {
+      "fromSec": 0,
+      "toSec": 10,
+      "samples": 16,
+      "rps": 1.6,
+      "errorPct": 0,
+      "p95": 40,
+      "avg": 6,
+      "maxThreads": 3
+    },
+    {
+      "fromSec": 10,
+      "toSec": 20,
+      "samples": 16,
+      "rps": 1.6,
+      "errorPct": 0,
+      "p95": 5,
+      "avg": 2.4,
+      "maxThreads": 3
+    },
+    {
+      "fromSec": 20,
+      "toSec": 30,
+      "samples": 17,
+      "rps": 1.7,
+      "errorPct": 0,
+      "p95": 4,
+      "avg": 1.6,
+      "maxThreads": 3
+    },
+    {
+      "fromSec": 30,
+      "toSec": 40,
+      "samples": 14,
+      "rps": 1.4,
+      "errorPct": 0,
+      "p95": 4,
+      "avg": 1.9,
+      "maxThreads": 3
+    },
+    {
+      "fromSec": 40,
+      "toSec": 50,
+      "samples": 16,
+      "rps": 1.6,
+      "errorPct": 0,
+      "p95": 5,
+      "avg": 2.1,
+      "maxThreads": 3
+    },
+    {
+      "fromSec": 50,
+      "toSec": 60,
+      "samples": 14,
+      "rps": 1.4,
+      "errorPct": 0,
+      "p95": 5,
+      "avg": 1.8,
+      "maxThreads": 3
+    }
+  ],
+  "stability": {
+    "healthyWindows": 6,
+    "windows": 6,
+    "maxHealthyRps": 1.7,
+    "firstBreach": null
+  },
+  "failures": {},
+  "badLines": [],
+  "run": {
+    "plan": "23120399_Load_20261118.jmx",
+    "studentId": "23120399",
+    "scenario": "Load",
+    "planDate": "20261118",
+    "props": [
+      "threads=2",
+      "rampup=2",
+      "duration=60"
+    ],
+    "base": "http://localhost:3000",
+    "hostname": "MSI",
+    "platform": "Windows_NT 10.0.26300 x64",
+    "cpu": "AMD Ryzen 5 5600H with Radeon Graphics         ",
+    "logicalCores": 12,
+    "totalMemGB": 15.4,
+    "node": "v24.11.1",
+    "startIso": "2026-11-23T03:04:14.454Z",
+    "endIso": "2026-11-23T03:05:24.114Z",
+    "jmeterExitCode": 0
+  },
+  "backendUsage": {
+    "samples": 68,
+    "cpuAvg": 0,
+    "cpuMax": 0.4,
+    "workingSetStartMb": 55.4,
+    "workingSetEndMb": 57.3,
+    "workingSetMaxMb": 57.3
+  },
+  "dbCheck": {
+    "label": "TXN checkout",
+    "sql": "SELECT COUNT(*) AS n FROM orders",
+    "samplesOk": 13,
+    "samplesAll": 13,
+    "dbCount": 13,
+    "verdict": "KHỚP",
+    "atIso": "2026-11-23T03:05:24.130Z"
+  }
+}

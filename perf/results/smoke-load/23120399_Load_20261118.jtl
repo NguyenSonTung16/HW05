@@ -1,0 +1,94 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1795403062388,30,AUTH login,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,642,259,1,2,http://localhost:3000/api/login,30,0,23
+1795403063289,3,AUTH login,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,642,259,2,3,http://localhost:3000/api/login,3,0,1
+1795403063651,1,READ list,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,1238,187,2,3,http://localhost:3000/api/products,1,0,0
+1795403064813,3,READ list,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,1238,187,2,3,http://localhost:3000/api/products,2,0,0
+1795403065055,3,READ search,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,453,201,2,3,http://localhost:3000/api/products?search=iPhone,3,0,0
+1795403066702,1,READ detail,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,451,189,2,3,http://localhost:3000/api/products/1,1,0,0
+1795403066704,2,TXN add-cart,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,294,426,2,3,http://localhost:3000/api/cart,2,0,0
+1795403066707,1,TXN view-cart,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,334,340,2,3,http://localhost:3000/api/cart,1,0,0
+1795403067270,2,READ search,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,480,202,2,3,http://localhost:3000/api/products?search=Samsung,1,0,0
+1795403067312,3,AUTH login-wrong,401,Unauthorized,TG lockout-probe (tài khoản lock*) 2-1,text,true,,314,259,1,3,http://localhost:3000/api/login,3,0,1
+1795403069683,2,READ detail,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,480,189,2,3,http://localhost:3000/api/products/2,2,0,0
+1795403069686,1,TXN add-cart,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,294,433,2,3,http://localhost:3000/api/cart,1,0,0
+1795403069688,1,TXN view-cart,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,341,340,2,3,http://localhost:3000/api/cart,1,0,0
+1795403069683,40,TXN checkout,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,312,439,2,3,http://localhost:3000/api/checkout,40,0,0
+1795403070761,1,READ list,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,1238,187,2,3,http://localhost:3000/api/products,1,0,0
+1795403072317,2,AUTH login-wrong,401,Unauthorized,TG lockout-probe (tài khoản lock*) 2-1,text,true,,314,259,1,3,http://localhost:3000/api/login,2,0,1
+1795403072419,4,TXN checkout,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,312,439,2,3,http://localhost:3000/api/checkout,4,0,0
+1795403073110,2,READ search,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,450,202,2,3,http://localhost:3000/api/products?search=MacBook,2,0,0
+1795403074181,2,READ list,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,1238,187,2,3,http://localhost:3000/api/products,2,0,0
+1795403074575,2,READ detail,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,448,189,2,3,http://localhost:3000/api/products/3,2,0,0
+1795403074578,1,TXN add-cart,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,294,423,2,3,http://localhost:3000/api/cart,1,0,0
+1795403074579,1,TXN view-cart,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,398,340,2,3,http://localhost:3000/api/cart,1,0,0
+1795403075764,5,TXN checkout,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,312,431,2,3,http://localhost:3000/api/checkout,5,0,0
+1795403076424,3,READ search,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,461,198,2,3,http://localhost:3000/api/products?search=Tai,2,0,0
+1795403077330,4,AUTH login-wrong,401,Unauthorized,TG lockout-probe (tài khoản lock*) 2-1,text,true,,314,259,1,3,http://localhost:3000/api/login,4,0,2
+1795403078255,3,READ list,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,1238,187,2,3,http://localhost:3000/api/products,2,0,0
+1795403078828,2,READ detail,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,461,189,2,3,http://localhost:3000/api/products/4,2,0,0
+1795403078831,1,TXN add-cart,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,294,430,2,3,http://localhost:3000/api/cart,1,0,0
+1795403078833,0,TXN view-cart,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,412,340,2,3,http://localhost:3000/api/cart,0,0,0
+1795403080439,2,READ search,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,469,203,2,3,http://localhost:3000/api/products?search=B%C3%A0n,2,0,0
+1795403081744,4,TXN checkout,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,312,433,2,3,http://localhost:3000/api/checkout,4,0,0
+1795403082348,2,AUTH login-wrong,401,Unauthorized,TG lockout-probe (tài khoản lock*) 2-1,text,true,,314,259,1,3,http://localhost:3000/api/login,2,0,1
+1795403082860,1,READ detail,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,467,189,2,3,http://localhost:3000/api/products/5,1,0,0
+1795403082862,1,TXN add-cart,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,294,434,2,3,http://localhost:3000/api/cart,1,0,0
+1795403082864,1,TXN view-cart,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,472,340,2,3,http://localhost:3000/api/cart,1,0,0
+1795403084000,1,READ list,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,1238,187,2,3,http://localhost:3000/api/products,1,0,0
+1795403084631,4,TXN checkout,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,312,438,2,3,http://localhost:3000/api/checkout,4,0,0
+1795403085966,1,READ list,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,1238,187,2,3,http://localhost:3000/api/products,1,0,0
+1795403086684,1,READ search,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,453,201,2,3,http://localhost:3000/api/products?search=iPhone,1,0,0
+1795403087362,2,AUTH login-wrong,401,Unauthorized,TG lockout-probe (tài khoản lock*) 2-1,text,true,,314,259,1,3,http://localhost:3000/api/login,2,0,1
+1795403088594,2,READ search,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,480,202,2,3,http://localhost:3000/api/products?search=Samsung,2,0,0
+1795403089618,2,READ detail,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,451,189,2,3,http://localhost:3000/api/products/1,2,0,0
+1795403089620,1,TXN add-cart,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,294,426,2,3,http://localhost:3000/api/cart,1,0,0
+1795403089621,1,TXN view-cart,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,478,340,2,3,http://localhost:3000/api/cart,1,0,0
+1795403089964,2,READ detail,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,480,189,2,3,http://localhost:3000/api/products/2,2,0,0
+1795403089967,1,TXN add-cart,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,294,433,2,3,http://localhost:3000/api/cart,1,0,0
+1795403089968,1,TXN view-cart,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,546,340,2,3,http://localhost:3000/api/cart,0,0,0
+1795403091881,4,TXN checkout,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,312,431,2,3,http://localhost:3000/api/checkout,4,0,0
+1795403092376,2,AUTH login-wrong,401,Unauthorized,TG lockout-probe (tài khoản lock*) 2-1,text,true,,314,259,1,3,http://localhost:3000/api/login,2,0,1
+1795403092470,4,TXN checkout,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,312,439,2,3,http://localhost:3000/api/checkout,4,0,0
+1795403094105,1,READ list,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,1238,187,2,3,http://localhost:3000/api/products,1,0,0
+1795403094756,1,READ list,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,1238,187,2,3,http://localhost:3000/api/products,1,0,0
+1795403096163,2,READ search,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,450,202,2,3,http://localhost:3000/api/products?search=MacBook,2,0,0
+1795403097382,3,AUTH login-wrong,401,Unauthorized,TG lockout-probe (tài khoản lock*) 2-1,text,true,,314,259,1,3,http://localhost:3000/api/login,3,0,1
+1795403097747,1,READ search,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,461,198,2,3,http://localhost:3000/api/products?search=Tai,1,0,0
+1795403097762,2,READ detail,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,448,189,2,3,http://localhost:3000/api/products/3,1,0,0
+1795403097764,1,TXN add-cart,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,294,423,2,3,http://localhost:3000/api/cart,1,0,0
+1795403097765,1,TXN view-cart,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,609,340,2,3,http://localhost:3000/api/cart,1,0,0
+1795403099621,1,READ detail,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,461,189,2,3,http://localhost:3000/api/products/4,1,0,0
+1795403099623,1,TXN add-cart,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,294,430,2,3,http://localhost:3000/api/cart,1,0,0
+1795403099625,0,TXN view-cart,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,549,340,2,3,http://localhost:3000/api/cart,0,0,0
+1795403100635,4,TXN checkout,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,312,433,2,3,http://localhost:3000/api/checkout,4,0,0
+1795403100662,4,TXN checkout,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,312,438,2,3,http://localhost:3000/api/checkout,4,0,0
+1795403102397,3,AUTH login-wrong,401,Unauthorized,TG lockout-probe (tài khoản lock*) 2-1,text,true,,314,259,1,3,http://localhost:3000/api/login,3,0,1
+1795403102977,2,READ list,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,1238,187,2,3,http://localhost:3000/api/products,2,0,0
+1795403103381,2,READ list,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,1238,187,2,3,http://localhost:3000/api/products,2,0,0
+1795403105600,2,READ search,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,469,203,2,3,http://localhost:3000/api/products?search=B%C3%A0n,2,0,0
+1795403105742,1,READ search,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,453,201,2,3,http://localhost:3000/api/products?search=iPhone,1,0,0
+1795403107402,4,AUTH login-wrong,401,Unauthorized,TG lockout-probe (tài khoản lock*) 2-1,text,true,,314,259,1,3,http://localhost:3000/api/login,4,0,2
+1795403108102,2,READ detail,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,467,189,2,3,http://localhost:3000/api/products/5,2,0,0
+1795403108104,1,TXN add-cart,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,294,434,2,3,http://localhost:3000/api/cart,1,0,0
+1795403108106,0,TXN view-cart,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,683,340,2,3,http://localhost:3000/api/cart,0,0,0
+1795403108614,2,READ detail,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,451,189,2,3,http://localhost:3000/api/products/1,2,0,0
+1795403108616,1,TXN add-cart,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,294,426,2,3,http://localhost:3000/api/cart,1,0,0
+1795403108618,0,TXN view-cart,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,615,340,2,3,http://localhost:3000/api/cart,0,0,0
+1795403109619,5,TXN checkout,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,313,438,2,3,http://localhost:3000/api/checkout,5,0,0
+1795403109766,5,TXN checkout,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,313,431,2,3,http://localhost:3000/api/checkout,5,0,0
+1795403111779,2,READ list,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,1238,187,2,3,http://localhost:3000/api/products,2,0,0
+1795403112258,2,READ list,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,1238,187,2,3,http://localhost:3000/api/products,2,0,0
+1795403112417,2,AUTH login-wrong,401,Unauthorized,TG lockout-probe (tài khoản lock*) 2-1,text,true,,314,259,1,3,http://localhost:3000/api/login,2,0,1
+1795403114267,2,READ search,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,450,202,2,3,http://localhost:3000/api/products?search=MacBook,2,0,0
+1795403114510,2,READ search,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,480,202,2,3,http://localhost:3000/api/products?search=Samsung,2,0,0
+1795403116094,1,READ detail,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,480,189,2,3,http://localhost:3000/api/products/2,1,0,0
+1795403116096,0,TXN add-cart,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,294,433,2,3,http://localhost:3000/api/cart,0,0,0
+1795403116097,0,TXN view-cart,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,756,340,2,3,http://localhost:3000/api/cart,0,0,0
+1795403117122,2,READ detail,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,448,189,2,3,http://localhost:3000/api/products/3,2,0,0
+1795403117125,1,TXN add-cart,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,294,423,2,3,http://localhost:3000/api/cart,1,0,0
+1795403117127,0,TXN view-cart,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,678,340,2,3,http://localhost:3000/api/cart,0,0,0
+1795403117427,2,AUTH login-wrong,401,Unauthorized,TG lockout-probe (tài khoản lock*) 2-1,text,true,,314,259,1,3,http://localhost:3000/api/login,2,0,1
+1795403117909,5,TXN checkout,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,313,433,2,2,http://localhost:3000/api/checkout,5,0,0
+1795403118979,5,TXN checkout,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,313,439,2,2,http://localhost:3000/api/checkout,5,0,0
+1795403120041,1,READ list,200,OK,TG workflow (AUTH → READ → TXN) 1-2,text,true,,1238,187,2,2,http://localhost:3000/api/products,1,0,0
+1795403120815,2,READ list,200,OK,TG workflow (AUTH → READ → TXN) 1-1,text,true,,1238,187,1,1,http://localhost:3000/api/products,2,0,0
