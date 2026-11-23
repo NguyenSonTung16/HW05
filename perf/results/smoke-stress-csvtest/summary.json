@@ -1,0 +1,339 @@
+{
+  "method": {
+    "percentile": "nearest-rank",
+    "throughput": "samples / (lastEnd - firstStart)",
+    "bucketSec": 10,
+    "p95LimitMs": 1000,
+    "errLimitPct": 1,
+    "window": {
+      "fromSec": 0,
+      "toSec": null
+    }
+  },
+  "total": {
+    "samples": 103,
+    "errors": 0,
+    "errorPct": 0,
+    "avg": 2.8,
+    "min": 0,
+    "max": 50,
+    "p50": 2,
+    "p90": 4,
+    "p95": 5,
+    "p99": 39,
+    "avg_ok": 2.8,
+    "p95_ok": 5,
+    "throughput": 2.6,
+    "spanSec": 39.8,
+    "codes": {
+      "200": 96,
+      "401": 7
+    }
+  },
+  "groups": {
+    "AUTH": {
+      "samples": 11,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 6.3,
+      "min": 2,
+      "max": 39,
+      "p50": 3,
+      "p90": 4,
+      "p95": 39,
+      "p99": 39,
+      "avg_ok": 6.3,
+      "p95_ok": 39,
+      "throughput": 0.3,
+      "spanSec": 35,
+      "codes": {
+        "200": 4,
+        "401": 7
+      }
+    },
+    "READ": {
+      "samples": 49,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 1.7,
+      "min": 1,
+      "max": 3,
+      "p50": 2,
+      "p90": 2,
+      "p95": 2,
+      "p99": 3,
+      "avg_ok": 1.7,
+      "p95_ok": 2,
+      "throughput": 1.3,
+      "spanSec": 37.7,
+      "codes": {
+        "200": 49
+      }
+    },
+    "TXN": {
+      "samples": 43,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 3.1,
+      "min": 0,
+      "max": 50,
+      "p50": 1,
+      "p90": 5,
+      "p95": 5,
+      "p99": 50,
+      "avg_ok": 3.1,
+      "p95_ok": 5,
+      "throughput": 1.3,
+      "spanSec": 32.6,
+      "codes": {
+        "200": 43
+      }
+    }
+  },
+  "labels": {
+    "AUTH login": {
+      "samples": 4,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 12.3,
+      "min": 3,
+      "max": 39,
+      "p50": 3,
+      "p90": 39,
+      "p95": 39,
+      "p99": 39,
+      "avg_ok": 12.3,
+      "p95_ok": 39,
+      "throughput": 0.3,
+      "spanSec": 14.8,
+      "codes": {
+        "200": 4
+      }
+    },
+    "AUTH login-wrong": {
+      "samples": 7,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 2.9,
+      "min": 2,
+      "max": 4,
+      "p50": 3,
+      "p90": 4,
+      "p95": 4,
+      "p99": 4,
+      "avg_ok": 2.9,
+      "p95_ok": 4,
+      "throughput": 0.2,
+      "spanSec": 30.1,
+      "codes": {
+        "401": 7
+      }
+    },
+    "READ detail": {
+      "samples": 15,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 1.7,
+      "min": 1,
+      "max": 2,
+      "p50": 2,
+      "p90": 2,
+      "p95": 2,
+      "p99": 2,
+      "avg_ok": 1.7,
+      "p95_ok": 2,
+      "throughput": 0.5,
+      "spanSec": 32.6,
+      "codes": {
+        "200": 15
+      }
+    },
+    "READ list": {
+      "samples": 17,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 1.7,
+      "min": 1,
+      "max": 3,
+      "p50": 2,
+      "p90": 2,
+      "p95": 3,
+      "p99": 3,
+      "avg_ok": 1.7,
+      "p95_ok": 3,
+      "throughput": 0.5,
+      "spanSec": 34.9,
+      "codes": {
+        "200": 17
+      }
+    },
+    "READ search": {
+      "samples": 17,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 1.8,
+      "min": 1,
+      "max": 3,
+      "p50": 2,
+      "p90": 2,
+      "p95": 3,
+      "p99": 3,
+      "avg_ok": 1.8,
+      "p95_ok": 3,
+      "throughput": 0.5,
+      "spanSec": 34.6,
+      "codes": {
+        "200": 17
+      }
+    },
+    "TXN add-cart": {
+      "samples": 15,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 1.1,
+      "min": 1,
+      "max": 2,
+      "p50": 1,
+      "p90": 2,
+      "p95": 2,
+      "p99": 2,
+      "avg_ok": 1.1,
+      "p95_ok": 2,
+      "throughput": 0.5,
+      "spanSec": 32.6,
+      "codes": {
+        "200": 15
+      }
+    },
+    "TXN checkout": {
+      "samples": 13,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 7.9,
+      "min": 4,
+      "max": 50,
+      "p50": 4,
+      "p90": 5,
+      "p95": 50,
+      "p99": 50,
+      "avg_ok": 7.9,
+      "p95_ok": 50,
+      "throughput": 0.5,
+      "spanSec": 27.3,
+      "codes": {
+        "200": 13
+      }
+    },
+    "TXN view-cart": {
+      "samples": 15,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 0.8,
+      "min": 0,
+      "max": 1,
+      "p50": 1,
+      "p90": 1,
+      "p95": 1,
+      "p99": 1,
+      "avg_ok": 0.8,
+      "p95_ok": 1,
+      "throughput": 0.5,
+      "spanSec": 32.6,
+      "codes": {
+        "200": 15
+      }
+    }
+  },
+  "series": [
+    {
+      "fromSec": 0,
+      "toSec": 10,
+      "samples": 13,
+      "rps": 1.3,
+      "errorPct": 0,
+      "p95": 50,
+      "avg": 8.8,
+      "maxThreads": 4
+    },
+    {
+      "fromSec": 10,
+      "toSec": 20,
+      "samples": 23,
+      "rps": 2.3,
+      "errorPct": 0,
+      "p95": 4,
+      "avg": 2.1,
+      "maxThreads": 5
+    },
+    {
+      "fromSec": 20,
+      "toSec": 30,
+      "samples": 33,
+      "rps": 3.3,
+      "errorPct": 0,
+      "p95": 5,
+      "avg": 1.8,
+      "maxThreads": 5
+    },
+    {
+      "fromSec": 30,
+      "toSec": 40,
+      "samples": 34,
+      "rps": 3.4,
+      "errorPct": 0,
+      "p95": 5,
+      "avg": 1.8,
+      "maxThreads": 5
+    }
+  ],
+  "stability": {
+    "healthyWindows": 4,
+    "windows": 4,
+    "maxHealthyRps": 3.4,
+    "firstBreach": null
+  },
+  "failures": {},
+  "badLines": [],
+  "run": {
+    "plan": "23120399_Stress_20261123.jmx",
+    "studentId": "23120399",
+    "scenario": "Stress",
+    "planDate": "20261123",
+    "props": [
+      "data_dir=../data-csvtest",
+      "s1_threads=2",
+      "s1_duration=40",
+      "s2_threads=2",
+      "s2_delay=5",
+      "s2_duration=35",
+      "s3_threads=2",
+      "s3_delay=10",
+      "s3_duration=30",
+      "s4_threads=2",
+      "s4_delay=15",
+      "s4_duration=25",
+      "s5_threads=2",
+      "s5_delay=20",
+      "s5_duration=20",
+      "total_duration=40"
+    ],
+    "base": "http://localhost:3000",
+    "hostname": "MSI",
+    "platform": "Windows_NT 10.0.26300 x64",
+    "cpu": "AMD Ryzen 5 5600H with Radeon Graphics         ",
+    "logicalCores": 12,
+    "totalMemGB": 15.4,
+    "node": "v24.11.1",
+    "startIso": "2026-11-23T03:55:38.531Z",
+    "endIso": "2026-11-23T03:56:25.690Z",
+    "jmeterExitCode": 0
+  },
+  "backendUsage": {
+    "samples": 46,
+    "cpuAvg": 0,
+    "cpuMax": 0.1,
+    "workingSetStartMb": 51.6,
+    "workingSetEndMb": 54,
+    "workingSetMaxMb": 54
+  }
+}
