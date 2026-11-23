@@ -1,0 +1,1027 @@
+2026-11-23 11:04:35,959 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2026-11-23 11:04:35,991 INFO o.a.j.JMeter: Loading user properties from: D:\Jmeter\apache-jmeter-5.6.3\bin\user.properties
+2026-11-23 11:04:35,991 INFO o.a.j.JMeter: Loading system properties from: D:\Jmeter\apache-jmeter-5.6.3\bin\system.properties
+2026-11-23 11:04:35,991 INFO o.a.j.JMeter: Setting JMeter property: jmeter.save.saveservice.output_format=csv
+2026-11-23 11:04:35,994 INFO o.a.j.JMeter: Setting JMeter property: jmeter.save.saveservice.print_field_names=true
+2026-11-23 11:04:35,994 INFO o.a.j.JMeter: Setting JMeter property: jmeter.save.saveservice.thread_counts=true
+2026-11-23 11:04:35,994 INFO o.a.j.JMeter: Setting JMeter property: jmeter.save.saveservice.latency=true
+2026-11-23 11:04:35,994 INFO o.a.j.JMeter: Setting JMeter property: jmeter.save.saveservice.connect_time=true
+2026-11-23 11:04:35,996 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2026-11-23 11:04:35,996 INFO o.a.j.JMeter: Version 5.6.3
+2026-11-23 11:04:35,996 INFO o.a.j.JMeter: java.version=17.0.20
+2026-11-23 11:04:35,996 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2026-11-23 11:04:35,996 INFO o.a.j.JMeter: os.name=Windows 11
+2026-11-23 11:04:35,996 INFO o.a.j.JMeter: os.arch=amd64
+2026-11-23 11:04:35,996 INFO o.a.j.JMeter: os.version=10.0
+2026-11-23 11:04:35,996 INFO o.a.j.JMeter: file.encoding=Cp1252
+2026-11-23 11:04:35,996 INFO o.a.j.JMeter: java.awt.headless=true
+2026-11-23 11:04:35,996 INFO o.a.j.JMeter: Max memory     =1073741824
+2026-11-23 11:04:35,996 INFO o.a.j.JMeter: Available Processors =12
+2026-11-23 11:04:36,006 INFO o.a.j.JMeter: Default Locale=English (EN)
+2026-11-23 11:04:36,006 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2026-11-23 11:04:36,006 INFO o.a.j.JMeter: JMeterHome=D:\Jmeter\apache-jmeter-5.6.3
+2026-11-23 11:04:36,006 INFO o.a.j.JMeter: user.dir  =D:\vscode\Software testing\HW05
+2026-11-23 11:04:36,006 INFO o.a.j.JMeter: PWD       =D:\vscode\Software testing\HW05
+2026-11-23 11:04:36,015 INFO o.a.j.JMeter: IP: 192.168.1.223 Name: MSI FullName: host.docker.internal
+2026-11-23 11:04:36,022 INFO o.a.j.JMeter: Setting property 'jmeter.reportgenerator.outputdir' to:'D:\vscode\Software testing\HW05\perf\results\stress\html'
+2026-11-23 11:04:36,022 INFO o.a.j.s.FileServer: Default base='D:\vscode\Software testing\HW05'
+2026-11-23 11:04:36,038 INFO o.a.j.s.FileServer: Set new base='D:\vscode\Software testing\HW05\perf\plans'
+2026-11-23 11:04:36,221 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2026-11-23 11:04:36,247 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2026-11-23 11:04:36,250 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2026-11-23 11:04:36,253 INFO o.a.j.s.SaveService: Loading file: perf\plans\23120399_Stress_20261123.jmx
+2026-11-23 11:04:36,314 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-11-23 11:04:36,314 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-11-23 11:04:36,314 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-11-23 11:04:36,314 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-11-23 11:04:36,314 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2026-11-23 11:04:36,315 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2026-11-23 11:04:36,400 INFO o.a.j.JMeter: Creating summariser <summary>
+2026-11-23 11:04:36,403 INFO o.a.j.r.d.ReportGenerator: ReportGenerator will use for Parsing the separator: ','
+2026-11-23 11:04:36,403 INFO o.a.j.r.d.ReportGenerator: Will generate report at end of test from  results file: perf\results\stress\23120399_Stress_20261123.jtl
+2026-11-23 11:04:36,403 INFO o.a.j.r.d.ReportGenerator: Reading report generator properties from: D:\Jmeter\apache-jmeter-5.6.3\bin\reportgenerator.properties
+2026-11-23 11:04:36,407 INFO o.a.j.r.d.ReportGenerator: Merging with JMeter properties
+2026-11-23 11:04:36,412 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.temp_dir' not found, using default value 'temp' instead.
+2026-11-23 11:04:36,414 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.apdex_per_transaction' not found, using default value 'null' instead.
+2026-11-23 11:04:36,415 INFO o.a.j.r.c.ReportGeneratorConfiguration: apdex_per_transaction is empty, not APDEX per transaction customization
+2026-11-23 11:04:36,415 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.sample_filter' not found, using default value 'null' instead.
+2026-11-23 11:04:36,415 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.report_title' not found, using default value 'null' instead.
+2026-11-23 11:04:36,415 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.start_date' not found, using default value 'null' instead.
+2026-11-23 11:04:36,415 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.end_date' not found, using default value 'null' instead.
+2026-11-23 11:04:36,415 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.date_format' not found, using default value 'null' instead.
+2026-11-23 11:04:36,415 INFO o.a.j.r.c.ReportGeneratorConfiguration: Will use date range start date: null, end date: null
+2026-11-23 11:04:36,419 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.totalTPS.exclude_controllers' not found, using default value 'false' instead.
+2026-11-23 11:04:36,419 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.activeThreadsOverTime.exclude_controllers' not found, using default value 'false' instead.
+2026-11-23 11:04:36,419 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.timeVsThreads.exclude_controllers' not found, using default value 'false' instead.
+2026-11-23 11:04:36,419 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimeDistribution.exclude_controllers' not found, using default value 'false' instead.
+2026-11-23 11:04:36,419 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.transactionsPerSecond.exclude_controllers' not found, using default value 'false' instead.
+2026-11-23 11:04:36,419 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentiles.exclude_controllers' not found, using default value 'false' instead.
+2026-11-23 11:04:36,419 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentilesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2026-11-23 11:04:36,419 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2026-11-23 11:04:36,419 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.connectTimeOverTime.exclude_controllers' not found, using default value 'false' instead.
+2026-11-23 11:04:36,419 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.latenciesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2026-11-23 11:04:36,424 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.filters_only_sample_series' not found, using default value 'true' instead.
+2026-11-23 11:04:36,424 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.series_filter' not found, using default value '' instead.
+2026-11-23 11:04:36,424 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.show_controllers_only' not found, using default value 'false' instead.
+2026-11-23 11:04:36,425 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.filters_only_sample_series' not found, using default value 'true' instead.
+2026-11-23 11:04:36,425 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.series_filter' not found, using default value '' instead.
+2026-11-23 11:04:36,425 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.show_controllers_only' not found, using default value 'false' instead.
+2026-11-23 11:04:36,444 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2026-11-23 11:04:36,444 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2026-11-23 11:04:36,446 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2026-11-23 11:04:36,452 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2026-11-23 11:04:36,452 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2026-11-23 11:04:36,536 INFO o.a.j.JMeter: Running test (1795406676536)
+2026-11-23 11:04:36,552 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : TG b?c 1 workflow (AUTH ? READ ? TXN)
+2026-11-23 11:04:36,553 INFO o.a.j.e.StandardJMeterEngine: Starting 25 threads for group TG b?c 1 workflow (AUTH ? READ ? TXN).
+2026-11-23 11:04:36,553 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-11-23 11:04:36,553 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=25 ramp-up=30 delayedStart=false
+2026-11-23 11:04:36,578 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2026-11-23 11:04:36,578 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 2 : TG b?c 2 workflow (AUTH ? READ ? TXN)
+2026-11-23 11:04:36,578 INFO o.a.j.e.StandardJMeterEngine: Starting 25 threads for group TG b?c 2 workflow (AUTH ? READ ? TXN).
+2026-11-23 11:04:36,578 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-11-23 11:04:36,578 INFO o.a.j.t.ThreadGroup: Starting thread group... number=2 threads=25 ramp-up=30 delayedStart=false
+2026-11-23 11:04:36,596 INFO o.a.j.t.ThreadGroup: Started thread group number 2
+2026-11-23 11:04:36,597 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 3 : TG b?c 3 workflow (AUTH ? READ ? TXN)
+2026-11-23 11:04:36,597 INFO o.a.j.e.StandardJMeterEngine: Starting 50 threads for group TG b?c 3 workflow (AUTH ? READ ? TXN).
+2026-11-23 11:04:36,597 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-11-23 11:04:36,597 INFO o.a.j.t.ThreadGroup: Starting thread group... number=3 threads=50 ramp-up=30 delayedStart=false
+2026-11-23 11:04:36,644 INFO o.a.j.t.ThreadGroup: Started thread group number 3
+2026-11-23 11:04:36,645 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 4 : TG b?c 4 workflow (AUTH ? READ ? TXN)
+2026-11-23 11:04:36,645 INFO o.a.j.e.StandardJMeterEngine: Starting 100 threads for group TG b?c 4 workflow (AUTH ? READ ? TXN).
+2026-11-23 11:04:36,645 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-11-23 11:04:36,645 INFO o.a.j.t.ThreadGroup: Starting thread group... number=4 threads=100 ramp-up=30 delayedStart=false
+2026-11-23 11:04:36,657 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-1
+2026-11-23 11:04:36,667 INFO o.a.j.s.FileServer: Stored: ../data/orders.csv
+2026-11-23 11:04:36,711 INFO o.a.j.s.FileServer: Stored: ../data/products.csv
+2026-11-23 11:04:36,711 INFO o.a.j.s.FileServer: Stored: ../data/users.csv
+2026-11-23 11:04:36,735 INFO o.a.j.t.ThreadGroup: Started thread group number 4
+2026-11-23 11:04:36,735 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 5 : TG b?c 5 workflow (AUTH ? READ ? TXN)
+2026-11-23 11:04:36,735 INFO o.a.j.e.StandardJMeterEngine: Starting 200 threads for group TG b?c 5 workflow (AUTH ? READ ? TXN).
+2026-11-23 11:04:36,736 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-11-23 11:04:36,736 INFO o.a.j.t.ThreadGroup: Starting thread group... number=5 threads=200 ramp-up=30 delayedStart=false
+2026-11-23 11:04:36,736 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = MSI
+2026-11-23 11:04:36,750 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2026-11-23 11:04:36,754 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2026-11-23 11:04:36,754 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2026-11-23 11:04:36,754 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2026-11-23 11:04:36,754 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2026-11-23 11:04:36,857 INFO o.a.j.t.ThreadGroup: Started thread group number 5
+2026-11-23 11:04:36,857 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 6 : TG lockout-probe (tài kho?n lock*)
+2026-11-23 11:04:36,858 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group TG lockout-probe (tài kho?n lock*).
+2026-11-23 11:04:36,858 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-11-23 11:04:36,858 INFO o.a.j.t.ThreadGroup: Starting thread group... number=6 threads=1 ramp-up=1 delayedStart=false
+2026-11-23 11:04:36,858 INFO o.a.j.t.ThreadGroup: Started thread group number 6
+2026-11-23 11:04:36,858 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2026-11-23 11:04:36,858 INFO o.a.j.t.JMeterThread: Thread started: TG lockout-probe (tài kho?n lock*) 6-1
+2026-11-23 11:04:36,859 INFO o.a.j.s.FileServer: Stored: ../data/lock-users.csv
+2026-11-23 11:04:37,854 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-2
+2026-11-23 11:04:39,063 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-3
+2026-11-23 11:04:40,279 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-4
+2026-11-23 11:04:41,467 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-5
+2026-11-23 11:04:42,655 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-6
+2026-11-23 11:04:43,874 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-7
+2026-11-23 11:04:45,059 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-8
+2026-11-23 11:04:46,250 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-9
+2026-11-23 11:04:47,455 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-10
+2026-11-23 11:04:48,639 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-11
+2026-11-23 11:04:49,865 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-12
+2026-11-23 11:04:51,056 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-13
+2026-11-23 11:04:52,244 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-14
+2026-11-23 11:04:53,462 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-15
+2026-11-23 11:04:54,631 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-16
+2026-11-23 11:04:55,861 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-17
+2026-11-23 11:04:57,040 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-18
+2026-11-23 11:04:58,258 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-19
+2026-11-23 11:04:59,439 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-20
+2026-11-23 11:05:00,043 INFO o.a.j.r.Summariser: summary +    184 in 00:00:24 =    7.8/s Avg:     2 Min:     0 Max:    40 Err:     0 (0.00%) Active: 21 Started: 21 Finished: 0
+2026-11-23 11:05:00,631 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-21
+2026-11-23 11:05:01,853 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-22
+2026-11-23 11:05:03,026 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-23
+2026-11-23 11:05:04,227 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-24
+2026-11-23 11:05:05,430 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-25
+2026-11-23 11:05:30,068 INFO o.a.j.r.Summariser: summary +    570 in 00:00:30 =   19.0/s Avg:     1 Min:     0 Max:     7 Err:     0 (0.00%) Active: 26 Started: 26 Finished: 0
+2026-11-23 11:05:30,069 INFO o.a.j.r.Summariser: summary =    754 in 00:00:54 =   14.1/s Avg:     1 Min:     0 Max:    40 Err:     0 (0.00%)
+2026-11-23 11:06:00,200 INFO o.a.j.r.Summariser: summary +    564 in 00:00:30 =   18.7/s Avg:     1 Min:     0 Max:     6 Err:     0 (0.00%) Active: 26 Started: 26 Finished: 0
+2026-11-23 11:06:00,201 INFO o.a.j.r.Summariser: summary =   1318 in 00:01:24 =   15.8/s Avg:     1 Min:     0 Max:    40 Err:     0 (0.00%)
+2026-11-23 11:06:30,026 INFO o.a.j.r.Summariser: summary +    557 in 00:00:30 =   18.7/s Avg:     1 Min:     0 Max:     9 Err:     0 (0.00%) Active: 26 Started: 26 Finished: 0
+2026-11-23 11:06:30,026 INFO o.a.j.r.Summariser: summary =   1875 in 00:01:53 =   16.5/s Avg:     1 Min:     0 Max:    40 Err:     0 (0.00%)
+2026-11-23 11:07:00,001 INFO o.a.j.r.Summariser: summary +    574 in 00:00:30 =   19.1/s Avg:     1 Min:     0 Max:     7 Err:     0 (0.00%) Active: 26 Started: 26 Finished: 0
+2026-11-23 11:07:00,002 INFO o.a.j.r.Summariser: summary =   2449 in 00:02:23 =   17.1/s Avg:     1 Min:     0 Max:    40 Err:     0 (0.00%)
+2026-11-23 11:07:30,004 INFO o.a.j.r.Summariser: summary +    573 in 00:00:30 =   19.1/s Avg:     1 Min:     0 Max:     8 Err:     0 (0.00%) Active: 26 Started: 26 Finished: 0
+2026-11-23 11:07:30,005 INFO o.a.j.r.Summariser: summary =   3022 in 00:02:53 =   17.4/s Avg:     1 Min:     0 Max:    40 Err:     0 (0.00%)
+2026-11-23 11:07:36,579 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-1
+2026-11-23 11:07:37,780 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-2
+2026-11-23 11:07:38,979 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-3
+2026-11-23 11:07:40,179 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-4
+2026-11-23 11:07:41,380 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-5
+2026-11-23 11:07:42,579 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-6
+2026-11-23 11:07:43,779 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-7
+2026-11-23 11:07:44,980 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-8
+2026-11-23 11:07:46,179 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-9
+2026-11-23 11:07:47,381 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-10
+2026-11-23 11:07:48,580 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-11
+2026-11-23 11:07:49,779 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-12
+2026-11-23 11:07:50,980 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-13
+2026-11-23 11:07:52,180 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-14
+2026-11-23 11:07:53,380 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-15
+2026-11-23 11:07:54,580 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-16
+2026-11-23 11:07:55,780 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-17
+2026-11-23 11:07:56,980 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-18
+2026-11-23 11:07:58,180 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-19
+2026-11-23 11:07:59,380 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-20
+2026-11-23 11:08:00,060 INFO o.a.j.r.Summariser: summary +    746 in 00:00:30 =   24.8/s Avg:     1 Min:     0 Max:     6 Err:     0 (0.00%) Active: 46 Started: 46 Finished: 0
+2026-11-23 11:08:00,060 INFO o.a.j.r.Summariser: summary =   3768 in 00:03:24 =   18.5/s Avg:     1 Min:     0 Max:    40 Err:     0 (0.00%)
+2026-11-23 11:08:00,580 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-21
+2026-11-23 11:08:01,780 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-22
+2026-11-23 11:08:02,979 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-23
+2026-11-23 11:08:04,179 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-24
+2026-11-23 11:08:05,380 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-25
+2026-11-23 11:08:30,076 INFO o.a.j.r.Summariser: summary +   1109 in 00:00:30 =   36.9/s Avg:     1 Min:     0 Max:    98 Err:     0 (0.00%) Active: 51 Started: 51 Finished: 0
+2026-11-23 11:08:30,076 INFO o.a.j.r.Summariser: summary =   4877 in 00:03:54 =   20.9/s Avg:     1 Min:     0 Max:    98 Err:     0 (0.00%)
+2026-11-23 11:09:00,081 INFO o.a.j.r.Summariser: summary +   1139 in 00:00:30 =   38.0/s Avg:     1 Min:     0 Max:    12 Err:     0 (0.00%) Active: 51 Started: 51 Finished: 0
+2026-11-23 11:09:00,081 INFO o.a.j.r.Summariser: summary =   6016 in 00:04:24 =   22.8/s Avg:     1 Min:     0 Max:    98 Err:     0 (0.00%)
+2026-11-23 11:09:30,005 INFO o.a.j.r.Summariser: summary +   1134 in 00:00:30 =   37.9/s Avg:     1 Min:     0 Max:     7 Err:     0 (0.00%) Active: 51 Started: 51 Finished: 0
+2026-11-23 11:09:30,005 INFO o.a.j.r.Summariser: summary =   7150 in 00:04:53 =   24.4/s Avg:     1 Min:     0 Max:    98 Err:     0 (0.00%)
+2026-11-23 11:10:00,025 INFO o.a.j.r.Summariser: summary +   1155 in 00:00:30 =   38.5/s Avg:     1 Min:     0 Max:    11 Err:     0 (0.00%) Active: 51 Started: 51 Finished: 0
+2026-11-23 11:10:00,025 INFO o.a.j.r.Summariser: summary =   8305 in 00:05:23 =   25.7/s Avg:     1 Min:     0 Max:    98 Err:     0 (0.00%)
+2026-11-23 11:10:30,015 INFO o.a.j.r.Summariser: summary +   1144 in 00:00:30 =   38.1/s Avg:     1 Min:     0 Max:    11 Err:     0 (0.00%) Active: 51 Started: 51 Finished: 0
+2026-11-23 11:10:30,015 INFO o.a.j.r.Summariser: summary =   9449 in 00:05:53 =   26.7/s Avg:     1 Min:     0 Max:    98 Err:     0 (0.00%)
+2026-11-23 11:10:36,597 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-1
+2026-11-23 11:10:37,198 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-2
+2026-11-23 11:10:37,798 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-3
+2026-11-23 11:10:38,398 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-4
+2026-11-23 11:10:38,998 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-5
+2026-11-23 11:10:39,597 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-6
+2026-11-23 11:10:40,198 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-7
+2026-11-23 11:10:40,798 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-8
+2026-11-23 11:10:41,397 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-9
+2026-11-23 11:10:41,998 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-10
+2026-11-23 11:10:42,598 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-11
+2026-11-23 11:10:43,197 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-12
+2026-11-23 11:10:43,798 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-13
+2026-11-23 11:10:44,398 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-14
+2026-11-23 11:10:44,999 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-15
+2026-11-23 11:10:45,597 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-16
+2026-11-23 11:10:46,198 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-17
+2026-11-23 11:10:46,798 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-18
+2026-11-23 11:10:47,398 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-19
+2026-11-23 11:10:47,998 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-20
+2026-11-23 11:10:48,598 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-21
+2026-11-23 11:10:49,198 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-22
+2026-11-23 11:10:49,799 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-23
+2026-11-23 11:10:50,397 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-24
+2026-11-23 11:10:50,997 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-25
+2026-11-23 11:10:51,597 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-26
+2026-11-23 11:10:52,197 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-27
+2026-11-23 11:10:52,798 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-28
+2026-11-23 11:10:53,398 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-29
+2026-11-23 11:10:53,998 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-30
+2026-11-23 11:10:54,597 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-31
+2026-11-23 11:10:55,198 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-32
+2026-11-23 11:10:55,799 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-33
+2026-11-23 11:10:56,398 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-34
+2026-11-23 11:10:56,998 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-35
+2026-11-23 11:10:57,600 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-36
+2026-11-23 11:10:58,197 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-37
+2026-11-23 11:10:58,799 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-38
+2026-11-23 11:10:59,397 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-39
+2026-11-23 11:10:59,998 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-40
+2026-11-23 11:11:00,001 INFO o.a.j.r.Summariser: summary +   1496 in 00:00:30 =   49.9/s Avg:     1 Min:     0 Max:     8 Err:     0 (0.00%) Active: 91 Started: 91 Finished: 0
+2026-11-23 11:11:00,001 INFO o.a.j.r.Summariser: summary =  10945 in 00:06:23 =   28.5/s Avg:     1 Min:     0 Max:    98 Err:     0 (0.00%)
+2026-11-23 11:11:00,598 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-41
+2026-11-23 11:11:01,200 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-42
+2026-11-23 11:11:01,797 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-43
+2026-11-23 11:11:02,397 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-44
+2026-11-23 11:11:02,997 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-45
+2026-11-23 11:11:03,598 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-46
+2026-11-23 11:11:04,197 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-47
+2026-11-23 11:11:04,799 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-48
+2026-11-23 11:11:05,397 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-49
+2026-11-23 11:11:05,999 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-50
+2026-11-23 11:11:30,010 INFO o.a.j.r.Summariser: summary +   2257 in 00:00:30 =   75.2/s Avg:     1 Min:     0 Max:     6 Err:     0 (0.00%) Active: 101 Started: 101 Finished: 0
+2026-11-23 11:11:30,010 INFO o.a.j.r.Summariser: summary =  13202 in 00:06:53 =   31.9/s Avg:     1 Min:     0 Max:    98 Err:     0 (0.00%)
+2026-11-23 11:12:00,005 INFO o.a.j.r.Summariser: summary +   2253 in 00:00:30 =   75.1/s Avg:     1 Min:     0 Max:     6 Err:     0 (0.00%) Active: 101 Started: 101 Finished: 0
+2026-11-23 11:12:00,006 INFO o.a.j.r.Summariser: summary =  15455 in 00:07:23 =   34.9/s Avg:     1 Min:     0 Max:    98 Err:     0 (0.00%)
+2026-11-23 11:12:30,003 INFO o.a.j.r.Summariser: summary +   2216 in 00:00:30 =   73.9/s Avg:     1 Min:     0 Max:     6 Err:     0 (0.00%) Active: 101 Started: 101 Finished: 0
+2026-11-23 11:12:30,003 INFO o.a.j.r.Summariser: summary =  17671 in 00:07:53 =   37.3/s Avg:     1 Min:     0 Max:    98 Err:     0 (0.00%)
+2026-11-23 11:13:00,058 INFO o.a.j.r.Summariser: summary +   2304 in 00:00:30 =   76.7/s Avg:     1 Min:     0 Max:     6 Err:     0 (0.00%) Active: 101 Started: 101 Finished: 0
+2026-11-23 11:13:00,058 INFO o.a.j.r.Summariser: summary =  19975 in 00:08:24 =   39.7/s Avg:     1 Min:     0 Max:    98 Err:     0 (0.00%)
+2026-11-23 11:13:30,018 INFO o.a.j.r.Summariser: summary +   2269 in 00:00:30 =   75.7/s Avg:     1 Min:     0 Max:     8 Err:     0 (0.00%) Active: 101 Started: 101 Finished: 0
+2026-11-23 11:13:30,018 INFO o.a.j.r.Summariser: summary =  22244 in 00:08:53 =   41.7/s Avg:     1 Min:     0 Max:    98 Err:     0 (0.00%)
+2026-11-23 11:13:36,646 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-1
+2026-11-23 11:13:36,946 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-2
+2026-11-23 11:13:37,246 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-3
+2026-11-23 11:13:37,546 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-4
+2026-11-23 11:13:37,847 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-5
+2026-11-23 11:13:38,146 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-6
+2026-11-23 11:13:38,446 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-7
+2026-11-23 11:13:38,746 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-8
+2026-11-23 11:13:39,047 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-9
+2026-11-23 11:13:39,346 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-10
+2026-11-23 11:13:39,646 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-11
+2026-11-23 11:13:39,947 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-12
+2026-11-23 11:13:40,247 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-13
+2026-11-23 11:13:40,547 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-14
+2026-11-23 11:13:40,846 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-15
+2026-11-23 11:13:41,146 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-16
+2026-11-23 11:13:41,446 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-17
+2026-11-23 11:13:41,748 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-18
+2026-11-23 11:13:42,047 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-19
+2026-11-23 11:13:42,346 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-20
+2026-11-23 11:13:42,646 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-21
+2026-11-23 11:13:42,947 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-22
+2026-11-23 11:13:43,246 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-23
+2026-11-23 11:13:43,546 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-24
+2026-11-23 11:13:43,847 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-25
+2026-11-23 11:13:44,149 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-26
+2026-11-23 11:13:44,446 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-27
+2026-11-23 11:13:44,748 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-28
+2026-11-23 11:13:45,047 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-29
+2026-11-23 11:13:45,347 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-30
+2026-11-23 11:13:45,647 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-31
+2026-11-23 11:13:45,953 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-32
+2026-11-23 11:13:46,247 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-33
+2026-11-23 11:13:46,546 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-34
+2026-11-23 11:13:46,847 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-35
+2026-11-23 11:13:47,147 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-36
+2026-11-23 11:13:47,447 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-37
+2026-11-23 11:13:47,747 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-38
+2026-11-23 11:13:48,046 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-39
+2026-11-23 11:13:48,346 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-40
+2026-11-23 11:13:48,646 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-41
+2026-11-23 11:13:48,947 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-42
+2026-11-23 11:13:49,247 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-43
+2026-11-23 11:13:49,547 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-44
+2026-11-23 11:13:49,846 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-45
+2026-11-23 11:13:50,147 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-46
+2026-11-23 11:13:50,447 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-47
+2026-11-23 11:13:50,747 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-48
+2026-11-23 11:13:51,047 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-49
+2026-11-23 11:13:51,346 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-50
+2026-11-23 11:13:51,647 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-51
+2026-11-23 11:13:51,948 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-52
+2026-11-23 11:13:52,247 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-53
+2026-11-23 11:13:52,546 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-54
+2026-11-23 11:13:52,848 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-55
+2026-11-23 11:13:53,146 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-56
+2026-11-23 11:13:53,446 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-57
+2026-11-23 11:13:53,746 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-58
+2026-11-23 11:13:54,047 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-59
+2026-11-23 11:13:54,347 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-60
+2026-11-23 11:13:54,647 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-61
+2026-11-23 11:13:54,947 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-62
+2026-11-23 11:13:55,246 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-63
+2026-11-23 11:13:55,546 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-64
+2026-11-23 11:13:55,846 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-65
+2026-11-23 11:13:56,146 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-66
+2026-11-23 11:13:56,446 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-67
+2026-11-23 11:13:56,747 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-68
+2026-11-23 11:13:57,046 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-69
+2026-11-23 11:13:57,349 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-70
+2026-11-23 11:13:57,646 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-71
+2026-11-23 11:13:57,947 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-72
+2026-11-23 11:13:58,246 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-73
+2026-11-23 11:13:58,546 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-74
+2026-11-23 11:13:58,849 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-75
+2026-11-23 11:13:59,146 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-76
+2026-11-23 11:13:59,448 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-77
+2026-11-23 11:13:59,747 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-78
+2026-11-23 11:14:00,011 INFO o.a.j.r.Summariser: summary +   2938 in 00:00:30 =   98.0/s Avg:     1 Min:     0 Max:    11 Err:     0 (0.00%) Active: 179 Started: 179 Finished: 0
+2026-11-23 11:14:00,011 INFO o.a.j.r.Summariser: summary =  25182 in 00:09:23 =   44.7/s Avg:     1 Min:     0 Max:    98 Err:     0 (0.00%)
+2026-11-23 11:14:00,046 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-79
+2026-11-23 11:14:00,346 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-80
+2026-11-23 11:14:00,646 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-81
+2026-11-23 11:14:00,947 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-82
+2026-11-23 11:14:01,247 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-83
+2026-11-23 11:14:01,547 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-84
+2026-11-23 11:14:01,848 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-85
+2026-11-23 11:14:02,147 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-86
+2026-11-23 11:14:02,447 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-87
+2026-11-23 11:14:02,747 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-88
+2026-11-23 11:14:03,046 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-89
+2026-11-23 11:14:03,346 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-90
+2026-11-23 11:14:03,646 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-91
+2026-11-23 11:14:03,946 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-92
+2026-11-23 11:14:04,247 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-93
+2026-11-23 11:14:04,546 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-94
+2026-11-23 11:14:04,847 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-95
+2026-11-23 11:14:05,146 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-96
+2026-11-23 11:14:05,446 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-97
+2026-11-23 11:14:05,746 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-98
+2026-11-23 11:14:06,047 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-99
+2026-11-23 11:14:06,347 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-100
+2026-11-23 11:14:30,002 INFO o.a.j.r.Summariser: summary +   4497 in 00:00:30 =  149.9/s Avg:     1 Min:     0 Max:    12 Err:     0 (0.00%) Active: 201 Started: 201 Finished: 0
+2026-11-23 11:14:30,002 INFO o.a.j.r.Summariser: summary =  29679 in 00:09:53 =   50.0/s Avg:     1 Min:     0 Max:    98 Err:     0 (0.00%)
+2026-11-23 11:15:00,018 INFO o.a.j.r.Summariser: summary +   4495 in 00:00:30 =  149.8/s Avg:     1 Min:     0 Max:     9 Err:     0 (0.00%) Active: 201 Started: 201 Finished: 0
+2026-11-23 11:15:00,018 INFO o.a.j.r.Summariser: summary =  34174 in 00:10:23 =   54.8/s Avg:     1 Min:     0 Max:    98 Err:     0 (0.00%)
+2026-11-23 11:15:30,001 INFO o.a.j.r.Summariser: summary +   4491 in 00:00:30 =  149.8/s Avg:     1 Min:     0 Max:    58 Err:     0 (0.00%) Active: 201 Started: 201 Finished: 0
+2026-11-23 11:15:30,001 INFO o.a.j.r.Summariser: summary =  38665 in 00:10:53 =   59.2/s Avg:     1 Min:     0 Max:    98 Err:     0 (0.00%)
+2026-11-23 11:16:00,009 INFO o.a.j.r.Summariser: summary +   4528 in 00:00:30 =  150.9/s Avg:     1 Min:     0 Max:     5 Err:     0 (0.00%) Active: 201 Started: 201 Finished: 0
+2026-11-23 11:16:00,010 INFO o.a.j.r.Summariser: summary =  43193 in 00:11:23 =   63.2/s Avg:     1 Min:     0 Max:    98 Err:     0 (0.00%)
+2026-11-23 11:16:30,000 INFO o.a.j.r.Summariser: summary +   4522 in 00:00:30 =  150.8/s Avg:     1 Min:     0 Max:     7 Err:     0 (0.00%) Active: 201 Started: 201 Finished: 0
+2026-11-23 11:16:30,000 INFO o.a.j.r.Summariser: summary =  47715 in 00:11:53 =   66.9/s Avg:     1 Min:     0 Max:    98 Err:     0 (0.00%)
+2026-11-23 11:16:36,736 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-1
+2026-11-23 11:16:36,890 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-2
+2026-11-23 11:16:37,037 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-3
+2026-11-23 11:16:37,187 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-4
+2026-11-23 11:16:37,337 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-5
+2026-11-23 11:16:37,486 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-6
+2026-11-23 11:16:37,637 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-7
+2026-11-23 11:16:37,787 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-8
+2026-11-23 11:16:37,939 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-9
+2026-11-23 11:16:38,087 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-10
+2026-11-23 11:16:38,236 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-11
+2026-11-23 11:16:38,387 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-12
+2026-11-23 11:16:38,536 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-13
+2026-11-23 11:16:38,687 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-14
+2026-11-23 11:16:38,837 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-15
+2026-11-23 11:16:38,986 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-16
+2026-11-23 11:16:39,136 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-17
+2026-11-23 11:16:39,287 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-18
+2026-11-23 11:16:39,437 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-19
+2026-11-23 11:16:39,586 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-20
+2026-11-23 11:16:39,736 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-21
+2026-11-23 11:16:39,887 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-22
+2026-11-23 11:16:40,037 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-23
+2026-11-23 11:16:40,187 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-24
+2026-11-23 11:16:40,337 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-25
+2026-11-23 11:16:40,487 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-26
+2026-11-23 11:16:40,637 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-27
+2026-11-23 11:16:40,787 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-28
+2026-11-23 11:16:40,936 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-29
+2026-11-23 11:16:41,086 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-30
+2026-11-23 11:16:41,236 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-31
+2026-11-23 11:16:41,386 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-32
+2026-11-23 11:16:41,536 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-33
+2026-11-23 11:16:41,686 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-34
+2026-11-23 11:16:41,837 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-35
+2026-11-23 11:16:41,987 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-36
+2026-11-23 11:16:42,138 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-37
+2026-11-23 11:16:42,289 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-38
+2026-11-23 11:16:42,436 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-39
+2026-11-23 11:16:42,588 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-40
+2026-11-23 11:16:42,737 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-41
+2026-11-23 11:16:42,888 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-42
+2026-11-23 11:16:43,036 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-43
+2026-11-23 11:16:43,186 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-44
+2026-11-23 11:16:43,336 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-45
+2026-11-23 11:16:43,486 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-46
+2026-11-23 11:16:43,636 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-47
+2026-11-23 11:16:43,787 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-48
+2026-11-23 11:16:43,936 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-49
+2026-11-23 11:16:44,087 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-50
+2026-11-23 11:16:44,236 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-51
+2026-11-23 11:16:44,386 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-52
+2026-11-23 11:16:44,537 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-53
+2026-11-23 11:16:44,686 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-54
+2026-11-23 11:16:44,836 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-55
+2026-11-23 11:16:44,988 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-56
+2026-11-23 11:16:45,138 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-57
+2026-11-23 11:16:45,287 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-58
+2026-11-23 11:16:45,437 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-59
+2026-11-23 11:16:45,586 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-60
+2026-11-23 11:16:45,737 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-61
+2026-11-23 11:16:45,886 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-62
+2026-11-23 11:16:46,040 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-63
+2026-11-23 11:16:46,187 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-64
+2026-11-23 11:16:46,337 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-65
+2026-11-23 11:16:46,487 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-66
+2026-11-23 11:16:46,637 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-67
+2026-11-23 11:16:46,787 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-68
+2026-11-23 11:16:46,936 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-69
+2026-11-23 11:16:47,087 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-70
+2026-11-23 11:16:47,236 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-71
+2026-11-23 11:16:47,386 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-72
+2026-11-23 11:16:47,536 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-73
+2026-11-23 11:16:47,686 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-74
+2026-11-23 11:16:47,837 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-75
+2026-11-23 11:16:47,987 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-76
+2026-11-23 11:16:48,137 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-77
+2026-11-23 11:16:48,287 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-78
+2026-11-23 11:16:48,437 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-79
+2026-11-23 11:16:48,587 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-80
+2026-11-23 11:16:48,736 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-81
+2026-11-23 11:16:48,887 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-82
+2026-11-23 11:16:49,037 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-83
+2026-11-23 11:16:49,186 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-84
+2026-11-23 11:16:49,339 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-85
+2026-11-23 11:16:49,486 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-86
+2026-11-23 11:16:49,637 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-87
+2026-11-23 11:16:49,786 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-88
+2026-11-23 11:16:49,937 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-89
+2026-11-23 11:16:50,087 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-90
+2026-11-23 11:16:50,237 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-91
+2026-11-23 11:16:50,387 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-92
+2026-11-23 11:16:50,536 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-93
+2026-11-23 11:16:50,686 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-94
+2026-11-23 11:16:50,837 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-95
+2026-11-23 11:16:50,987 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-96
+2026-11-23 11:16:51,138 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-97
+2026-11-23 11:16:51,287 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-98
+2026-11-23 11:16:51,437 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-99
+2026-11-23 11:16:51,587 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-100
+2026-11-23 11:16:51,737 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-101
+2026-11-23 11:16:51,887 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-102
+2026-11-23 11:16:52,036 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-103
+2026-11-23 11:16:52,186 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-104
+2026-11-23 11:16:52,338 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-105
+2026-11-23 11:16:52,487 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-106
+2026-11-23 11:16:52,638 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-107
+2026-11-23 11:16:52,786 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-108
+2026-11-23 11:16:52,938 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-109
+2026-11-23 11:16:53,087 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-110
+2026-11-23 11:16:53,238 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-111
+2026-11-23 11:16:53,388 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-112
+2026-11-23 11:16:53,538 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-113
+2026-11-23 11:16:53,687 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-114
+2026-11-23 11:16:53,839 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-115
+2026-11-23 11:16:53,988 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-116
+2026-11-23 11:16:54,140 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-117
+2026-11-23 11:16:54,287 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-118
+2026-11-23 11:16:54,436 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-119
+2026-11-23 11:16:54,587 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-120
+2026-11-23 11:16:54,739 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-121
+2026-11-23 11:16:54,886 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-122
+2026-11-23 11:16:55,036 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-123
+2026-11-23 11:16:55,186 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-124
+2026-11-23 11:16:55,336 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-125
+2026-11-23 11:16:55,486 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-126
+2026-11-23 11:16:55,638 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-127
+2026-11-23 11:16:55,786 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-128
+2026-11-23 11:16:55,936 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-129
+2026-11-23 11:16:56,086 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-130
+2026-11-23 11:16:56,237 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-131
+2026-11-23 11:16:56,386 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-132
+2026-11-23 11:16:56,536 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-133
+2026-11-23 11:16:56,686 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-134
+2026-11-23 11:16:56,836 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-135
+2026-11-23 11:16:56,987 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-136
+2026-11-23 11:16:57,137 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-137
+2026-11-23 11:16:57,286 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-138
+2026-11-23 11:16:57,437 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-139
+2026-11-23 11:16:57,586 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-140
+2026-11-23 11:16:57,736 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-141
+2026-11-23 11:16:57,886 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-142
+2026-11-23 11:16:58,036 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-143
+2026-11-23 11:16:58,186 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-144
+2026-11-23 11:16:58,337 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-145
+2026-11-23 11:16:58,486 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-146
+2026-11-23 11:16:58,638 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-147
+2026-11-23 11:16:58,787 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-148
+2026-11-23 11:16:58,937 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-149
+2026-11-23 11:16:59,086 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-150
+2026-11-23 11:16:59,236 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-151
+2026-11-23 11:16:59,387 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-152
+2026-11-23 11:16:59,536 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-153
+2026-11-23 11:16:59,688 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-154
+2026-11-23 11:16:59,836 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-155
+2026-11-23 11:16:59,986 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-156
+2026-11-23 11:17:00,000 INFO o.a.j.r.Summariser: summary +   5902 in 00:00:30 =  196.7/s Avg:     1 Min:     0 Max:    16 Err:     0 (0.00%) Active: 357 Started: 357 Finished: 0
+2026-11-23 11:17:00,000 INFO o.a.j.r.Summariser: summary =  53617 in 00:12:23 =   72.1/s Avg:     1 Min:     0 Max:    98 Err:     0 (0.00%)
+2026-11-23 11:17:00,136 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-157
+2026-11-23 11:17:00,287 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-158
+2026-11-23 11:17:00,436 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-159
+2026-11-23 11:17:00,586 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-160
+2026-11-23 11:17:00,736 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-161
+2026-11-23 11:17:00,886 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-162
+2026-11-23 11:17:01,037 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-163
+2026-11-23 11:17:01,187 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-164
+2026-11-23 11:17:01,337 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-165
+2026-11-23 11:17:01,487 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-166
+2026-11-23 11:17:01,637 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-167
+2026-11-23 11:17:01,788 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-168
+2026-11-23 11:17:01,936 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-169
+2026-11-23 11:17:02,086 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-170
+2026-11-23 11:17:02,237 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-171
+2026-11-23 11:17:02,387 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-172
+2026-11-23 11:17:02,537 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-173
+2026-11-23 11:17:02,687 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-174
+2026-11-23 11:17:02,837 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-175
+2026-11-23 11:17:02,986 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-176
+2026-11-23 11:17:03,136 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-177
+2026-11-23 11:17:03,287 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-178
+2026-11-23 11:17:03,436 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-179
+2026-11-23 11:17:03,587 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-180
+2026-11-23 11:17:03,736 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-181
+2026-11-23 11:17:03,888 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-182
+2026-11-23 11:17:04,036 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-183
+2026-11-23 11:17:04,187 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-184
+2026-11-23 11:17:04,336 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-185
+2026-11-23 11:17:04,486 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-186
+2026-11-23 11:17:04,636 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-187
+2026-11-23 11:17:04,786 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-188
+2026-11-23 11:17:04,936 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-189
+2026-11-23 11:17:05,086 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-190
+2026-11-23 11:17:05,236 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-191
+2026-11-23 11:17:05,387 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-192
+2026-11-23 11:17:05,537 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-193
+2026-11-23 11:17:05,686 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-194
+2026-11-23 11:17:05,837 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-195
+2026-11-23 11:17:05,988 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-196
+2026-11-23 11:17:06,136 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-197
+2026-11-23 11:17:06,290 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-198
+2026-11-23 11:17:06,436 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-199
+2026-11-23 11:17:06,586 INFO o.a.j.t.JMeterThread: Thread started: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-200
+2026-11-23 11:17:30,014 INFO o.a.j.r.Summariser: summary +   8915 in 00:00:30 =  297.0/s Avg:     1 Min:     0 Max:     8 Err:     0 (0.00%) Active: 401 Started: 401 Finished: 0
+2026-11-23 11:17:30,014 INFO o.a.j.r.Summariser: summary =  62532 in 00:12:53 =   80.8/s Avg:     1 Min:     0 Max:    98 Err:     0 (0.00%)
+2026-11-23 11:18:00,006 INFO o.a.j.r.Summariser: summary +   9002 in 00:00:30 =  300.1/s Avg:     1 Min:     0 Max:    12 Err:     0 (0.00%) Active: 401 Started: 401 Finished: 0
+2026-11-23 11:18:00,007 INFO o.a.j.r.Summariser: summary =  71534 in 00:13:23 =   89.0/s Avg:     1 Min:     0 Max:    98 Err:     0 (0.00%)
+2026-11-23 11:18:30,003 INFO o.a.j.r.Summariser: summary +   8974 in 00:00:30 =  299.2/s Avg:     1 Min:     0 Max:    14 Err:     0 (0.00%) Active: 401 Started: 401 Finished: 0
+2026-11-23 11:18:30,003 INFO o.a.j.r.Summariser: summary =  80508 in 00:13:53 =   96.6/s Avg:     1 Min:     0 Max:    98 Err:     0 (0.00%)
+2026-11-23 11:19:00,008 INFO o.a.j.r.Summariser: summary +   9009 in 00:00:30 =  300.2/s Avg:     1 Min:     0 Max:    14 Err:     0 (0.00%) Active: 401 Started: 401 Finished: 0
+2026-11-23 11:19:00,008 INFO o.a.j.r.Summariser: summary =  89517 in 00:14:23 =  103.7/s Avg:     1 Min:     0 Max:    98 Err:     0 (0.00%)
+2026-11-23 11:19:30,014 INFO o.a.j.r.Summariser: summary +   8993 in 00:00:30 =  299.7/s Avg:     1 Min:     0 Max:    16 Err:     0 (0.00%) Active: 401 Started: 401 Finished: 0
+2026-11-23 11:19:30,014 INFO o.a.j.r.Summariser: summary =  98510 in 00:14:53 =  110.3/s Avg:     1 Min:     0 Max:    98 Err:     0 (0.00%)
+2026-11-23 11:19:32,432 INFO o.a.j.t.JMeterThread: Thread finished: TG lockout-probe (tài kho?n lock*) 6-1
+2026-11-23 11:19:33,775 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-14
+2026-11-23 11:19:33,811 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-27
+2026-11-23 11:19:33,851 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-86
+2026-11-23 11:19:33,860 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-17
+2026-11-23 11:19:33,864 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-6
+2026-11-23 11:19:33,895 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-84
+2026-11-23 11:19:33,951 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-121
+2026-11-23 11:19:34,016 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-3
+2026-11-23 11:19:34,047 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-9
+2026-11-23 11:19:34,089 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-100
+2026-11-23 11:19:34,098 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-85
+2026-11-23 11:19:34,111 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-68
+2026-11-23 11:19:34,158 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-194
+2026-11-23 11:19:34,165 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-74
+2026-11-23 11:19:34,180 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-130
+2026-11-23 11:19:34,191 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-108
+2026-11-23 11:19:34,216 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-66
+2026-11-23 11:19:34,225 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-11
+2026-11-23 11:19:34,244 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-12
+2026-11-23 11:19:34,268 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-84
+2026-11-23 11:19:34,331 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-12
+2026-11-23 11:19:34,340 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-46
+2026-11-23 11:19:34,343 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-31
+2026-11-23 11:19:34,359 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-64
+2026-11-23 11:19:34,367 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-156
+2026-11-23 11:19:34,392 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-40
+2026-11-23 11:19:34,400 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-44
+2026-11-23 11:19:34,405 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-47
+2026-11-23 11:19:34,439 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-39
+2026-11-23 11:19:34,444 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-36
+2026-11-23 11:19:34,473 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-88
+2026-11-23 11:19:34,474 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-77
+2026-11-23 11:19:34,505 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-13
+2026-11-23 11:19:34,505 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-73
+2026-11-23 11:19:34,512 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-110
+2026-11-23 11:19:34,533 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-67
+2026-11-23 11:19:34,542 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-9
+2026-11-23 11:19:34,543 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-122
+2026-11-23 11:19:34,545 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-2
+2026-11-23 11:19:34,549 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-46
+2026-11-23 11:19:34,549 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-180
+2026-11-23 11:19:34,566 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-25
+2026-11-23 11:19:34,577 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-29
+2026-11-23 11:19:34,577 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-36
+2026-11-23 11:19:34,586 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-131
+2026-11-23 11:19:34,590 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-40
+2026-11-23 11:19:34,601 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-73
+2026-11-23 11:19:34,603 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-94
+2026-11-23 11:19:34,610 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-137
+2026-11-23 11:19:34,615 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-95
+2026-11-23 11:19:34,621 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-178
+2026-11-23 11:19:34,652 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-45
+2026-11-23 11:19:34,674 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-80
+2026-11-23 11:19:34,728 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-98
+2026-11-23 11:19:34,728 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-53
+2026-11-23 11:19:34,730 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-34
+2026-11-23 11:19:34,731 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-145
+2026-11-23 11:19:34,743 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-193
+2026-11-23 11:19:34,751 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-79
+2026-11-23 11:19:34,752 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-48
+2026-11-23 11:19:34,769 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-143
+2026-11-23 11:19:34,785 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-183
+2026-11-23 11:19:34,788 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-104
+2026-11-23 11:19:34,790 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-80
+2026-11-23 11:19:34,795 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-28
+2026-11-23 11:19:34,795 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-4
+2026-11-23 11:19:34,809 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-23
+2026-11-23 11:19:34,821 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-6
+2026-11-23 11:19:34,831 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-41
+2026-11-23 11:19:34,833 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-17
+2026-11-23 11:19:34,853 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-166
+2026-11-23 11:19:34,862 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-22
+2026-11-23 11:19:34,862 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-97
+2026-11-23 11:19:34,864 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-24
+2026-11-23 11:19:34,866 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-1
+2026-11-23 11:19:34,868 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-11
+2026-11-23 11:19:34,873 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-87
+2026-11-23 11:19:34,881 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-125
+2026-11-23 11:19:34,895 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-33
+2026-11-23 11:19:34,899 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-55
+2026-11-23 11:19:34,912 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-5
+2026-11-23 11:19:34,916 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-94
+2026-11-23 11:19:34,920 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-190
+2026-11-23 11:19:34,928 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-173
+2026-11-23 11:19:34,935 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-36
+2026-11-23 11:19:34,956 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-43
+2026-11-23 11:19:34,968 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-39
+2026-11-23 11:19:34,969 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-25
+2026-11-23 11:19:34,980 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-71
+2026-11-23 11:19:34,981 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-112
+2026-11-23 11:19:34,989 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-49
+2026-11-23 11:19:35,001 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-61
+2026-11-23 11:19:35,013 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-87
+2026-11-23 11:19:35,013 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-158
+2026-11-23 11:19:35,019 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-38
+2026-11-23 11:19:35,020 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-59
+2026-11-23 11:19:35,030 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-26
+2026-11-23 11:19:35,045 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-20
+2026-11-23 11:19:35,052 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-142
+2026-11-23 11:19:35,062 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-20
+2026-11-23 11:19:35,064 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-118
+2026-11-23 11:19:35,065 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-44
+2026-11-23 11:19:35,080 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-6
+2026-11-23 11:19:35,089 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-120
+2026-11-23 11:19:35,089 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-89
+2026-11-23 11:19:35,090 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-7
+2026-11-23 11:19:35,105 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-67
+2026-11-23 11:19:35,108 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-5
+2026-11-23 11:19:35,116 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-7
+2026-11-23 11:19:35,134 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-58
+2026-11-23 11:19:35,138 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-91
+2026-11-23 11:19:35,148 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-18
+2026-11-23 11:19:35,168 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-15
+2026-11-23 11:19:35,182 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-27
+2026-11-23 11:19:35,191 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-91
+2026-11-23 11:19:35,193 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-32
+2026-11-23 11:19:35,219 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-48
+2026-11-23 11:19:35,222 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-187
+2026-11-23 11:19:35,225 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-90
+2026-11-23 11:19:35,262 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-154
+2026-11-23 11:19:35,269 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-16
+2026-11-23 11:19:35,276 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-21
+2026-11-23 11:19:35,289 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-16
+2026-11-23 11:19:35,303 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-35
+2026-11-23 11:19:35,303 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-15
+2026-11-23 11:19:35,313 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-42
+2026-11-23 11:19:35,317 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-138
+2026-11-23 11:19:35,325 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-16
+2026-11-23 11:19:35,333 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-174
+2026-11-23 11:19:35,339 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-75
+2026-11-23 11:19:35,365 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-3
+2026-11-23 11:19:35,373 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-43
+2026-11-23 11:19:35,378 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-11
+2026-11-23 11:19:35,394 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-150
+2026-11-23 11:19:35,395 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-109
+2026-11-23 11:19:35,405 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-167
+2026-11-23 11:19:35,413 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-61
+2026-11-23 11:19:35,427 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-184
+2026-11-23 11:19:35,428 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-10
+2026-11-23 11:19:35,431 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-2
+2026-11-23 11:19:35,435 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-52
+2026-11-23 11:19:35,438 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-57
+2026-11-23 11:19:35,444 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-32
+2026-11-23 11:19:35,453 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-157
+2026-11-23 11:19:35,464 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-63
+2026-11-23 11:19:35,474 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-5
+2026-11-23 11:19:35,495 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-19
+2026-11-23 11:19:35,501 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-13
+2026-11-23 11:19:35,503 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-60
+2026-11-23 11:19:35,510 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-186
+2026-11-23 11:19:35,511 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-164
+2026-11-23 11:19:35,525 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-20
+2026-11-23 11:19:35,525 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-77
+2026-11-23 11:19:35,535 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-24
+2026-11-23 11:19:35,541 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-55
+2026-11-23 11:19:35,547 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-105
+2026-11-23 11:19:35,549 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-136
+2026-11-23 11:19:35,552 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-159
+2026-11-23 11:19:35,557 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-114
+2026-11-23 11:19:35,557 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-9
+2026-11-23 11:19:35,559 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-74
+2026-11-23 11:19:35,560 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-4
+2026-11-23 11:19:35,569 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-5
+2026-11-23 11:19:35,570 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-3
+2026-11-23 11:19:35,571 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-6
+2026-11-23 11:19:35,571 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-20
+2026-11-23 11:19:35,582 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-60
+2026-11-23 11:19:35,603 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-12
+2026-11-23 11:19:35,628 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-182
+2026-11-23 11:19:35,633 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-28
+2026-11-23 11:19:35,635 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-47
+2026-11-23 11:19:35,652 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-107
+2026-11-23 11:19:35,658 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-78
+2026-11-23 11:19:35,675 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-41
+2026-11-23 11:19:35,700 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-195
+2026-11-23 11:19:35,705 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-69
+2026-11-23 11:19:35,711 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-33
+2026-11-23 11:19:35,714 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-15
+2026-11-23 11:19:35,717 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-35
+2026-11-23 11:19:35,719 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-86
+2026-11-23 11:19:35,728 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-168
+2026-11-23 11:19:35,736 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-15
+2026-11-23 11:19:35,737 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-2
+2026-11-23 11:19:35,739 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-30
+2026-11-23 11:19:35,744 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-21
+2026-11-23 11:19:35,750 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-70
+2026-11-23 11:19:35,751 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-13
+2026-11-23 11:19:35,751 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-21
+2026-11-23 11:19:35,756 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-179
+2026-11-23 11:19:35,756 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-22
+2026-11-23 11:19:35,758 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-147
+2026-11-23 11:19:35,768 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-198
+2026-11-23 11:19:35,771 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-49
+2026-11-23 11:19:35,772 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-117
+2026-11-23 11:19:35,775 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-19
+2026-11-23 11:19:35,775 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-25
+2026-11-23 11:19:35,778 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-11
+2026-11-23 11:19:35,783 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-19
+2026-11-23 11:19:35,791 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-23
+2026-11-23 11:19:35,793 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-14
+2026-11-23 11:19:35,796 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-56
+2026-11-23 11:19:35,798 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-26
+2026-11-23 11:19:35,808 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-8
+2026-11-23 11:19:35,809 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-38
+2026-11-23 11:19:35,812 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-59
+2026-11-23 11:19:35,812 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-4
+2026-11-23 11:19:35,812 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-116
+2026-11-23 11:19:35,823 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-65
+2026-11-23 11:19:35,835 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-1
+2026-11-23 11:19:35,837 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-185
+2026-11-23 11:19:35,838 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-71
+2026-11-23 11:19:35,839 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-92
+2026-11-23 11:19:35,841 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-8
+2026-11-23 11:19:35,847 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-37
+2026-11-23 11:19:35,852 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-23
+2026-11-23 11:19:35,857 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-99
+2026-11-23 11:19:35,870 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-8
+2026-11-23 11:19:35,872 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-70
+2026-11-23 11:19:35,876 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-188
+2026-11-23 11:19:35,876 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-176
+2026-11-23 11:19:35,876 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-16
+2026-11-23 11:19:35,879 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-18
+2026-11-23 11:19:35,882 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-69
+2026-11-23 11:19:35,888 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-8
+2026-11-23 11:19:35,891 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-151
+2026-11-23 11:19:35,906 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-6
+2026-11-23 11:19:35,906 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-146
+2026-11-23 11:19:35,906 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-41
+2026-11-23 11:19:35,906 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-96
+2026-11-23 11:19:35,907 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-10
+2026-11-23 11:19:35,910 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-17
+2026-11-23 11:19:35,925 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-103
+2026-11-23 11:19:35,937 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-75
+2026-11-23 11:19:35,940 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-57
+2026-11-23 11:19:35,943 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-18
+2026-11-23 11:19:35,946 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-119
+2026-11-23 11:19:35,955 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-66
+2026-11-23 11:19:35,956 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-191
+2026-11-23 11:19:35,966 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-15
+2026-11-23 11:19:35,969 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-34
+2026-11-23 11:19:35,970 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-56
+2026-11-23 11:19:35,972 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-83
+2026-11-23 11:19:35,983 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-101
+2026-11-23 11:19:35,985 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-76
+2026-11-23 11:19:35,987 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-17
+2026-11-23 11:19:35,989 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-62
+2026-11-23 11:19:35,990 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-115
+2026-11-23 11:19:35,997 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-33
+2026-11-23 11:19:36,001 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-79
+2026-11-23 11:19:36,006 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-49
+2026-11-23 11:19:36,011 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-199
+2026-11-23 11:19:36,012 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-92
+2026-11-23 11:19:36,027 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-7
+2026-11-23 11:19:36,028 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-126
+2026-11-23 11:19:36,029 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-32
+2026-11-23 11:19:36,033 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-189
+2026-11-23 11:19:36,042 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-11
+2026-11-23 11:19:36,048 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-9
+2026-11-23 11:19:36,056 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-134
+2026-11-23 11:19:36,060 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-21
+2026-11-23 11:19:36,061 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-163
+2026-11-23 11:19:36,064 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-13
+2026-11-23 11:19:36,067 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-30
+2026-11-23 11:19:36,081 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-50
+2026-11-23 11:19:36,082 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-25
+2026-11-23 11:19:36,083 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-78
+2026-11-23 11:19:36,085 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-46
+2026-11-23 11:19:36,088 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-44
+2026-11-23 11:19:36,089 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-29
+2026-11-23 11:19:36,092 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-30
+2026-11-23 11:19:36,109 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-72
+2026-11-23 11:19:36,110 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-127
+2026-11-23 11:19:36,114 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-9
+2026-11-23 11:19:36,117 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-141
+2026-11-23 11:19:36,118 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-23
+2026-11-23 11:19:36,129 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-197
+2026-11-23 11:19:36,130 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-43
+2026-11-23 11:19:36,135 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-37
+2026-11-23 11:19:36,135 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-2
+2026-11-23 11:19:36,139 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-169
+2026-11-23 11:19:36,146 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-88
+2026-11-23 11:19:36,146 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-132
+2026-11-23 11:19:36,149 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-34
+2026-11-23 11:19:36,151 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-13
+2026-11-23 11:19:36,155 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-65
+2026-11-23 11:19:36,160 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-52
+2026-11-23 11:19:36,175 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-90
+2026-11-23 11:19:36,177 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-10
+2026-11-23 11:19:36,178 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-42
+2026-11-23 11:19:36,179 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-22
+2026-11-23 11:19:36,179 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-12
+2026-11-23 11:19:36,180 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-25
+2026-11-23 11:19:36,182 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-76
+2026-11-23 11:19:36,193 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-8
+2026-11-23 11:19:36,194 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-83
+2026-11-23 11:19:36,194 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-24
+2026-11-23 11:19:36,199 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-3
+2026-11-23 11:19:36,202 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-144
+2026-11-23 11:19:36,215 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-23
+2026-11-23 11:19:36,220 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-47
+2026-11-23 11:19:36,221 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-38
+2026-11-23 11:19:36,223 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-62
+2026-11-23 11:19:36,224 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-133
+2026-11-23 11:19:36,226 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-102
+2026-11-23 11:19:36,231 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-24
+2026-11-23 11:19:36,236 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-93
+2026-11-23 11:19:36,270 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-106
+2026-11-23 11:19:36,271 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-51
+2026-11-23 11:19:36,280 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-29
+2026-11-23 11:19:36,285 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-14
+2026-11-23 11:19:36,289 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-24
+2026-11-23 11:19:36,293 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-162
+2026-11-23 11:19:36,296 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-149
+2026-11-23 11:19:36,299 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-181
+2026-11-23 11:19:36,301 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-35
+2026-11-23 11:19:36,301 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-124
+2026-11-23 11:19:36,301 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-128
+2026-11-23 11:19:36,309 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-54
+2026-11-23 11:19:36,309 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-16
+2026-11-23 11:19:36,309 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-17
+2026-11-23 11:19:36,311 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-5
+2026-11-23 11:19:36,317 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-14
+2026-11-23 11:19:36,324 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-39
+2026-11-23 11:19:36,331 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-31
+2026-11-23 11:19:36,334 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-100
+2026-11-23 11:19:36,336 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-54
+2026-11-23 11:19:36,340 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-153
+2026-11-23 11:19:36,342 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-196
+2026-11-23 11:19:36,342 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-37
+2026-11-23 11:19:36,360 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-96
+2026-11-23 11:19:36,360 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-140
+2026-11-23 11:19:36,372 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-89
+2026-11-23 11:19:36,379 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-172
+2026-11-23 11:19:36,379 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-19
+2026-11-23 11:19:36,380 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-53
+2026-11-23 11:19:36,384 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-1
+2026-11-23 11:19:36,385 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-7
+2026-11-23 11:19:36,395 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-63
+2026-11-23 11:19:36,397 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-50
+2026-11-23 11:19:36,401 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-165
+2026-11-23 11:19:36,401 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-12
+2026-11-23 11:19:36,407 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-22
+2026-11-23 11:19:36,410 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-85
+2026-11-23 11:19:36,411 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-40
+2026-11-23 11:19:36,414 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-19
+2026-11-23 11:19:36,415 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-81
+2026-11-23 11:19:36,419 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-200
+2026-11-23 11:19:36,425 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-68
+2026-11-23 11:19:36,428 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-4
+2026-11-23 11:19:36,429 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-99
+2026-11-23 11:19:36,432 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-14
+2026-11-23 11:19:36,434 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-31
+2026-11-23 11:19:36,446 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-177
+2026-11-23 11:19:36,447 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-28
+2026-11-23 11:19:36,465 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-1
+2026-11-23 11:19:36,466 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 2 workflow (AUTH ? READ ? TXN) 2-10
+2026-11-23 11:19:36,477 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-4
+2026-11-23 11:19:36,478 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-21
+2026-11-23 11:19:36,478 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-22
+2026-11-23 11:19:36,481 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-81
+2026-11-23 11:19:36,482 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-139
+2026-11-23 11:19:36,492 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-45
+2026-11-23 11:19:36,499 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-148
+2026-11-23 11:19:36,500 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-18
+2026-11-23 11:19:36,515 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-51
+2026-11-23 11:19:36,521 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-2
+2026-11-23 11:19:36,525 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-3
+2026-11-23 11:19:36,532 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-42
+2026-11-23 11:19:36,537 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-26
+2026-11-23 11:19:36,538 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-58
+2026-11-23 11:19:36,543 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-97
+2026-11-23 11:19:36,543 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-192
+2026-11-23 11:19:36,546 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-50
+2026-11-23 11:19:36,546 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-129
+2026-11-23 11:19:36,547 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-45
+2026-11-23 11:19:36,553 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-1
+2026-11-23 11:19:36,556 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 1 workflow (AUTH ? READ ? TXN) 1-18
+2026-11-23 11:19:36,560 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-160
+2026-11-23 11:19:36,568 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-152
+2026-11-23 11:19:36,577 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-10
+2026-11-23 11:19:36,577 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-48
+2026-11-23 11:19:36,582 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-64
+2026-11-23 11:19:36,594 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-113
+2026-11-23 11:19:36,623 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 3 workflow (AUTH ? READ ? TXN) 3-27
+2026-11-23 11:19:36,640 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-161
+2026-11-23 11:19:36,645 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-135
+2026-11-23 11:19:36,669 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-7
+2026-11-23 11:19:36,670 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-123
+2026-11-23 11:19:36,676 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-82
+2026-11-23 11:19:36,722 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 4 workflow (AUTH ? READ ? TXN) 4-93
+2026-11-23 11:19:36,722 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-82
+2026-11-23 11:19:36,727 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-20
+2026-11-23 11:19:36,738 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-155
+2026-11-23 11:19:36,776 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-95
+2026-11-23 11:19:36,777 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-72
+2026-11-23 11:19:36,792 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-98
+2026-11-23 11:19:36,792 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-111
+2026-11-23 11:19:36,811 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-170
+2026-11-23 11:19:36,846 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-175
+2026-11-23 11:19:36,846 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-175
+2026-11-23 11:19:36,849 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-171
+2026-11-23 11:19:36,849 INFO o.a.j.t.JMeterThread: Thread finished: TG b?c 5 workflow (AUTH ? READ ? TXN) 5-171
+2026-11-23 11:19:36,849 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2026-11-23 11:19:36,849 INFO o.a.j.s.FileServer: Close: ../data/products.csv
+2026-11-23 11:19:36,849 INFO o.a.j.s.FileServer: Close: ../data/lock-users.csv
+2026-11-23 11:19:36,849 INFO o.a.j.s.FileServer: Close: ../data/orders.csv
+2026-11-23 11:19:36,849 INFO o.a.j.s.FileServer: Close: ../data/users.csv
+2026-11-23 11:19:36,851 INFO o.a.j.r.Summariser: summary +   2034 in 00:00:07 =  297.5/s Avg:     1 Min:     0 Max:    11 Err:     0 (0.00%) Active: 0 Started: 401 Finished: 401
+2026-11-23 11:19:36,851 INFO o.a.j.r.Summariser: summary = 100544 in 00:15:00 =  111.7/s Avg:     1 Min:     0 Max:    98 Err:     0 (0.00%)
+2026-11-23 11:19:36,851 INFO o.a.j.JMeter: Generating Dashboard
+2026-11-23 11:19:36,851 INFO o.a.j.r.d.ReportGenerator: Flushing result collector before report Generation
+2026-11-23 11:19:36,871 INFO o.a.j.r.p.NormalizerSampleConsumer: Using format, 'ms', to parse timeStamp field
+2026-11-23 11:19:38,158 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): beginDate produced 0 samples
+2026-11-23 11:19:38,158 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): endDate produced 0 samples
+2026-11-23 11:19:38,160 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ApdexSummaryConsumer#stopProducing(): apdexSummary produced 0 samples
+2026-11-23 11:19:38,160 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.RequestsSummaryConsumer#stopProducing(): requestsSummary produced 0 samples
+2026-11-23 11:19:38,176 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.StatisticsSummaryConsumer#stopProducing(): statisticsSummary produced 0 samples
+2026-11-23 11:19:38,178 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.Top5ErrorsBySamplerConsumer#stopProducing(): top5ErrorsBySampler produced 0 samples
+2026-11-23 11:19:38,179 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ErrorsSummaryConsumer#stopProducing(): errorsSummary produced 0 samples
+2026-11-23 11:19:38,179 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.HitsPerSecondGraphConsumer#stopProducing(): hitsPerSecond produced 0 samples
+2026-11-23 11:19:38,472 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyVSRequestGraphConsumer#stopProducing(): latencyVsRequest produced 0 samples
+2026-11-23 11:19:38,476 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.SyntheticResponseTimeDistributionGraphConsumer#stopProducing(): syntheticResponseTimeDistribution produced 0 samples
+2026-11-23 11:19:38,477 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.BytesThroughputGraphConsumer#stopProducing(): bytesThroughputOverTime produced 0 samples
+2026-11-23 11:19:38,477 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.CodesPerSecondGraphConsumer#stopProducing(): codesPerSecond produced 0 samples
+2026-11-23 11:19:38,729 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeVSRequestGraphConsumer#stopProducing(): responseTimeVsRequest produced 0 samples
+2026-11-23 11:19:38,730 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): startIntervalControlerFilter produced 703808 samples
+2026-11-23 11:19:38,730 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TotalTPSGraphConsumer#stopProducing(): totalTPS produced 0 samples
+2026-11-23 11:19:38,730 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ActiveThreadsGraphConsumer#stopProducing(): activeThreadsOverTime produced 0 samples
+2026-11-23 11:19:38,731 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TimeVSThreadGraphConsumer#stopProducing(): timeVsThreads produced 0 samples
+2026-11-23 11:19:38,732 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeDistributionGraphConsumer#stopProducing(): responseTimeDistribution produced 0 samples
+2026-11-23 11:19:38,732 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TransactionsPerSecondGraphConsumer#stopProducing(): transactionsPerSecond produced 0 samples
+2026-11-23 11:19:38,732 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesGraphConsumer#stopProducing(): responseTimePercentiles produced 0 samples
+2026-11-23 11:19:38,734 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesOverTimeGraphConsumer#stopProducing(): responseTimePercentilesOverTime produced 0 samples
+2026-11-23 11:19:38,737 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeOverTimeGraphConsumer#stopProducing(): responseTimesOverTime produced 0 samples
+2026-11-23 11:19:38,737 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ConnectTimeOverTimeGraphConsumer#stopProducing(): connectTimeOverTime produced 0 samples
+2026-11-23 11:19:38,738 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyOverTimeGraphConsumer#stopProducing(): latenciesOverTime produced 0 samples
+2026-11-23 11:19:38,738 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): nameFilter produced 1508160 samples
+2026-11-23 11:19:38,738 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): dateRangeFilter produced 301632 samples
+2026-11-23 11:19:38,738 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.NormalizerSampleConsumer#stopProducing(): normalizer produced 100544 samples
+2026-11-23 11:19:38,738 INFO o.a.j.r.p.CsvFileSampleSource: produce(): 100544 samples produced in 1s 843 ms on channel 0
+2026-11-23 11:19:38,738 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'json' of className:'org.apache.jmeter.report.dashboard.JsonExporter'
+2026-11-23 11:19:38,818 INFO o.a.j.r.d.JsonExporter: Found data for consumer statisticsSummary in context
+2026-11-23 11:19:38,818 INFO o.a.j.r.d.JsonExporter: Creating statistics for overall
+2026-11-23 11:19:38,819 INFO o.a.j.r.d.JsonExporter: Creating statistics for other transactions
+2026-11-23 11:19:38,819 INFO o.a.j.r.d.JsonExporter: Checking output folder
+2026-11-23 11:19:38,819 INFO o.a.j.r.d.JsonExporter: Writing statistics JSON to D:\vscode\Software testing\HW05\perf\results\stress\html\statistics.json
+2026-11-23 11:19:38,866 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'html' of className:'org.apache.jmeter.report.dashboard.HtmlTemplateExporter'
+2026-11-23 11:19:38,868 INFO o.a.j.r.d.HtmlTemplateExporter: Will generate dashboard in folder: D:\vscode\Software testing\HW05\perf\results\stress\html
+2026-11-23 11:19:39,003 INFO o.a.j.r.d.HtmlTemplateExporter: Report will be generated in: D:\vscode\Software testing\HW05\perf\results\stress\html, creating folder structure
+2026-11-23 11:19:39,006 INFO o.a.j.r.d.TemplateVisitor: Copying folder from 'D:\Jmeter\apache-jmeter-5.6.3\bin\report-template' to 'D:\vscode\Software testing\HW05\perf\results\stress\html', got message: D:\vscode\Software testing\HW05\perf\results\stress\html, found non empty folder with following content [D:\vscode\Software testing\HW05\perf\results\stress\html\statistics.json], will be ignored
+2026-11-23 11:19:39,472 INFO o.a.j.JMeter: Dashboard generated

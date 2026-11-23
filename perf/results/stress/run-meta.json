@@ -1,0 +1,17 @@
+{
+  "plan": "23120399_Stress_20261123.jmx",
+  "studentId": "23120399",
+  "scenario": "Stress",
+  "planDate": "20261123",
+  "props": [],
+  "base": "http://localhost:3000",
+  "hostname": "MSI",
+  "platform": "Windows_NT 10.0.26300 x64",
+  "cpu": "AMD Ryzen 5 5600H with Radeon Graphics         ",
+  "logicalCores": 12,
+  "totalMemGB": 15.4,
+  "node": "v24.11.1",
+  "startIso": "2026-11-23T04:04:33.009Z",
+  "endIso": "2026-11-23T04:19:41.850Z",
+  "jmeterExitCode": 0
+}
