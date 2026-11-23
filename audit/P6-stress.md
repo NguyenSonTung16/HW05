@@ -26,3 +26,21 @@ Plan: `perf/plans/23120399_Stress_20261123.jmx` (mặc định, không truyền 
 ## Hạn chế
 - Kết luận đúng chỉ cho kịch bản có think time 1–3 s; chưa biết giới hạn thật của backend.
 - Không đo CPU của chính JMeter; nếu tăng tải mạnh, máy chạy JMeter cũng là máy chạy backend nên có thể tranh tài nguyên.
+
+## Lượt lặp lại `stress2` (lấy ảnh minh chứng)
+Lượt `stress` không có ảnh do sinh viên quên chụp. `stress2` chạy lại đúng plan và cấu hình (không -J), 2026-11-23 11:49:51 → 12:05:05 ICT, máy MSI, JMeter exit 0, backend PID 3408 (khớp cột `pid` trong `node-usage.csv` và ảnh). Số liệu chính của báo cáo vẫn là lượt `stress`; ảnh trong `evidence/screenshots/stress/` thuộc lượt `stress2`:
+- `stress2-bac4-200vu.png`: `00:11:00`, Active 201, ~150 req/s, lỗi 0 (không có taskbar/đồng hồ trong khung).
+- `stress2-bac5-400vu.png`: `00:13:30`, Active 401, ~298 req/s, lỗi 0, đồng hồ 12:03 PM 11/23/2026.
+
+### So sánh hai lượt (phần ổn định từng bậc, `jtl-summary.mjs --from-sec/--to-sec`)
+| VU | req/s stress | req/s stress2 | p95 stress | p95 stress2 | Lỗi (cả hai) |
+|---|---|---|---|---|---|
+| 25 | 19,0 | 19,1 | 4 | 4 | 0 % |
+| 50 | 38,0 | 37,3 | 4 | 4 | 0 % |
+| 100 | 75,5 | 75,6 | 4 | 3 | 0 % |
+| 200 | 150,2 | 149,5 | 3 | 4 | 0 % |
+| 400 | 299,9 | 298,1 | 3 | 6 | 0 % |
+
+Tổng `stress2`: 99 999 mẫu, lỗi 0 %, p95 5 ms, max 113 ms, 90/90 cửa sổ khỏe, đỉnh 303,7 req/s; CPU backend TB 0,7 % / max 3,9 %; RAM 68,9 → 91,1 MB (đỉnh 120,2 MB); checkout 16 438 = 16 438 đơn trong DB → KHỚP.
+
+Nhận xét: throughput hai lượt gần như trùng nhau (lệch < 2 %), xác nhận kết luận "tải bị giới hạn bởi think time, không gãy tới 400 VU". p95 ở 400 VU của `stress2` cao hơn (6 so với 3 ms, avg 2,1 so với 1,1 ms); khả năng do sinh viên thao tác chụp ảnh và mở Task Manager trên cùng máy trong lúc chạy (JMeter và backend dùng chung máy). Chênh lệch vẫn rất xa ngưỡng 500 ms nên không đổi kết luận. Mẫu đếm RAM không tăng đơn điệu ở cả hai lượt.
