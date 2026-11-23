@@ -5,7 +5,10 @@ import path from 'node:path';
 
 export async function openDb(dbFile, sutBackendDir) {
   try {
-    const { DatabaseSync } = await import('node:sqlite');
+    const emit = process.emitWarning;
+    process.emitWarning = (w, ...rest) => (String(w).includes('SQLite') ? undefined : emit.call(process, w, ...rest));
+    let DatabaseSync;
+    try { ({ DatabaseSync } = await import('node:sqlite')); } finally { process.emitWarning = emit; }
     const db = new DatabaseSync(dbFile);
     return {
       kind: 'node:sqlite',

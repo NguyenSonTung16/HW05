@@ -73,3 +73,4 @@ Skill không chạy được JMeter hay trình duyệt thay người dùng khi m
 - v1.2 (2026-11-18): `run-scenario.mjs` bọc ngoặc kép đối số khi gọi `jmeter.bat` qua shell trên Windows (đường dẫn có dấu cách bị cắt).
 - v1.3 (2026-11-18): đổi `plan.jmx.template` → `plan.template.jmx` để hộp Open của JMeter (chỉ lọc `.jmx`) thấy được.
 - v1.4 (2026-11-18): từ review P5 của sinh viên: template đăng nhập 1 lần/VU, mỗi VU một tài khoản riêng, think time chỉ trước xem hàng và thanh toán, mặc định 2 VU (smoke trước), nhánh đăng nhập sai bật Ignore Status; `run-scenario.mjs --verify-db`.
+- v1.5 (2026-11-23): sau lượt chạy thật đầu tiên trên Windows: `monitor-node.ps1` lưu UTF-8 có BOM (PowerShell 5.1 hiển thị sai tiếng Việt); `run-scenario.mjs` tự ghép chuỗi lệnh khi gọi `jmeter.bat` (Node 24 cảnh báo DEP0190); ẩn cảnh báo thử nghiệm của `node:sqlite`.

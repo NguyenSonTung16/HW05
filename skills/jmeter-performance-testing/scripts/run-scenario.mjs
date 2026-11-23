@@ -65,7 +65,10 @@ console.log(`\n=== ${planName} | ${meta.startIso} | host ${meta.hostname} ===\n$
 const win = process.platform === 'win32';
 const q = (s) => (win && /[\s"&|<>^()]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s);
 const code = await new Promise((ok) => {
-  const p = spawn(q(o.jmeter ?? 'jmeter'), args.map(q), { stdio: 'inherit', shell: win });
+  // Node >= 24 cảnh báo (DEP0190) khi truyền mảng args cùng shell:true, nên trên Windows tự ghép một chuỗi lệnh đã bọc ngoặc.
+  const p = win
+    ? spawn([q(o.jmeter ?? 'jmeter'), ...args.map(q)].join(' '), { stdio: 'inherit', shell: true })
+    : spawn(o.jmeter ?? 'jmeter', args, { stdio: 'inherit' });
   p.on('exit', (c) => ok(c)); p.on('error', (e) => { console.error(`Không chạy được JMeter: ${e.message}`); ok(-1); });
 });
 

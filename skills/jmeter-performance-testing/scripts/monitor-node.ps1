@@ -1,4 +1,4 @@
-# Ghi CPU/RAM của tiến trình backend (node) mỗi khoảng thời gian ra CSV. Windows PowerShell 5.1+ / PowerShell 7.
+﻿# Ghi CPU/RAM của tiến trình backend (node) mỗi khoảng thời gian ra CSV. Windows PowerShell 5.1+ / PowerShell 7.
 # Dùng: powershell -NoProfile -ExecutionPolicy Bypass -File monitor-node.ps1 -Match server.js -Out node-usage.csv [-IntervalMs 1000] [-DurationSec 0]
 # Dừng: tạo file "<Out>.stop" (run-scenario.mjs tự làm), hoặc Ctrl+C, hoặc hết DurationSec.
 # cpu_percent đã chia cho số lõi logic (100 = dùng hết mọi lõi), khác cột CPU của Task Manager tab Details chỉ ở cách làm tròn.
