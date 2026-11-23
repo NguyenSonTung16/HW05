@@ -60,3 +60,10 @@ test('CSV không có header vẫn đọc theo thứ tự mặc định', () => {
   assert.equal(readSamples(t).samples[0].elapsed, 10);
   assert.equal(parseCsv('a,"b,c"\n').at(0)[1], 'b,c');
 });
+
+test('summarize không tràn stack với 500 000 mẫu (lượt stress-nothink ~440k mẫu từng lỗi RangeError)', async () => {
+  const { summarize } = await import('../jtl-summary.mjs');
+  const samples = Array.from({ length: 500000 }, (_, i) => ({ ts: 1_000_000 + i, elapsed: i % 50, label: i % 2 ? 'A' : 'B', success: true, code: '200', allThreads: 10 }));
+  const r = summarize(samples, { bucket: 10 });
+  assert.equal(r.total.samples, 500000);
+});

@@ -59,14 +59,18 @@ export function percentile(sorted, p) {
   return sorted[k - 1];
 }
 
+// Không trải mảng thành đối số cho Math.min/Math.max: với vài trăm nghìn mẫu sẽ tràn stack (RangeError).
+export function minOf(arr, f = (x) => x) { let m = Infinity; for (const x of arr) { const v = f(x); if (v < m) m = v; } return m; }
+export function maxOf(arr, f = (x) => x) { let m = -Infinity; for (const x of arr) { const v = f(x); if (v > m) m = v; } return m; }
+
 function stats(list) {
   const n = list.length;
   if (!n) return null;
   const el = list.map((s) => s.elapsed).sort((a, b) => a - b);
   const ok = list.filter((s) => s.success).map((s) => s.elapsed).sort((a, b) => a - b);
   const errors = n - ok.length;
-  const t0 = Math.min(...list.map((s) => s.ts));
-  const t1 = Math.max(...list.map((s) => s.ts + s.elapsed));
+  const t0 = minOf(list, (s) => s.ts);
+  const t1 = maxOf(list, (s) => s.ts + s.elapsed);
   const spanSec = (t1 - t0) / 1000;
   const codes = {};
   for (const s of list) codes[s.code] = (codes[s.code] ?? 0) + 1;
@@ -83,7 +87,7 @@ function stats(list) {
 export function summarize(samples, opt = {}) {
   const bucket = opt.bucket ?? 10; const p95Limit = opt.p95Limit ?? 1000; const errLimit = opt.errLimit ?? 1;
   if (!samples.length) throw new Error('Không có mẫu hợp lệ');
-  const base = Math.min(...samples.map((s) => s.ts));
+  const base = minOf(samples, (s) => s.ts);
   let sel = samples;
   if (opt.fromSec !== undefined) sel = sel.filter((s) => (s.ts - base) / 1000 >= opt.fromSec);
   if (opt.toSec !== undefined) sel = sel.filter((s) => (s.ts - base) / 1000 < opt.toSec);
@@ -105,7 +109,7 @@ export function summarize(samples, opt = {}) {
     const st = stats(list);
     return {
       fromSec: b * bucket, toSec: (b + 1) * bucket, samples: st.samples, rps: Math.round((st.samples / bucket) * 10) / 10,
-      errorPct: st.errorPct, p95: st.p95, avg: st.avg, maxThreads: Math.max(...list.map((s) => (Number.isFinite(s.allThreads) ? s.allThreads : 0))),
+      errorPct: st.errorPct, p95: st.p95, avg: st.avg, maxThreads: maxOf(list, (s) => (Number.isFinite(s.allThreads) ? s.allThreads : 0)),
     };
   });
   const healthy = series.filter((w) => w.errorPct <= errLimit && w.p95 <= p95Limit);
@@ -124,7 +128,7 @@ export function summarize(samples, opt = {}) {
     total: stats(sel), groups: by((s) => s.label.split(' ')[0]), labels: by((s) => s.label), series,
     stability: {
       healthyWindows: healthy.length, windows: series.length,
-      maxHealthyRps: healthy.length ? Math.max(...healthy.map((w) => w.rps)) : null,
+      maxHealthyRps: healthy.length ? maxOf(healthy, (w) => w.rps) : null,
       firstBreach,
     },
     failures,
