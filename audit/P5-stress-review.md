@@ -20,3 +20,7 @@ Plan: `perf/plans/23120399_Stress_20261123.jmx`. Sinh viên nêu 5 điểm; dư�
 ## Rút thời lượng Stress từ 15 xuống 5 phút (10:59, theo yêu cầu sinh viên)
 Giữ 5 bậc 25/50/100/200/400 VU, mỗi bậc 60 s: delay 0/60/120/180/240 s, ramp-up 15 s, duration 300/240/180/120/60 s, `total_duration=300`; phân tích với `--bucket 10`.
 Đánh đổi (ghi vào báo cáo): mỗi mức VU chỉ còn ~45 s sau ramp-up, nên chỉ thấy dấu hiệu ban đầu ở từng bậc, không đo được suy giảm theo thời gian; bậc 5 thêm 200 VU trong 15 s nên có tính chất gần với spike. Điểm gãy tìm được là ước lượng thô; nếu cần chính xác hơn thì chạy lại riêng quanh bậc nghi ngờ.
+
+## Đổi lại thành 10 phút (11:00, theo yêu cầu sinh viên)
+5 bậc 25/50/100/200/400 VU, mỗi bậc 120 s: delay 0/120/240/360/480 s, ramp-up 30 s, duration 600/480/360/240/120 s, `total_duration=600`; phân tích `--bucket 10` hoặc `--bucket 30`.
+So với bản 5 phút: mỗi mức VU có ~90 s ổn định (gấp đôi), bậc 5 thêm 200 VU trong 30 s nên bớt tính spike, và vẫn ngắn hơn bản 15 phút. Vẫn chỉ đủ thấy xu hướng ban đầu ở từng bậc, không thay cho Soak.
