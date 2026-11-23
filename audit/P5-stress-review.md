@@ -24,3 +24,6 @@ Giữ 5 bậc 25/50/100/200/400 VU, mỗi bậc 60 s: delay 0/60/120/180/240 s, 
 ## Đổi lại thành 10 phút (11:00, theo yêu cầu sinh viên)
 5 bậc 25/50/100/200/400 VU, mỗi bậc 120 s: delay 0/120/240/360/480 s, ramp-up 30 s, duration 600/480/360/240/120 s, `total_duration=600`; phân tích `--bucket 10` hoặc `--bucket 30`.
 So với bản 5 phút: mỗi mức VU có ~90 s ổn định (gấp đôi), bậc 5 thêm 200 VU trong 30 s nên bớt tính spike, và vẫn ngắn hơn bản 15 phút. Vẫn chỉ đủ thấy xu hướng ban đầu ở từng bậc, không thay cho Soak.
+
+## Quay lại bản 15 phút (11:02, sinh viên chốt)
+Sau khi so sánh 5 / 10 / 15 phút, sinh viên chốt giữ bản 15 phút (5 bậc, delay 0/180/360/540/720 s, ramp-up 30 s, mỗi bậc ~150 s ổn định, `total_duration=900`). Plan khôi phục đúng nội dung commit 898acd9 (đã gồm sửa assertion 401/403 và ghi chú ngưỡng phân tích). Lý do: mỗi mức VU có đủ thời gian để thấy suy giảm trong bậc, kết quả điểm gãy đáng tin hơn; thời gian chạy chấp nhận được.
