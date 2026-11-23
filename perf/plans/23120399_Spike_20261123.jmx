@@ -2,7 +2,7 @@
 <jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="23120399_Spike_20261123" enabled="true">
-      <stringProp name="TestPlan.comments">SPIKE (tăng đột ngột). Nhóm nền base_threads=50 VU (mức Load đã đo ở load2), ramp 30 s, chạy 420 s. Nhóm đỉnh spike_threads=500 VU vào ở giây spike_delay=120 trong spike_rampup=5 s, giữ spike_duration=60 s rồi dừng cùng lúc (giây 180). Cửa sổ đo: trước đỉnh 30-120 s, đỉnh 125-180 s, sau đỉnh 180-420 s (--bucket 10) để đo lỗi/p95 lúc đỉnh và thời gian hồi phục. Mỗi VU một tài khoản riêng (nhóm nền + đỉnh đọc chung users.csv, shareMode.all, không recycle), cần ≥ 550 tài khoản perf*. Đăng nhập một lần, think time 1-3 s (nhóm đỉnh có tham số riêng spike_think_min_ms/spike_think_range_ms), lockout-probe coi 401/403 là đúng (Equals + OR). Report: View Results Tree chỉ lỗi (Summary/Aggregate tắt). Ngưỡng phân tích như Stress: p95 500 ms, lỗi 5 %. Bản AI sinh ở P4, chưa review, chưa chạy.</stringProp>
+      <stringProp name="TestPlan.comments">SPIKE (tăng đột ngột vượt năng lực). Nhóm nền base_threads=50 VU có think time 1-3 s (mức Load đã đo ở load2), ramp 30 s, chạy 420 s. Nhóm đỉnh spike_threads=200 VU KHÔNG think time (spike_think_min_ms=0, spike_think_range_ms=0) vào ở giây spike_delay=120 trong spike_rampup=5 s, giữ spike_duration=60 s rồi dừng cùng lúc (giây 180). Lý do (P5): đỉnh 500 VU có think time chỉ ~410 req/s ≈ 30 % năng lực ~1 450 req/s đo ở stress-nothink nên không tạo quá tải; 200 VU không think time đẩy backend vượt bão hòa (ở stress-nothink 160 VU cho p95 375 ms) để đo được tác động lên người dùng nền và thời gian hồi phục. Cửa sổ đo: trước đỉnh 30-120 s, đỉnh 125-180 s, sau đỉnh 180-420 s (--bucket 10). Hồi phục = 3 cửa sổ 10 s liên tiếp sau giây 180 có p95 ≤ 1,5 × p95 trung vị trước đỉnh và lỗi 0 %. Mỗi VU một tài khoản riêng (nhóm nền + đỉnh đọc chung users.csv, shareMode.all, không recycle), cần ≥ 250 tài khoản perf*. Đăng nhập một lần, lockout-probe coi 401/403 là đúng (Equals + OR). Report: View Results Tree chỉ lỗi (Summary/Aggregate tắt). Ngưỡng phân tích: p95 500 ms, lỗi 5 %. Bản AI sinh ở P4, đã chốt theo P5, chưa chạy.</stringProp>
       <boolProp name="TestPlan.functional_mode">false</boolProp>
       <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
       <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
@@ -411,7 +411,7 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">-1</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">${__P(spike_threads,500)}</stringProp>
+        <stringProp name="ThreadGroup.num_threads">${__P(spike_threads,200)}</stringProp>
         <stringProp name="ThreadGroup.ramp_time">${__P(spike_rampup,5)}</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.duration">${__P(spike_duration,60)}</stringProp>
@@ -517,8 +517,8 @@
         </HTTPSamplerProxy>
         <hashTree>
           <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Think time trước READ list" enabled="true">
-            <stringProp name="ConstantTimer.delay">${__P(spike_think_min_ms,1000)}</stringProp>
-            <stringProp name="RandomTimer.range">${__P(spike_think_range_ms,2000)}</stringProp>
+            <stringProp name="ConstantTimer.delay">${__P(spike_think_min_ms,0)}</stringProp>
+            <stringProp name="RandomTimer.range">${__P(spike_think_range_ms,0)}</stringProp>
           </UniformRandomTimer>
           <hashTree />
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Code = 200" enabled="true">
@@ -554,8 +554,8 @@
         </HTTPSamplerProxy>
         <hashTree>
           <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Think time trước READ search" enabled="true">
-            <stringProp name="ConstantTimer.delay">${__P(spike_think_min_ms,1000)}</stringProp>
-            <stringProp name="RandomTimer.range">${__P(spike_think_range_ms,2000)}</stringProp>
+            <stringProp name="ConstantTimer.delay">${__P(spike_think_min_ms,0)}</stringProp>
+            <stringProp name="RandomTimer.range">${__P(spike_think_range_ms,0)}</stringProp>
           </UniformRandomTimer>
           <hashTree />
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Code = 200" enabled="true">
@@ -591,8 +591,8 @@
         </HTTPSamplerProxy>
         <hashTree>
           <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Think time trước READ detail" enabled="true">
-            <stringProp name="ConstantTimer.delay">${__P(spike_think_min_ms,1000)}</stringProp>
-            <stringProp name="RandomTimer.range">${__P(spike_think_range_ms,2000)}</stringProp>
+            <stringProp name="ConstantTimer.delay">${__P(spike_think_min_ms,0)}</stringProp>
+            <stringProp name="RandomTimer.range">${__P(spike_think_range_ms,0)}</stringProp>
           </UniformRandomTimer>
           <hashTree />
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Code = 200" enabled="true">
@@ -724,8 +724,8 @@
         </HTTPSamplerProxy>
         <hashTree>
           <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Think time trước TXN checkout" enabled="true">
-            <stringProp name="ConstantTimer.delay">${__P(spike_think_min_ms,1000)}</stringProp>
-            <stringProp name="RandomTimer.range">${__P(spike_think_range_ms,2000)}</stringProp>
+            <stringProp name="ConstantTimer.delay">${__P(spike_think_min_ms,0)}</stringProp>
+            <stringProp name="RandomTimer.range">${__P(spike_think_range_ms,0)}</stringProp>
           </UniformRandomTimer>
           <hashTree />
           <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Header: Authorization" enabled="true">
