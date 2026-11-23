@@ -48,7 +48,7 @@ Nhận xét: throughput hai lượt gần như trùng nhau (lệch < 2 %), xác 
 ## Lượt Stress phụ không think time (`stress-nothink`)
 Thiết kế: `audit/P4-stress-nothink.md`. Cùng plan, `-J think_min_ms=0 think_range_ms=0`, 5 bậc 10/20/40/80/160 VU × 60 s (ramp 10 s), 2026-11-23 12:10:07 → 12:15:23 ICT, máy MSI, JMeter exit 0, backend PID 17220 (khớp `node-usage.csv` và ảnh).
 
-**Sự cố công cụ:** bước tóm tắt của `run-scenario.mjs` lỗi `RangeError: Maximum call stack size exceeded` do `Math.min(...mảng)` với 432 595 mẫu. JMeter đã chạy xong và .jtl/html/node-usage còn nguyên. Đã sửa (skill v1.6, thêm test 500k mẫu) và tính lại bằng `run-scenario.mjs --resume` (12:2x ICT) — không chạy lại JMeter. Đối chiếu DB lúc tính lại: backend vẫn chạy nhưng không còn request nào sau lượt, nên số đơn không đổi.
+**Sự cố công cụ:** bước tóm tắt của `run-scenario.mjs` lỗi `RangeError: Maximum call stack size exceeded` do `Math.min(...mảng)` với 432 595 mẫu. JMeter đã chạy xong và .jtl/html/node-usage còn nguyên. Đã sửa (skill v1.6, thêm test 500k mẫu) và tính lại bằng `run-scenario.mjs --resume` (12:16 ICT) — không chạy lại JMeter. Đối chiếu DB lúc tính lại: backend vẫn chạy nhưng không còn request nào sau lượt, nên số đơn không đổi.
 
 Tổng: 432 595 mẫu, lỗi 0 %, p95 165 ms, p99 367 ms, max 565 ms, 1 442,5 req/s; 30/30 cửa sổ 10 s khỏe, đỉnh 1 656,8 req/s. Checkout 71 981 = 71 981 đơn trong DB → KHỚP. CPU backend TB 8,1 % / max 10,7 % (thang 12 lõi ≈ 97–128 % một lõi; vượt 100 % vì sqlite3 chạy truy vấn trên threadpool của libuv). RAM 53,3 → 199,1 MB (đỉnh 259,1 MB).
 
