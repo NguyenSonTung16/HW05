@@ -2,7 +2,7 @@
 <jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="23120399_Stress_20261123" enabled="true">
-      <stringProp name="TestPlan.comments">STRESS (tăng bậc để quan sát dấu hiệu suy giảm). 5 bậc cộng dồn: 25/25/50/100/200 VU, delay 0/180/360/540/720 s → 25, 50, 100, 200, 400 VU; mọi bậc kết thúc ở giây 900 (15 phút) - plan KHÔNG tự dừng khi vượt ngưỡng, luôn chạy hết 900 s. Ngưỡng p95 500 ms và lỗi 5 % là ngưỡng PHÂN TÍCH (dùng với jtl-summary.mjs --bucket 30 --p95-limit 500 --err-limit 5 để tìm cửa sổ vi phạm đầu tiên), không phải ngưỡng dừng chạy. Bậc 5 chỉ kéo dài 180 s nên chỉ đủ quan sát dấu hiệu ban đầu ở 400 VU, không kết luận được độ ổn định hay điểm gãy bền. Mỗi VU một tài khoản riêng: 5 nhóm cùng đọc users.csv với shareMode.all (chia sẻ giữa mọi nhóm, không recycle, hết dòng thì dừng VU), cần ≥ 400 tài khoản perf*. Đăng nhập một lần, think time 1-3 s trước READ và checkout, nhánh lockout-probe coi 401/403 là đúng. Tham số: s1..s5_threads/rampup/duration/delay, total_duration. Report: Aggregate Report (Summary tắt). Bản AI sinh ở P4, đã sửa theo review ở P5, chưa chạy.</stringProp>
+      <stringProp name="TestPlan.comments">STRESS (tăng bậc để quan sát dấu hiệu suy giảm). 5 bậc cộng dồn: 25/25/50/100/200 VU, delay 0/60/120/180/240 s, ramp-up 15 s mỗi bậc → 25, 50, 100, 200, 400 VU; mọi bậc kết thúc ở giây 300 (5 phút; rút từ 15 phút theo yêu cầu của sinh viên) - plan KHÔNG tự dừng khi vượt ngưỡng, luôn chạy hết 300 s. Ngưỡng p95 500 ms và lỗi 5 % là ngưỡng PHÂN TÍCH (dùng với jtl-summary.mjs --bucket 10 --p95-limit 500 --err-limit 5 để tìm cửa sổ vi phạm đầu tiên), không phải ngưỡng dừng chạy. Mỗi bậc chỉ 60 s (45 s sau ramp-up) nên mỗi mức VU chỉ đủ quan sát dấu hiệu ban đầu; bậc 5 chỉ 60 s nên chỉ đủ quan sát dấu hiệu ban đầu ở 400 VU, không kết luận được độ ổn định hay điểm gãy bền. Mỗi VU một tài khoản riêng: 5 nhóm cùng đọc users.csv với shareMode.all (chia sẻ giữa mọi nhóm, không recycle, hết dòng thì dừng VU), cần ≥ 400 tài khoản perf*. Đăng nhập một lần, think time 1-3 s trước READ và checkout, nhánh lockout-probe coi 401/403 là đúng. Tham số: s1..s5_threads/rampup/duration/delay, total_duration. Report: Aggregate Report (Summary tắt). Bản AI sinh ở P4, đã sửa theo review ở P5, chưa chạy.</stringProp>
       <boolProp name="TestPlan.functional_mode">false</boolProp>
       <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
       <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
@@ -59,9 +59,9 @@
           <stringProp name="LoopController.loops">-1</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">${__P(s1_threads,25)}</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">${__P(s1_rampup,30)}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${__P(s1_rampup,15)}</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
-        <stringProp name="ThreadGroup.duration">${__P(s1_duration,900)}</stringProp>
+        <stringProp name="ThreadGroup.duration">${__P(s1_duration,300)}</stringProp>
         <stringProp name="ThreadGroup.delay">${__P(s1_delay,0)}</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
@@ -412,10 +412,10 @@
           <stringProp name="LoopController.loops">-1</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">${__P(s2_threads,25)}</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">${__P(s2_rampup,30)}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${__P(s2_rampup,15)}</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
-        <stringProp name="ThreadGroup.duration">${__P(s2_duration,720)}</stringProp>
-        <stringProp name="ThreadGroup.delay">${__P(s2_delay,180)}</stringProp>
+        <stringProp name="ThreadGroup.duration">${__P(s2_duration,240)}</stringProp>
+        <stringProp name="ThreadGroup.delay">${__P(s2_delay,60)}</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
       <hashTree>
@@ -765,10 +765,10 @@
           <stringProp name="LoopController.loops">-1</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">${__P(s3_threads,50)}</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">${__P(s3_rampup,30)}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${__P(s3_rampup,15)}</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
-        <stringProp name="ThreadGroup.duration">${__P(s3_duration,540)}</stringProp>
-        <stringProp name="ThreadGroup.delay">${__P(s3_delay,360)}</stringProp>
+        <stringProp name="ThreadGroup.duration">${__P(s3_duration,180)}</stringProp>
+        <stringProp name="ThreadGroup.delay">${__P(s3_delay,120)}</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
       <hashTree>
@@ -1118,10 +1118,10 @@
           <stringProp name="LoopController.loops">-1</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">${__P(s4_threads,100)}</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">${__P(s4_rampup,30)}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${__P(s4_rampup,15)}</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
-        <stringProp name="ThreadGroup.duration">${__P(s4_duration,360)}</stringProp>
-        <stringProp name="ThreadGroup.delay">${__P(s4_delay,540)}</stringProp>
+        <stringProp name="ThreadGroup.duration">${__P(s4_duration,120)}</stringProp>
+        <stringProp name="ThreadGroup.delay">${__P(s4_delay,180)}</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
       <hashTree>
@@ -1471,10 +1471,10 @@
           <stringProp name="LoopController.loops">-1</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">${__P(s5_threads,200)}</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">${__P(s5_rampup,30)}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${__P(s5_rampup,15)}</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
-        <stringProp name="ThreadGroup.duration">${__P(s5_duration,180)}</stringProp>
-        <stringProp name="ThreadGroup.delay">${__P(s5_delay,720)}</stringProp>
+        <stringProp name="ThreadGroup.duration">${__P(s5_duration,60)}</stringProp>
+        <stringProp name="ThreadGroup.delay">${__P(s5_delay,240)}</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
       <hashTree>
@@ -1826,7 +1826,7 @@
         <stringProp name="ThreadGroup.num_threads">${__P(lock_threads,1)}</stringProp>
         <stringProp name="ThreadGroup.ramp_time">1</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
-        <stringProp name="ThreadGroup.duration">${__P(total_duration,900)}</stringProp>
+        <stringProp name="ThreadGroup.duration">${__P(total_duration,300)}</stringProp>
         <stringProp name="ThreadGroup.delay">0</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>

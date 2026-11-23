@@ -16,3 +16,7 @@ Plan: `perf/plans/23120399_Stress_20261123.jmx`. Sinh viên nêu 5 điểm; dư�
 - Nếu mỗi bậc đọc file riêng thì sẽ có 10 lần đăng nhập và tài khoản trùng nhau. Kết luận: với cùng đường dẫn và `shareMode.all`, 5 Thread Group dùng chung một con trỏ CSV, không trùng tài khoản. Không cần chia file theo bậc.
 - Lỗi 0 %, nhánh lockout-probe 7 × 401 (chưa tới 403 vì mỗi tài khoản lock chỉ bị thử một lần trong 40 s).
 - `perf/data/users.csv` đã có 500 tài khoản (501 dòng kể cả header) → đủ cho 400 VU.
+
+## Rút thời lượng Stress từ 15 xuống 5 phút (10:59, theo yêu cầu sinh viên)
+Giữ 5 bậc 25/50/100/200/400 VU, mỗi bậc 60 s: delay 0/60/120/180/240 s, ramp-up 15 s, duration 300/240/180/120/60 s, `total_duration=300`; phân tích với `--bucket 10`.
+Đánh đổi (ghi vào báo cáo): mỗi mức VU chỉ còn ~45 s sau ramp-up, nên chỉ thấy dấu hiệu ban đầu ở từng bậc, không đo được suy giảm theo thời gian; bậc 5 thêm 200 VU trong 15 s nên có tính chất gần với spike. Điểm gãy tìm được là ước lượng thô; nếu cần chính xác hơn thì chạy lại riêng quanh bậc nghi ngờ.
