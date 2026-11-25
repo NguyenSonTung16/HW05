@@ -545,14 +545,25 @@ AI mạnh ở việc dựng khung (workflow, plan, script, báo cáo) và đọc
 
 ## Phụ lục A – Toàn văn nhật ký AI (audit/AI_LOG.md)
 
-Nhật ký thô theo từng tin nhắn của sinh viên: giờ (UTC+07:00), prompt nguyên văn, output nguyên văn (toàn bộ văn bản sinh viên thấy trên màn hình ở lượt đó). Cột Verdict trong nhật ký để trống; verdict nằm ở Mục 3.
+**AI Log – HW05 (MSSV 23120399)**
+
+Nhật ký thô, ghi liên tục; dùng để điền bảng Audit theo template AI-02 (docs/AI-02_Audit_Template.docx).
+
+• Công cụ: Claude (claude.ai, Project "software testing"; model Sonnet 5.5).
+
+• Giờ ghi theo UTC+07:00 (giờ gửi tin nhắn của sinh viên); bắt đầu ngày 18/11/2026.
+
+• Prompt là tin nhắn nguyên văn của sinh viên. Output là toàn bộ văn bản sinh viên thấy trên màn hình ở lượt đó.
+
+• Verdict: do sinh viên điền, AI không tự gán.
 
 <table>
 <colgroup>
 <col style="width: 4%" />
 <col style="width: 8%" />
-<col style="width: 31%" />
-<col style="width: 55%" />
+<col style="width: 28%" />
+<col style="width: 52%" />
+<col style="width: 5%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -560,13 +571,14 @@ Nhật ký thô theo từng tin nhắn của sinh viên: giờ (UTC+07:00), prom
 <th>Giờ</th>
 <th>Prompt</th>
 <th>Output</th>
+<th>Verdict</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>1</td>
 <td>10:19</td>
-<td>@"/mnt/user-data/uploads/0e95a0ec-2026.HW05.Performance_Testing_En.pdf" sử dụng folder HW05 làm folder chứa cho HW05, áp dụng cùng skill ghi audit cũng như template ở bản doc của HW04, bắt đầu làm HW05, trước tiên hãy giải thích HW05 yêu cầu làm gì</td>
+<td>sử dụng folder HW05 làm folder chứa cho HW05, áp dụng cùng skill ghi audit cũng như template ở bản doc của HW04, bắt đầu làm HW05, trước tiên hãy giải thích HW05 yêu cầu làm gì</td>
 <td># HW05 – Kiểm thử hiệu năng (Performance Testing)<br />
 <br />
 Bài cá nhân, khoảng 10 giờ, nộp qua Moodle. Bạn dùng JMeter (mặc định; k6 là điểm cộng) để test hiệu năng API backend của EShop, dùng AI ở từng bước (không một prompt chung chung), rồi tự review và chịu trách nhiệm kết quả. AI Audit Report là bắt buộc.<br />
@@ -621,6 +633,7 @@ Trong `D:\vscode\Software testing\HW05` mình tạo `audit/AI_LOG.md` (cùng quy
 <br />
 Mình có thể lập kế hoạch từng bước (PLAN.md) cho HW05 ngay sau khi bạn trả lời.<br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>2</td>
@@ -652,6 +665,7 @@ Kế hoạch đầy đủ nằm ở `HW05/PLAN.md` (bản đề xuất, chưa l�
 <br />
 Khi bạn duyệt, mình bắt đầu từ Giai đoạn A (soạn skill).<br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>3</td>
@@ -691,6 +705,7 @@ Dù chọn cách nào, mình cũng sẽ xin quyền xóa file trong thư mục (
 <br />
 Bạn review skill xong (hoặc ghi nhận xét để mình sửa) thì mình commit skill v1 rồi sang Giai đoạn B, bước P1.<br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>4</td>
@@ -710,6 +725,7 @@ Nó làm 4 việc chính:<br />
 <br />
 Tóm lại: AI lo thiết kế và tính toán, bạn duyệt và chạy, còn mọi con số trong báo cáo đều truy được về file `.jtl` gốc.<br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>5</td>
@@ -742,6 +758,7 @@ Tóm lại: AI lo thiết kế và tính toán, bạn duyệt và chạy, còn m
 <br />
 Bạn trả lời gốc repo và duyệt P1 là mình làm tiếp.<br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>6</td>
@@ -767,6 +784,7 @@ Bạn trả lời gốc repo và duyệt P1 là mình làm tiếp.<br />
 <br />
 **Bước sau (P4):** để bằng chứng "dẫn dắt AI từng bước" rõ ràng như đề yêu cầu, bạn nên gửi riêng từng prompt cho từng plan, ví dụ: "P4: sinh plan Load", rồi "P4: sinh plan Stress", "P4: sinh plan Spike". Mỗi lần mình sinh một plan từ template, giải thích tham số, rồi dừng để bạn review trước khi chạy.<br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>7</td>
@@ -786,6 +804,7 @@ Lưu ý: 110 tài khoản này sẽ mất khi bạn khởi động lại backend
 - Ngày trong tên file: mình đề xuất lấy ngày tạo plan (20261118). Nếu bạn muốn theo ngày chạy thì nói mình.<br />
 - Trong lúc đó, nếu chưa làm: `node -v`, mở thử template bằng JMeter GUI, chụp dxdiag và cấu hình máy.<br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>8</td>
@@ -807,6 +826,7 @@ Về lỗi vừa sửa: commit thành skill v1.2, test trên Linux vẫn pass. R
 <br />
 Cài xong, bạn gửi mình kết quả `jmeter -v` (hoặc ảnh JMeter mở template, nếu có báo lỗi) và gửi prompt "P4: sinh plan Load".<br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>9</td>
@@ -823,6 +843,7 @@ Cách sửa:<br />
 <br />
 `JAVA_HOME` trỏ vào JDK đi kèm Android Studio (`jbr`) là dùng được cho JMeter. Bạn gõ thêm `java -version` để chắc Java chạy được từ dòng lệnh. Nếu `java -version` báo lỗi nhưng `jmeter -v` vẫn chạy thì cũng không sao.<br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>10</td>
@@ -840,6 +861,7 @@ Còn lại trước khi sang P4 (không bắt buộc làm ngay):<br />
 <br />
 Khi sẵn sàng, gửi prompt "P4: sinh plan Load".<br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>11</td>
@@ -853,6 +875,7 @@ Mở giao diện JMeter bằng một trong hai cách:<br />
 <br />
 Trong GUI: File → Open → `D:\vscode\Software testing\HW05\skills\jmeter-performance-testing\templates\plan.jmx.template`, đổi bộ lọc sang "All files". Nếu mở được và thấy cây gồm "TG workflow" (7 request) và "TG lockout-probe" thì template hợp lệ.<br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>12</td>
@@ -871,6 +894,7 @@ Mở được thì cây bên trái phải có:<br />
 <br />
 Nếu JMeter báo lỗi khi mở, gửi mình ảnh thông báo. Nếu mở bình thường thì không cần chạy gì trong GUI cả, gửi "P4: sinh plan Load" là được.<br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>13</td>
@@ -883,6 +907,7 @@ Lưu ý: đóng file này mà **không bấm Save**. JMeter lưu lại sẽ vi�
 <br />
 Bước tiếp theo: gửi "P4: sinh plan Load".<br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>14</td>
@@ -918,6 +943,7 @@ Bạn có thể mở plan bằng JMeter GUI để xem (nhớ đừng Save). Duy�
 <br />
 Chạy xong gửi mình phần cuối kết quả trong terminal (hoặc nội dung `perf\results\smoke-load\summary.md`).<br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>15</td>
@@ -939,6 +965,7 @@ Năm điểm mình tự nêu chỉ là gợi ý; bạn cần tự quyết đồn
 <br />
 Khi bạn gửi nhận xét, mình ghi lại và sửa plan.<br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>16</td>
@@ -974,6 +1001,7 @@ Mỗi vòng giờ chỉ còn 6 request (đăng nhập tách ra đầu phiên). L
 <br />
 Smoke sẽ kiểm luôn hai điều chưa xác nhận: phải có đúng 2 mẫu `AUTH login`, và mẫu `AUTH login-wrong` phải được tính là thành công. Chạy xong, gửi mình nội dung `perf\results\smoke-load\summary.md`.<br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>17</td>
@@ -1014,6 +1042,7 @@ Smoke đo được mỗi vòng mất khoảng 9,2 s, tức mỗi người dùng 
 <br />
 Chạy xong gửi mình `perf\results\load\summary.md`.<br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>18</td>
@@ -1033,6 +1062,7 @@ Bạn chạy với `-J threads=500` nhưng chỉ có 100 tài khoản trong `use
 Mình vừa sửa luôn các lỗi nhỏ thấy trong ảnh (skill v1.5): dòng tiếng Việt bị lỗi font ở bước giám sát (`monitor-node.ps1` giờ lưu UTF-8 có BOM), cảnh báo DEP0190 khi gọi JMeter, và cảnh báo thử nghiệm của sqlite. 11/11 test vẫn qua, nên lần chạy lại sẽ sạch hơn.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>19</td>
@@ -1061,6 +1091,7 @@ node skills\jmeter-performance-testing\scripts\run-scenario.mjs --plan perf\plan
 Khi chạy xong, gửi mình `perf\results\load2\summary.md`. Mình sẽ đọc kết quả, kiểm tra phần đếm đơn trong DB và số lần bị khóa 403 do nhánh lockout-probe.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>20</td>
@@ -1090,6 +1121,7 @@ Khi chạy xong, gửi mình `perf\results\load2\summary.md`. Mình sẽ đọc 
 Cứ để lượt này chạy cho xong rồi gửi `perf\results\load2\summary.md`. Đừng thao tác trong lúc chạy để tránh làm lệch số liệu.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>21</td>
@@ -1109,6 +1141,7 @@ Hai việc cần bổ sung, không làm ảnh này sai:<br />
 Khi chạy xong, gửi mình `perf\results\load2\summary.md`.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>22</td>
@@ -1136,6 +1169,7 @@ Tổng: 14692 mẫu, lỗi 0%, p95 4 ms, 35 req/s<br />
 **Bước tiếp theo (P4 Stress):** mình sinh plan Stress theo bảng bậc tải của skill (cần thêm tài khoản vì VU ≤ số tài khoản, và dùng Aggregate Report). Sau đó bạn review như ở P5. Bạn muốn mình làm luôn không?<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>23</td>
@@ -1156,6 +1190,7 @@ Tổng: 14692 mẫu, lỗi 0%, p95 4 ms, 35 req/s<br />
 **Việc cần chuẩn bị cho Stress:** cần thêm tài khoản (VU không được vượt số tài khoản, hiện chỉ có 100, nên cần tạo khoảng 500 để chạy tới 400 VU), và dùng Aggregate Report như đã định. Mình sẽ tăng số tài khoản trong `prepare-data.mjs` rồi sinh plan Stress cho bạn review (P4). Bạn đồng ý làm tiếp không?<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>24</td>
@@ -1174,6 +1209,7 @@ node skills\jmeter-performance-testing\scripts\prepare-data.mjs --out perf\data 
 Lệnh này tạo 500 tài khoản `perf001–perf500` (100 tài khoản đầu giống cũ) và ghi lại `perf\data\users.csv`. Lượt Load đã chạy xong nên không bị ảnh hưởng. Chạy xong, bạn gửi mình dòng kết quả cuối cùng của lệnh là được.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>25</td>
@@ -1198,6 +1234,7 @@ Lệnh này tạo 500 tài khoản `perf001–perf500` (100 tài khoản đầu 
 Khi bạn chốt xong 4 điểm này, mình chạy smoke Stress rồi hướng dẫn lệnh chạy thật.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>26</td>
@@ -1227,6 +1264,7 @@ node skills\jmeter-performance-testing\scripts\run-scenario.mjs --plan perf\plan
 3. Gửi mình dòng `AUTH login` trong `perf\results\smoke-stress-csvtest\summary.md`. Ra 4 là chạy được Stress thật.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>27</td>
@@ -1257,6 +1295,7 @@ node skills\jmeter-performance-testing\scripts\run-scenario.mjs --plan perf\plan
 Xong thì báo mình, mình sẽ đọc kết quả và phân tích với ngưỡng p95 500 ms / lỗi 5 %.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>28</td>
@@ -1276,6 +1315,7 @@ Lý do bản cũ lâu: 5 bậc, mỗi bậc giữ 3 phút để thấy hệ th�
 Lệnh chạy vẫn y như tin trước (khởi động lại backend, `prepare-data.mjs --users 500 --accounts-only`, rồi `run-scenario.mjs ... --out perf\results\stress --verify-db ...`). Thời điểm chụp ảnh đổi lại: bậc 4 khoảng phút 3:20–3:50 (200 VU), bậc 5 khoảng phút 4:20–4:50 (400 VU).<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>29</td>
@@ -1295,6 +1335,7 @@ Lệnh chạy vẫn y như tin trước (khởi động lại backend, `prepare-
 Mô tả plan và `audit/P5-stress-review.md` đã cập nhật. Lệnh chạy giữ nguyên như trước. Thời điểm chụp ảnh: bậc 4 khoảng phút 7:00–7:50 (200 VU), bậc 5 khoảng phút 9:00–9:50 (400 VU).<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>30</td>
@@ -1311,6 +1352,7 @@ Quyết định so sánh 5 / 10 / 15 phút rồi giữ 15 phút đã ghi vào `a
 **Chụp ảnh:** bậc 4 khoảng phút 11:00–11:50 (200 VU), bậc 5 khoảng phút 13:30–14:30 (400 VU).<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>31</td>
@@ -1341,6 +1383,7 @@ Kết quả này vẫn báo cáo được ("không gãy tới 400 VU / 300 req/s
 **Ảnh minh chứng:** mình chưa thấy ảnh nào trong `evidence\screenshots\stress\`. Bạn có chụp ở bậc 4–5 không? Nếu có, gửi mình để lưu.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>32</td>
@@ -1372,6 +1415,7 @@ node skills\jmeter-performance-testing\scripts\run-scenario.mjs --plan perf\plan
 Chạy xong, gửi mình các ảnh, mình sẽ lưu vào `evidence\screenshots\stress\` và so sánh `stress2` với `stress`. Đề xuất chạy thêm lượt không think time vẫn chờ bạn quyết, làm sau cũng được.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>33</td>
@@ -1390,6 +1434,7 @@ Cách này còn có lợi: hai lượt cùng cấu hình cho số gần nhau th�
 Lệnh chạy giữ nguyên như tin trước, với `--out perf\results\stress2`.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>34</td>
@@ -1406,6 +1451,7 @@ node skills\jmeter-performance-testing\scripts\run-scenario.mjs --plan perf\plan
 Chụp khi terminal hiện khoảng `00:11:00`–`00:11:50` (200 VU) và `00:13:30`–`00:14:30` (400 VU).<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>35</td>
@@ -1429,6 +1475,7 @@ Chụp khi terminal hiện khoảng `00:11:00`–`00:11:50` (200 VU) và `00:13:
 Nếu bạn vẫn muốn giữ ảnh này thì mình lưu kèm làm ảnh phụ (`stress2-bac1-3min.png`), không bắt buộc.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>36</td>
@@ -1445,6 +1492,7 @@ Nếu bạn vẫn muốn giữ ảnh này thì mình lưu kèm làm ảnh phụ 
 **Ảnh tiếp theo:** bậc 5 bắt đầu ở `00:12:00`. Chụp lúc `00:13:30`–`00:14:30` (khoảng 12:04 giờ máy), khi `Active` khoảng 401 và throughput khoảng 300 req/s.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>37</td>
@@ -1459,6 +1507,7 @@ Nếu bạn vẫn muốn giữ ảnh này thì mình lưu kèm làm ảnh phụ 
 Bậc 5 sắp vào giai đoạn ổn định, chụp lúc khoảng `00:13:30`–`00:14:30`.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>38</td>
@@ -1469,6 +1518,7 @@ Bậc 5 sắp vào giai đoạn ổn định, chụp lúc khoảng `00:13:30`–
 Ảnh này chụp ở `00:12:00`, `Active: 202`, tức bậc 5 vừa bắt đầu tăng tải (ramp-up 30 s), chưa đạt 400 VU, nên mình chưa lưu làm ảnh bậc 5. Bạn chờ đến khi terminal hiện khoảng `00:13:30`–`00:14:30` và `Active` khoảng 401 rồi chụp lại.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>39</td>
@@ -1483,6 +1533,7 @@ Bậc 5 sắp vào giai đoạn ổn định, chụp lúc khoảng `00:13:30`–
 Giờ đã có đủ 2 ảnh (bậc 4 và bậc 5). Lượt chạy còn khoảng 1,5 phút nữa. Khi xong, bạn báo mình, mình sẽ so sánh `stress2` với `stress`, ghi vào audit và commit.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>40</td>
@@ -1511,6 +1562,7 @@ Trong báo cáo, số liệu chính vẫn lấy từ `stress`, ảnh ghi rõ thu
 Mình nghiêng về làm (1) trước, vì phần phân tích ở Task 2 sẽ có số liệu "điểm gãy" thật để AI diễn giải.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>41</td>
@@ -1544,6 +1596,7 @@ node skills\jmeter-performance-testing\scripts\run-scenario.mjs --plan perf\plan
 - Ảnh 2 ngay sau đó: chuyển Task Manager sang tab **Performance** (CPU toàn máy), vì JMeter chạy cùng máy nên cần biết máy có bị nghẽn không.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>42</td>
@@ -1563,6 +1616,7 @@ Ngay trên ảnh đã thấy kết quả chính, rõ hơn mình dự đoán:<br 
 File .jtl khoảng 65 MB, dưới giới hạn 100 MB của GitHub. Lượt chạy đang tạo báo cáo HTML. Khi terminal báo xong, bạn nhắn mình để phân tích chi tiết từng bậc và tách riêng `view-cart`.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>43</td>
@@ -1607,6 +1661,7 @@ Mọi thứ đã ghi vào `audit/P6-stress.md` (kể cả sự cố công cụ v
 **Bước tiếp theo:** Spike (P4: sinh plan, View Results Tree chỉ lỗi), sau đó là Soak 10–15 phút. Bạn muốn làm Spike luôn không?<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>44</td>
@@ -1628,6 +1683,7 @@ Mọi thứ đã ghi vào `audit/P6-stress.md` (kể cả sự cố công cụ v
 4. Có chạy smoke trước không (2 VU nền + 4 VU đỉnh, 40 s) để kiểm tra plan mới.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>45</td>
@@ -1648,6 +1704,7 @@ node skills\jmeter-performance-testing\scripts\run-scenario.mjs --plan perf\plan
 Xong thì báo mình. Mình sẽ kiểm tra có đúng 6 lần đăng nhập không, nhóm đỉnh có chạy liên tục không, và DB có khớp không, rồi đưa lệnh chạy thật.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>46</td>
@@ -1675,6 +1732,7 @@ node skills\jmeter-performance-testing\scripts\run-scenario.mjs --plan perf\plan
 - Nếu kịp, thêm một ảnh tab Performance lúc đỉnh.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>47</td>
@@ -1691,6 +1749,7 @@ So với trước đỉnh (Avg 1 ms, khoảng 37 req/s), độ trễ trung bình
 **Còn ảnh sau đỉnh:** chụp khi terminal hiện khoảng `00:04:00` (lúc đó Active về 51), để thấy độ trễ đã trở lại mức nền. Lượt chạy kết thúc ở `00:07:00`, xong thì báo mình.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>48</td>
@@ -1705,6 +1764,7 @@ Hai ảnh này cho thấy:<br />
 Lượt chạy kết thúc ở `00:07:00` (khoảng 12:35). Khi xong, gửi mình dòng kết quả cuối để mình phân tích theo 3 giai đoạn.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>49</td>
@@ -1736,6 +1796,7 @@ Lưu ý: con số p95 411 ms ở dòng tổng gộp cả 7 phút nên dễ hiể
 **Bước tiếp theo: Soak 10–15 phút** (đề yêu cầu có số liệu cụ thể). Mình đề xuất dùng plan Load ở mức 50 VU có think time, chạy 15 phút, theo dõi xu hướng RAM. Plan Load có tham số `duration` nên chỉ cần `-J duration=900`, nhưng tên file phải có chữ `Soak` theo quy ước, nên mình sẽ tạo `23120399_Soak_20261123.jmx` từ plan Load. Bạn đồng ý không?<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>50</td>
@@ -1760,6 +1821,7 @@ node skills\jmeter-performance-testing\scripts\run-scenario.mjs --plan perf\plan
 - khoảng `00:14:00`<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>51</td>
@@ -1776,6 +1838,7 @@ Mốc 145 MB này là điểm xuất phát để so với hai ảnh sau. Nếu R
 Hai ảnh tiếp theo: khoảng `00:08:00` (12:58) và `00:14:00` (13:04). Mỗi mốc nên chụp cả tab Details và tab Performance như lần này.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>52</td>
@@ -1793,6 +1856,7 @@ Nghĩa là trong 15 phút ở mức 300 VU có think time, dữ liệu giỏ hà
 Ảnh cuối: khoảng `00:14:00` (13:04).<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>53</td>
@@ -1812,6 +1876,7 @@ Mức tăng này nhỏ, và 15 phút chưa đủ để kết luận là rò rỉ
 Lượt chạy kết thúc ở khoảng `00:15:00`. Khi xong, gửi mình dòng kết quả cuối.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>54</td>
@@ -1847,6 +1912,7 @@ Tổng: 195439 mẫu, lỗi 0%, p95 4 ms, 217.2 req/s<br />
 Mình đề xuất làm (1) trước, vì Task 2 và báo cáo sẽ dẫn chiếu đến các Issue. Bạn muốn làm theo thứ tự này không?<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>55</td>
@@ -1880,6 +1946,7 @@ gh issue create --repo NguyenSonTung16/HW05 --title "&lt;tiêu đề&gt;" --body
 Trong lúc bạn đăng, mình có thể làm tiếp **Task 2** (cho AI phân tích .jtl và bắt chỗ hiểu sai). Bạn muốn mình bắt đầu luôn không?<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>56</td>
@@ -1899,12 +1966,14 @@ Trong lúc bạn đăng, mình có thể làm tiếp **Task 2** (cho AI phân t�
 Dù chọn cách nào, đề vẫn cần **ảnh chụp trang Issues** để đưa vào bug report. Phần này bạn chụp sau khi Issue đã được tạo.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>57</td>
 <td>13:17 (Opus 5.5)</td>
 <td>bạn tự chạy và cap màn hình issue</td>
 <td>Mình sẽ push code lên GitHub, tạo 5 Issue từ các file trong `bug-reports\`, rồi chụp màn hình trang Issues.</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>58</td>
@@ -1929,6 +1998,7 @@ Trong HW05 (D:\vscode\Software testing\HW05), 5 GitHub Issue #1–#5 đã đư�
 Mình dùng Chrome của bạn (đang đăng nhập GitHub) vì trình duyệt tích hợp không lưu ảnh ra file được.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>59</td>
@@ -1953,6 +2023,7 @@ Mình dùng Chrome của bạn (đang đăng nhập GitHub) vì trình duyệt t
 Bạn muốn mình commit ảnh issues và `audit/AI_LOG.md` (tác giả NguyenSonTung16, không thêm dòng Co-Authored-By) rồi push không? Mình cũng có thể đóng tab Chrome mình mở trước đó.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>60</td>
@@ -1972,6 +2043,7 @@ Sau đó bạn nhắn mình. Mình sẽ làm như sau:<br />
 - Hiển thị kết quả trên trang và chụp màn hình thành `evidence/screenshots/issues/bug04-manual-checkout.png`.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>61</td>
@@ -1995,6 +2067,7 @@ Lưu ý:<br />
 - Ảnh chưa commit và chưa comment vào Issue #4. Comment là hành động công khai nên mình chờ bạn đồng ý. Bạn muốn mình comment ảnh lên Issue #4, commit ảnh cùng `audit/AI_LOG.md` rồi push không?<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>62</td>
@@ -2010,6 +2083,7 @@ Lưu ý:<br />
 - Chưa có ảnh trang danh sách Issues (`issues-list.png`).<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>63</td>
@@ -2033,6 +2107,7 @@ Mình đã tick C1 trong `PLAN.md` nhưng chưa commit.<br />
 Bước tiếp theo là C2: bạn cho AI phân tích `.jtl` trong một phiên riêng và ghi nguyên văn prompt. Khi có câu trả lời, gửi mình để mình làm C3 và C4.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>64</td>
@@ -2049,6 +2124,7 @@ Trước khi làm C2, bạn kiểm tra giúp mình hai điều:<br />
 Khi có câu trả lời của AI, bạn gửi lại mình để mình làm C3.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>65</td>
@@ -2059,6 +2135,7 @@ Khi có câu trả lời của AI, bạn gửi lại mình để mình làm C3.<
 `D:\vscode\Software testing\HW05\perf\analysis\analysis-prompt.md`<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>66</td>
@@ -2080,6 +2157,7 @@ Lưu ý: 200 dòng đầu chỉ bao phủ vài giây đầu của mỗi lần ch
 Khi bạn sẵn sàng, dán nguyên văn prompt trong `perf/analysis/analysis-prompt.md` cùng các file trên vào một phiên AI riêng.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>67</td>
@@ -2095,6 +2173,7 @@ Khi bạn sẵn sàng, dán nguyên văn prompt trong `perf/analysis/analysis-pr
 Nếu bạn muốn, mình tạo một file txt chỉ chứa phần prompt để bạn copy một lần cho gọn.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>68</td>
@@ -2139,6 +2218,7 @@ Quy tắc:<br />
 Sau khi AI trả lời, lưu nguyên văn prompt và toàn bộ câu trả lời vào `audit/P8-ai-analysis.md`, rồi gửi mình phần trả lời để làm C3.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>69</td>
@@ -2153,6 +2233,7 @@ Mình đã đối chiếu từng nhận định với file gốc (C3), kết qu�
 Bước tiếp theo là C4: phân loại các đề xuất tối ưu của AI (khả thi hay ảo tưởng) dựa trên mã nguồn SUT. Mình sẽ làm sau khi bạn xác nhận.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>70</td>
@@ -2167,6 +2248,7 @@ Bước tiếp theo là C4: phân loại các đề xuất tối ưu của AI (k
 Mình chưa tick C2, C3, C4 trong `PLAN.md` và chưa commit. Bước tiếp theo là C5: bạn ghi phán quyết cuối vào `docs/AI_Analysis_Review.md`. Mình có thể soạn sẵn khung file đó nếu bạn cần.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>71</td>
@@ -2186,6 +2268,7 @@ Mình chưa tick C2, C3, C4 trong `PLAN.md` và chưa commit. Bước tiếp the
 Trước khi làm C5, nên lưu ý: `audit/P8-ai-analysis.md`, `perf/analysis/` và `audit/AI_LOG.md` đã có thay đổi nhưng chưa commit trên máy bạn. Mình sẽ commit khi bạn yêu cầu.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>72</td>
@@ -2202,6 +2285,7 @@ Trước khi làm C5, nên lưu ý: `audit/P8-ai-analysis.md`, `perf/analysis/` 
 Mình chưa commit. Lần này mình ghi lại đầy đủ hai điểm trên để không còn chỗ sai nào trong hàng này. Hàng #70 và #71 trước đó dùng cách gọi "ảo tưởng" cho đề xuất không áp dụng được, và mình không sửa được hàng cũ. Bạn coi nội dung của hàng này là bản đúng.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>73</td>
@@ -2221,6 +2305,7 @@ Mình chưa commit. Lần này mình ghi lại đầy đủ hai điểm trên đ
 Bạn muốn mình bắt đầu Task 3 (D) bây giờ không?<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>74</td>
@@ -2236,6 +2321,7 @@ Các bước:<br />
 3. Gửi mình toàn bộ phản hồi. Mình sẽ thay phần phản hồi trong `audit/P8-ai-analysis.md` và đối chiếu lại C3, C4 với bản mới.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>75</td>
@@ -2283,6 +2369,7 @@ Quy tắc:<br />
 Sau khi phiên AI trả lời xong, dán nguyên văn phản hồi vào đây. Mình sẽ thay phần phản hồi trong `audit/P8-ai-analysis.md` và đối chiếu lại C3, C4.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>76</td>
@@ -2303,6 +2390,7 @@ Phản hồi cũng có đoạn "không ghi audit lượt này theo yêu cầu c�
 P8 không có mục C3 hay C4. Nếu C3, C4 nằm ở file khác, bạn cho mình biết đường dẫn để mình đối chiếu lại với bản chạy lại này. Thay đổi chưa được commit.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>77</td>
@@ -2318,6 +2406,7 @@ P8 không có mục C3 hay C4. Nếu C3, C4 nằm ở file khác, bạn cho mìn
 Mình đề xuất dựng lại C3 và C4 ngay trong `audit/P8-ai-analysis.md`, dựa trên bản phản hồi chạy lại. Mình sẽ đối chiếu từng nhận định với file gốc và mã nguồn `eshop-sut/backend`, rồi ghi dòng `.jtl` hoặc dòng mã làm bằng chứng. Bạn xác nhận giúp mình là làm luôn như vậy được không?<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>78</td>
@@ -2344,6 +2433,7 @@ Ngoài phạm vi C4: `server.js` ghép `searchQuery` trực tiếp vào câu SQL
 Chưa commit, và `PLAN.md` chưa tick C2–C4. Bước tiếp theo là C5 (phán quyết của bạn trong `docs/AI_Analysis_Review.md`).<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>79</td>
@@ -2360,6 +2450,7 @@ Các file đã được stage: `PLAN.md`, `audit/AI_LOG.md`, `audit/P8-ai-analys
 Sau khi bạn trả lời, mình sẽ commit với tác giả NguyenSonTung16, không có dòng Co-Authored-By. Mình sẽ không push nếu bạn chưa yêu cầu.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>80</td>
@@ -2370,6 +2461,7 @@ Sau khi bạn trả lời, mình sẽ commit với tác giả NguyenSonTung16, k
 Mình đã đổi tên hai lock cũ thành `.git/stale-HEAD-lock-20261125031241` và `.git/stale-maintenance-lock-20261125031241` để không xóa gì. Trong lúc commit, git tạo lại hai file lock rỗng là `.git/HEAD.lock` và `.git/objects/maintenance.lock`, và không xóa được do quyền thiết bị. Vì vậy các lệnh git sau này sẽ lỗi "File exists" cho đến khi bạn xóa hai file này trên máy. Hai file này rỗng và có thể xóa an toàn khi không có git nào đang chạy. Hai file `hw05.bundle` và `hw05-b9.bundle` vẫn chưa theo dõi, bạn nên tự xóa sau.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>81</td>
@@ -2380,6 +2472,7 @@ Mình đã đổi tên hai lock cũ thành `.git/stale-HEAD-lock-20261125031241`
 Mình chưa commit, vì hai file lock `.git/HEAD.lock` và `.git/objects/maintenance.lock` vẫn còn và sẽ làm lệnh commit lỗi "File exists". Bạn xác nhận không có git nào đang chạy và cho phép mình đổi tên hai file này, như lần trước, thì mình commit ngay phần PLAN.md này.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>82</td>
@@ -2392,6 +2485,7 @@ Mình đã đổi tên hai lock cũ sang tên `stale-*` trong `.git`. Lúc commi
 Bước tiếp theo là C5 do bạn viết trong `docs/AI_Analysis_Review.md`. Mình có thể soạn khung file này nếu bạn cần.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>83</td>
@@ -2404,6 +2498,7 @@ Một điểm cần lưu ý: PLAN.md ghi C5 là phần của bạn, nên mình �
 Mình chưa tick C5 và chưa commit.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>84</td>
@@ -2414,6 +2509,7 @@ Mình chưa tick C5 và chưa commit.<br />
 Mình chưa tick C5 trong `PLAN.md` và chưa commit. Bạn muốn mình tick C5 và commit luôn không?<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>85</td>
@@ -2426,6 +2522,7 @@ Hai file lock rỗng `.git/HEAD.lock` và `.git/objects/maintenance.lock` vẫn 
 Phần còn lại là Task 3 (D), skill v2 và video (E), tài liệu nộp bài (F). Bạn muốn làm phần nào tiếp?<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>86</td>
@@ -2444,6 +2541,7 @@ Các ngưỡng là đề xuất của mình, chưa đo trên CI thật, nên b�
 Lượt này chưa ghi được log: máy ảo Linux trên thiết bị của bạn không khởi động được nên `append-ai-log.mjs` không chạy. Mình sẽ ghi bù hàng này ở lượt kế tiếp, trước khi ghi hàng mới. Mình cũng chưa tick D trong `PLAN.md` và chưa commit, vì git cũng cần môi trường đó.<br />
 <br />
 Bước tiếp theo là Task E: skill v2 kèm changelog và kịch bản video.</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>87</td>
@@ -2454,6 +2552,7 @@ Bước tiếp theo là Task E: skill v2 kèm changelog và kịch bản video.<
 Bước tiếp theo là Task E: cập nhật skill lên v2 kèm changelog v1→v2, rồi soạn kịch bản video `docs/Kich_ban_video_Skill.md`. Mình làm tiếp nếu bạn đồng ý.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>88</td>
@@ -2471,6 +2570,7 @@ Thay đổi trong `SKILL.md` và `templates/analysis-prompt.md`:<br />
 Mình đã tick mục skill v2 trong `PLAN.md`. Bước tiếp theo là kịch bản video `docs/Kich_ban_video_Skill.md` (bạn quay). Mình soạn tiếp nếu bạn đồng ý.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>89</td>
@@ -2503,6 +2603,7 @@ Mình đã tick mục skill v2 trong `PLAN.md`. Bước tiếp theo là kịch b
 Mình làm được ngay mục 2 đến 6 (trừ điểm tự chấm). Bạn muốn bắt đầu từ mục nào?<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>90</td>
@@ -2531,6 +2632,7 @@ Ngoài phạm vi, chưa báo: SQL injection ở `search`, `GET /api/products/:id
 **Lưu ý để tránh trùng:** nếu thành viên khác cũng chọn đăng nhập, danh sách và chi tiết sản phẩm, hoặc giỏ và checkout, thì trùng nhóm. Hai thành viên cũng không nên đăng cùng bug (đặc biệt BUG-01 đến BUG-04). Trong `PLAN.md`, quyết định D1 ghi "đã chốt: không trùng" nhưng mục rủi ro cuối file vẫn ghi "chờ bạn xác nhận D1", nên bạn cần hỏi lại nhóm để chắc. Tên nhóm hay danh sách thành viên mình không có trong thư mục.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>91</td>
@@ -2549,6 +2651,7 @@ Việc mình **không làm thay** được: báo cáo phần cứng (dxdiag ho�
 Thứ tự mình đề xuất: 1, 2, 3, 4, 5. Bạn đồng ý để mình làm lần lượt chứ?<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>92</td>
@@ -2565,6 +2668,7 @@ Bạn cần làm hoặc kiểm tra:<br />
 Còn thiếu: báo cáo phần cứng, video, và zip nộp bài (kiểm tra dung lượng vì `.jtl` thô khoảng 176 MB).<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>93</td>
@@ -2584,6 +2688,7 @@ Còn thiếu: báo cáo phần cứng, video, và zip nộp bài (kiểm tra dun
 Mình đề xuất làm lại cho đúng: dán nguyên văn prompt và output (rút từ `AI_LOG.md` cho từng artifact), thêm dẫn chiếu ISTQB cho mọi hàng, rồi điền cả bản `.docx` và xuất PDF từ đó. Phần nguyên văn sẽ khá dài. Bạn muốn làm như vậy không?<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>94</td>
@@ -2603,6 +2708,7 @@ Hai điểm cần bạn biết:<br />
 Bạn còn phải điền họ tên in hoa, lớp/khóa (đang để `[ĐIỀN …]`) và ký tên.<br />
 <br />
 đã ghi audit</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>95</td>
@@ -2613,6 +2719,90 @@ Bạn còn phải điền họ tên in hoa, lớp/khóa (đang để `[ĐIỀN �
 Lưu ý: file Word giờ dài hơn nhiều vì chứa toàn bộ nhật ký. Nếu nơi nộp giới hạn số trang hoặc dung lượng, bạn cho mình biết để mình tách Phụ lục A thành file riêng.<br />
 <br />
 đã ghi audit</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>96</td>
+<td>15:02</td>
+<td>sao tôi đọc thấy ko đúng thứ tự từ đầu tới cuối của audit v</td>
+<td>Mình đã kiểm tra thứ tự trong cả ba bản (`AI_LOG.md`, PDF, và `.md` xuất từ Word), và số thứ tự chạy liên tục từ #1 đến #95, không nhảy hay lặp. Chỗ duy nhất trông như sai thứ tự là cột Giờ: giờ bị lùi ở #17 (12:04 rồi 10:09) và ở #63 (19:29 rồi 09:23). Nhiều khả năng đó là sang ngày mới, nhưng nhật ký chỉ ghi HH:MM, không có ngày, nên người đọc thấy như bị đảo.<br />
+<br />
+Bảng Audit ở mục 3 sắp theo artifact (skill, P1, Load, Stress, Spike, Soak, phân tích, đề xuất tối ưu, báo cáo lỗi, CPT, tài liệu), cũng theo thứ tự hàng nhật ký tăng dần.<br />
+<br />
+Nếu bạn thấy lệch ở chỗ khác thì cho mình biết đó là bản nào, bảng mục 3 hay Phụ lục A, và quanh số hàng nào. Nếu đúng là do giờ, mình thêm cột Ngày vào Phụ lục A. Việc đó cần bạn xác nhận hàng nào thuộc ngày nào, vì log hiện không lưu ngày và mình không muốn đoán.<br />
+<br />
+đã ghi audit</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>97</td>
+<td>15:04</td>
+<td>câu input prompt đầu tiên phải như thế này chứ</td>
+<td>Bạn đúng, hàng #1 trong nhật ký đang có thêm đường dẫn file đính kèm ở đầu prompt (`@"/mnt/user-data/uploads/…pdf"`), trong khi trên màn hình của bạn chỉ có đúng câu "sử dụng folder HW05 làm folder chứa cho HW05, …, trước tiên hãy giải thích HW05 yêu cầu làm gì". Mình đã sửa hàng #1 trong `audit/AI_LOG.md` thành đúng câu đó.<br />
+<br />
+Mình đã dựng lại bản Word, PDF và md từ log mới (Phụ lục A giờ có 96 hàng). Nhưng chưa ghi xong: file `docs/AI_Audit_Report.docx` đang mở trong một ứng dụng trên máy bạn nên bị khoá. PDF và md đã được ghi bản mới, còn docx vẫn là bản cũ, nên mình chưa commit để tránh ba file lệch nhau.<br />
+<br />
+Bạn đóng file Word đó giúp mình, rồi nhắn "xong" để mình ghi lại docx và commit. Còn 4 hàng khác trong log (khoảng #46–#90) cũng có đường dẫn `@"…"` đầu prompt do đính kèm file. Bạn muốn bỏ luôn cho giống hàng #1 không?<br />
+<br />
+đã ghi audit</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>98</td>
+<td>15:06</td>
+<td>vậy file ghi nhận audit là file nào v</td>
+<td>File ghi nhận audit gốc là `HW05/audit/AI_LOG.md`. Skill ghi vào file này sau mỗi lượt, mỗi tin nhắn của bạn là một hàng gồm số thứ tự, giờ, prompt, output và cột Verdict để trống.<br />
+<br />
+Bản nộp là `docs/AI_Audit_Report.docx` (kèm `.pdf` và `.md` xuất từ nó). File này không tự ghi. Mình dựng nó từ template AI-02 và lấy dữ liệu từ `AI_LOG.md`, nên chép lại bằng tay hoặc dựng lại thì mới cập nhật:<br />
+- Mục 3 là 11 hàng artifact, mỗi hàng trích từ một hàng log.<br />
+- Phụ lục A là bản chép toàn bộ `AI_LOG.md`.<br />
+<br />
+Vì vậy khi log đổi (như hàng #1 vừa sửa), bản Word chỉ đổi sau khi dựng lại. Bản Word hiện có 96 hàng, còn log đã tới #97 và sẽ dài thêm mỗi lượt, nên trước khi nộp mình sẽ dựng lại một lần cuối.<br />
+<br />
+Với câu mình hỏi lúc nãy về mấy hàng có `@"…"`: mình chưa kiểm tra số hàng cụ thể, chỉ biết còn 4 hàng như vậy, nên khoảng "#46–#90" mình nêu là chưa chắc. Bạn nhắn "xong" sau khi đóng file Word, mình sẽ liệt kê đúng các hàng đó trước khi sửa.<br />
+<br />
+đã ghi audit</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>99</td>
+<td>15:09</td>
+<td>thứ tôi cần là bạn đưa toàn bộ thông tin của HW05/audit/AI_LOG.md vào bản doc</td>
+<td>Mình hiểu rồi: bản trước mới chép phần bảng, còn thiếu phần đầu và phần cuối của `AI_LOG.md` và cột Verdict. Giờ Phụ lục A chứa toàn bộ nội dung file:<br />
+- phần đầu (tiêu đề, công cụ, quy ước giờ, ý nghĩa cột Prompt/Output/Verdict);<br />
+- bảng đủ 98 hàng (#1 đến #98) với 5 cột #, Giờ, Prompt, Output, Verdict, theo đúng thứ tự, hàng #1 đã dùng prompt đúng như bạn gửi;<br />
+- mục "Quy ước từ đây" ở cuối.<br />
+<br />
+Bản PDF (39 trang) và `.md` đã dựng lại từ file Word này và đã ghi vào `docs/`. File Word `docs/AI_Audit_Report.docx` vẫn đang mở và bị khoá trên máy bạn nên chưa ghi đè được. Bản mới đang ở `docs/AI_Audit_Report_new.docx`. Bạn đóng file Word cũ rồi nhắn "xong", mình sẽ thay nó bằng bản mới, xoá tên `_new` và commit. Mình chưa commit lần này để PDF, md và docx không lệch nhau.<br />
+<br />
+Phụ lục luôn chậm hơn log vài hàng (log hiện tới #99 sau lượt này), nên trước khi nộp mình sẽ dựng lại lần cuối.<br />
+<br />
+đã ghi audit</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>100</td>
+<td>15:12</td>
+<td>giờ dã đảm bảo bản audit md và doc đã chuẩn nội dung từ file ghi nhận audit chưa</td>
+<td>Chưa hoàn toàn, mình vừa kiểm tra lại và kết quả như sau.<br />
+<br />
+Đã khớp:<br />
+- Phụ lục A trong bản Word mới (`AI_Audit_Report_new.docx`) có 98 hàng. Mình so từng hàng với `audit/AI_LOG.md` (số thứ tự, giờ, prompt, output, verdict): 98/98 khớp, không hàng nào lệch. Phần đầu và mục "Quy ước từ đây" cũng có đủ.<br />
+- Bản `.md` trên máy bạn xuất từ đúng file Word mới này, kích thước 226 291 byte, khớp với bản mình dựng, và có đủ Phụ lục A cùng mục "Quy ước từ đây".<br />
+<br />
+Chưa xong:<br />
+- `docs/AI_Audit_Report.docx` trên máy bạn vẫn là bản cũ (100 840 byte, 95 hàng, chưa có cột Verdict). File này đang mở và bị khoá nên mình chưa ghi đè được. Bản đúng đang nằm ở `docs/AI_Audit_Report_new.docx`.<br />
+- Chưa commit, nên git hiện có `.md` và `.pdf` đã sửa nhưng chưa vào commit, còn docx chưa đổi.<br />
+- Log đã dài thêm so với bản dựng. Sau lượt này log có #100, trong khi Phụ lục A dừng ở #98.<br />
+<br />
+Bạn đóng file Word cũ rồi nhắn "xong". Mình sẽ dựng lại một lần cuối từ log mới nhất, thay `AI_Audit_Report.docx`, xoá bản `_new`, kiểm tra khớp lại và commit.<br />
+<br />
+đã ghi audit</td>
+<td></td>
 </tr>
 </tbody>
 </table>
+
+**Quy ước từ đây**
+
+Mỗi tin nhắn của sinh viên = một hàng mới trong bảng trên (ghi bằng tools/append-ai-log.mjs). Không sửa các hàng cũ.
