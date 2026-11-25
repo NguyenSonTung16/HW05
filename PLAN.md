@@ -118,7 +118,7 @@ HW05/
 ---
 
 ## 5. Giai đoạn C – Task 2 (10 điểm)
-- [ ] C1 Chạy `jtl-summary.mjs` trên 3 `.jtl` → bảng "giá trị đúng".
+- [x] C1 Chạy `jtl-summary.mjs` trên 3 `.jtl` → bảng "giá trị đúng".
 - [ ] C2 Cho AI (phiên riêng, prompt ghi nguyên văn) phân tích `.jtl` và đề xuất ngưỡng.
 - [ ] C3 Bảng săn lỗi: nhận định AI ↔ giá trị đúng (trích dòng/cột `.jtl` thô) ↔ giải thích (ví dụ nhầm avg với p95, tính RPS cả thời gian ramp-up, gộp mẫu lỗi vào thời gian đáp ứng, nhầm `elapsed` với `Latency`).
 - [ ] C4 AI đề xuất tối ưu → phân loại khả thi/ảo tưởng có lập luận dựa trên mã nguồn (ví dụ: "connection pool" cho SQLite một file; index cho `LIKE '%x%'`; bật WAL; xóa giỏ sau checkout).

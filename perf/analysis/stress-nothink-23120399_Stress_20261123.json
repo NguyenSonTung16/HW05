@@ -1,0 +1,560 @@
+{
+  "method": {
+    "percentile": "nearest-rank",
+    "throughput": "samples / (lastEnd - firstStart)",
+    "bucketSec": 10,
+    "p95LimitMs": 1000,
+    "errLimitPct": 1,
+    "window": {
+      "fromSec": 0,
+      "toSec": null
+    }
+  },
+  "total": {
+    "samples": 432595,
+    "errors": 0,
+    "errorPct": 0,
+    "avg": 41.1,
+    "min": 0,
+    "max": 565,
+    "p50": 20,
+    "p90": 85,
+    "p95": 165,
+    "p99": 367,
+    "avg_ok": 41.1,
+    "p95_ok": 165,
+    "throughput": 1442.5,
+    "spanSec": 299.9,
+    "codes": {
+      "200": 432536,
+      "401": 29,
+      "403": 30
+    }
+  },
+  "groups": {
+    "AUTH": {
+      "samples": 219,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 99,
+      "min": 2,
+      "max": 422,
+      "p50": 62,
+      "p90": 237,
+      "p95": 317,
+      "p99": 381,
+      "avg_ok": 99,
+      "p95_ok": 317,
+      "throughput": 0.7,
+      "spanSec": 299.4,
+      "codes": {
+        "200": 160,
+        "401": 29,
+        "403": 30
+      }
+    },
+    "READ": {
+      "samples": 216363,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 32.7,
+      "min": 0,
+      "max": 496,
+      "p50": 21,
+      "p90": 66,
+      "p95": 96,
+      "p99": 255,
+      "avg_ok": 32.7,
+      "p95_ok": 96,
+      "throughput": 721.7,
+      "spanSec": 299.8,
+      "codes": {
+        "200": 216363
+      }
+    },
+    "TXN": {
+      "samples": 216013,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 49.4,
+      "min": 0,
+      "max": 565,
+      "p50": 18,
+      "p90": 140,
+      "p95": 242,
+      "p99": 397,
+      "avg_ok": 49.4,
+      "p95_ok": 242,
+      "throughput": 720.5,
+      "spanSec": 299.8,
+      "codes": {
+        "200": 216013
+      }
+    }
+  },
+  "labels": {
+    "AUTH login": {
+      "samples": 160,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 110.2,
+      "min": 2,
+      "max": 422,
+      "p50": 68,
+      "p90": 249,
+      "p95": 325,
+      "p99": 391,
+      "avg_ok": 110.2,
+      "p95_ok": 325,
+      "throughput": 0.6,
+      "spanSec": 249.9,
+      "codes": {
+        "200": 160
+      }
+    },
+    "AUTH login-wrong": {
+      "samples": 59,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 68.7,
+      "min": 6,
+      "max": 381,
+      "p50": 39,
+      "p90": 147,
+      "p95": 209,
+      "p99": 381,
+      "avg_ok": 68.7,
+      "p95_ok": 209,
+      "throughput": 0.2,
+      "spanSec": 294.4,
+      "codes": {
+        "401": 29,
+        "403": 30
+      }
+    },
+    "READ detail": {
+      "samples": 72114,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 26.6,
+      "min": 0,
+      "max": 408,
+      "p50": 20,
+      "p90": 58,
+      "p95": 67,
+      "p99": 103,
+      "avg_ok": 26.6,
+      "p95_ok": 67,
+      "throughput": 240.6,
+      "spanSec": 299.8,
+      "codes": {
+        "200": 72114
+      }
+    },
+    "READ list": {
+      "samples": 72125,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 47.4,
+      "min": 0,
+      "max": 496,
+      "p50": 26,
+      "p90": 114,
+      "p95": 159,
+      "p99": 310,
+      "avg_ok": 47.4,
+      "p95_ok": 159,
+      "throughput": 240.7,
+      "spanSec": 299.7,
+      "codes": {
+        "200": 72125
+      }
+    },
+    "READ search": {
+      "samples": 72124,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 24.2,
+      "min": 0,
+      "max": 418,
+      "p50": 17,
+      "p90": 55,
+      "p95": 64,
+      "p99": 95,
+      "avg_ok": 24.2,
+      "p95_ok": 64,
+      "throughput": 240.6,
+      "spanSec": 299.7,
+      "codes": {
+        "200": 72124
+      }
+    },
+    "TXN add-cart": {
+      "samples": 72031,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 16.6,
+      "min": 0,
+      "max": 307,
+      "p50": 10,
+      "p90": 42,
+      "p95": 53,
+      "p99": 81,
+      "avg_ok": 16.6,
+      "p95_ok": 53,
+      "throughput": 240.3,
+      "spanSec": 299.8,
+      "codes": {
+        "200": 72031
+      }
+    },
+    "TXN checkout": {
+      "samples": 71981,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 109.9,
+      "min": 2,
+      "max": 565,
+      "p50": 59,
+      "p90": 327,
+      "p95": 373,
+      "p99": 443,
+      "avg_ok": 109.9,
+      "p95_ok": 373,
+      "throughput": 240.1,
+      "spanSec": 299.8,
+      "codes": {
+        "200": 71981
+      }
+    },
+    "TXN view-cart": {
+      "samples": 72001,
+      "errors": 0,
+      "errorPct": 0,
+      "avg": 21.7,
+      "min": 0,
+      "max": 243,
+      "p50": 13,
+      "p90": 55,
+      "p95": 69,
+      "p99": 101,
+      "avg_ok": 21.7,
+      "p95_ok": 69,
+      "throughput": 240.2,
+      "spanSec": 299.7,
+      "codes": {
+        "200": 72001
+      }
+    }
+  },
+  "series": [
+    {
+      "fromSec": 0,
+      "toSec": 10,
+      "samples": 13570,
+      "rps": 1357,
+      "errorPct": 0,
+      "p95": 13,
+      "avg": 4,
+      "maxThreads": 11
+    },
+    {
+      "fromSec": 10,
+      "toSec": 20,
+      "samples": 16521,
+      "rps": 1652.1,
+      "errorPct": 0,
+      "p95": 18,
+      "avg": 5.9,
+      "maxThreads": 11
+    },
+    {
+      "fromSec": 20,
+      "toSec": 30,
+      "samples": 16568,
+      "rps": 1656.8,
+      "errorPct": 0,
+      "p95": 16,
+      "avg": 5.9,
+      "maxThreads": 11
+    },
+    {
+      "fromSec": 30,
+      "toSec": 40,
+      "samples": 16107,
+      "rps": 1610.7,
+      "errorPct": 0,
+      "p95": 16,
+      "avg": 6.1,
+      "maxThreads": 11
+    },
+    {
+      "fromSec": 40,
+      "toSec": 50,
+      "samples": 14441,
+      "rps": 1444.1,
+      "errorPct": 0,
+      "p95": 18,
+      "avg": 6.7,
+      "maxThreads": 11
+    },
+    {
+      "fromSec": 50,
+      "toSec": 60,
+      "samples": 13515,
+      "rps": 1351.5,
+      "errorPct": 0,
+      "p95": 18,
+      "avg": 7.2,
+      "maxThreads": 12
+    },
+    {
+      "fromSec": 60,
+      "toSec": 70,
+      "samples": 13998,
+      "rps": 1399.8,
+      "errorPct": 0,
+      "p95": 28,
+      "avg": 11.1,
+      "maxThreads": 21
+    },
+    {
+      "fromSec": 70,
+      "toSec": 80,
+      "samples": 14228,
+      "rps": 1422.8,
+      "errorPct": 0,
+      "p95": 32,
+      "avg": 13.9,
+      "maxThreads": 21
+    },
+    {
+      "fromSec": 80,
+      "toSec": 90,
+      "samples": 15021,
+      "rps": 1502.1,
+      "errorPct": 0,
+      "p95": 28,
+      "avg": 13.1,
+      "maxThreads": 21
+    },
+    {
+      "fromSec": 90,
+      "toSec": 100,
+      "samples": 14786,
+      "rps": 1478.6,
+      "errorPct": 0,
+      "p95": 33,
+      "avg": 13.3,
+      "maxThreads": 21
+    },
+    {
+      "fromSec": 100,
+      "toSec": 110,
+      "samples": 13330,
+      "rps": 1333,
+      "errorPct": 0,
+      "p95": 37,
+      "avg": 14.8,
+      "maxThreads": 21
+    },
+    {
+      "fromSec": 110,
+      "toSec": 120,
+      "samples": 13221,
+      "rps": 1322.1,
+      "errorPct": 0,
+      "p95": 37,
+      "avg": 15,
+      "maxThreads": 22
+    },
+    {
+      "fromSec": 120,
+      "toSec": 130,
+      "samples": 14048,
+      "rps": 1404.8,
+      "errorPct": 0,
+      "p95": 55,
+      "avg": 21.8,
+      "maxThreads": 41
+    },
+    {
+      "fromSec": 130,
+      "toSec": 140,
+      "samples": 14368,
+      "rps": 1436.8,
+      "errorPct": 0,
+      "p95": 72,
+      "avg": 27.8,
+      "maxThreads": 41
+    },
+    {
+      "fromSec": 140,
+      "toSec": 150,
+      "samples": 14174,
+      "rps": 1417.4,
+      "errorPct": 0,
+      "p95": 74,
+      "avg": 28,
+      "maxThreads": 41
+    },
+    {
+      "fromSec": 150,
+      "toSec": 160,
+      "samples": 13910,
+      "rps": 1391,
+      "errorPct": 0,
+      "p95": 74,
+      "avg": 28.6,
+      "maxThreads": 41
+    },
+    {
+      "fromSec": 160,
+      "toSec": 170,
+      "samples": 13281,
+      "rps": 1328.1,
+      "errorPct": 0,
+      "p95": 83,
+      "avg": 29.8,
+      "maxThreads": 41
+    },
+    {
+      "fromSec": 170,
+      "toSec": 180,
+      "samples": 13498,
+      "rps": 1349.8,
+      "errorPct": 0,
+      "p95": 71,
+      "avg": 29.5,
+      "maxThreads": 42
+    },
+    {
+      "fromSec": 180,
+      "toSec": 190,
+      "samples": 14894,
+      "rps": 1489.4,
+      "errorPct": 0,
+      "p95": 119,
+      "avg": 41.5,
+      "maxThreads": 81
+    },
+    {
+      "fromSec": 190,
+      "toSec": 200,
+      "samples": 14880,
+      "rps": 1488,
+      "errorPct": 0,
+      "p95": 160,
+      "avg": 53.5,
+      "maxThreads": 81
+    },
+    {
+      "fromSec": 200,
+      "toSec": 210,
+      "samples": 14964,
+      "rps": 1496.4,
+      "errorPct": 0,
+      "p95": 173,
+      "avg": 53.1,
+      "maxThreads": 81
+    },
+    {
+      "fromSec": 210,
+      "toSec": 220,
+      "samples": 14826,
+      "rps": 1482.6,
+      "errorPct": 0,
+      "p95": 172,
+      "avg": 54,
+      "maxThreads": 81
+    },
+    {
+      "fromSec": 220,
+      "toSec": 230,
+      "samples": 14858,
+      "rps": 1485.8,
+      "errorPct": 0,
+      "p95": 169,
+      "avg": 53.7,
+      "maxThreads": 81
+    },
+    {
+      "fromSec": 230,
+      "toSec": 240,
+      "samples": 14839,
+      "rps": 1483.9,
+      "errorPct": 0,
+      "p95": 169,
+      "avg": 54.4,
+      "maxThreads": 84
+    },
+    {
+      "fromSec": 240,
+      "toSec": 250,
+      "samples": 14659,
+      "rps": 1465.9,
+      "errorPct": 0,
+      "p95": 296,
+      "avg": 82.8,
+      "maxThreads": 161
+    },
+    {
+      "fromSec": 250,
+      "toSec": 260,
+      "samples": 14825,
+      "rps": 1482.5,
+      "errorPct": 0,
+      "p95": 354,
+      "avg": 109.1,
+      "maxThreads": 161
+    },
+    {
+      "fromSec": 260,
+      "toSec": 270,
+      "samples": 13622,
+      "rps": 1362.2,
+      "errorPct": 0,
+      "p95": 398,
+      "avg": 115.9,
+      "maxThreads": 161
+    },
+    {
+      "fromSec": 270,
+      "toSec": 280,
+      "samples": 13282,
+      "rps": 1328.2,
+      "errorPct": 0,
+      "p95": 383,
+      "avg": 120.5,
+      "maxThreads": 161
+    },
+    {
+      "fromSec": 280,
+      "toSec": 290,
+      "samples": 15339,
+      "rps": 1533.9,
+      "errorPct": 0,
+      "p95": 357,
+      "avg": 105.9,
+      "maxThreads": 161
+    },
+    {
+      "fromSec": 290,
+      "toSec": 300,
+      "samples": 13022,
+      "rps": 1302.2,
+      "errorPct": 0,
+      "p95": 400,
+      "avg": 118.1,
+      "maxThreads": 161
+    }
+  ],
+  "stability": {
+    "healthyWindows": 30,
+    "windows": 30,
+    "maxHealthyRps": 1656.8,
+    "firstBreach": null
+  },
+  "failures": {},
+  "badLines": []
+}
