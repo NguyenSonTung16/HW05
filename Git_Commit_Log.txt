@@ -1,0 +1,45 @@
+6f11600 | 2026-11-18 04:09 | NguyenSonTung16 | Khởi tạo HW05: kế hoạch, AI log và công cụ ghi log
+763cc26 | 2026-11-18 04:09 | NguyenSonTung16 | Skill jmeter-performance-testing v1 (đã review, chưa áp dụng)
+10021ca | 2026-11-18 04:09 | NguyenSonTung16 | P1: workflow và phạm vi endpoint (đã duyệt)
+3beafb5 | 2026-11-18 04:10 | NguyenSonTung16 | Skill v1.1: kiểm tra SUT tự tạo lại DB, prepare-data --accounts-only, bỏ dấu nháy đơn khỏi CSV
+6eb20eb | 2026-11-18 04:10 | NguyenSonTung16 | P2: khảo sát API EShop (auth, read, transactional)
+96d8932 | 2026-11-18 04:10 | NguyenSonTung16 | Cập nhật tiến độ: P1, P2 xong; script push
+1d267b8 | 2026-11-18 04:18 | NguyenSonTung16 | P3: dữ liệu CSV (100 tài khoản perf, 10 tài khoản lock, 5 sản phẩm, 8 dòng đơn hàng)
+5e80a62 | 2026-11-18 04:23 | NguyenSonTung16 | Skill v1.2: run-scenario bọc ngoặc kép đối số có dấu cách khi gọi jmeter.bat trên Windows
+8ea81ca | 2026-11-18 04:44 | NguyenSonTung16 | Skill v1.3: đổi tên plan template sang đuôi .jmx để JMeter mở được
+0a3c187 | 2026-11-18 04:45 | NguyenSonTung16 | Ghi nhận kiểm tra template trên JMeter 5.6.3 của sinh viên
+cc0cd4a | 2026-11-18 04:48 | NguyenSonTung16 | P4: plan Load do AI sinh (chưa review, chưa chạy)
+644ffb2 | 2026-11-18 05:03 | NguyenSonTung16 | P5: sửa plan Load theo review của sinh viên
+eae943b | 2026-11-18 05:04 | NguyenSonTung16 | Skill v1.4: áp dụng review P5 vào template, checklist, SKILL.md; run-scenario --verify-db
+c19e729 | 2026-11-18 05:04 | NguyenSonTung16 | Cập nhật tiến độ: P4, P5 cho plan Load
+cbe0b8c | 2026-11-23 03:07 | NguyenSonTung16 | P6: smoke plan Load (2 VU, 60 s) - xác nhận các sửa P5, đối chiếu DB khớp 13/13
+81e9d22 | 2026-11-23 03:33 | NguyenSonTung16 | Skill v1.5: sửa lỗi hiển thị tiếng Việt monitor, cảnh báo DEP0190 và sqlite sau lượt chạy thật đầu tiên
+b295f1f | 2026-11-23 03:33 | NguyenSonTung16 | P6: chạy Load thật 50 VU 7 phút (load2), giữ lượt load hỏng threads=500, đối chiếu DB khớp 2408
+24732b8 | 2026-11-23 03:44 | NguyenSonTung16 | P4: plan Stress (5 bậc đến 400 VU, Aggregate Report) - chưa review, chưa chạy
+898acd9 | 2026-11-23 03:54 | NguyenSonTung16 | P5: sửa plan Stress theo review (assertion 401/403 Equals+OR, ngưỡng phân tích, ghi chú bậc 5), thêm dữ liệu kiểm tra chia sẻ CSV
+4e3ca3d | 2026-11-23 03:57 | NguyenSonTung16 | P6: smoke Stress kiểm tra chia sẻ CSV giữa 5 Thread Group (4 login / 10 VU), users.csv 500 tài khoản
+670f9da | 2026-11-23 03:59 | NguyenSonTung16 | P5: rút plan Stress còn 5 phút (5 bậc x 60 s, ramp 15 s) theo yêu cầu sinh viên
+e77640f | 2026-11-23 04:00 | NguyenSonTung16 | P5: đổi plan Stress thành 10 phút (5 bậc x 120 s, ramp 30 s) theo yêu cầu sinh viên
+7110b76 | 2026-11-23 04:02 | NguyenSonTung16 | P5: giữ plan Stress 15 phút theo quyết định của sinh viên (khôi phục bản 898acd9)
+4ba39a5 | 2026-11-23 04:46 | NguyenSonTung16 | P6: chạy Stress 15 phút đến 400 VU - lỗi 0%, p95 3 ms, tải tuyến tính theo think time, DB khớp 16527
+d5aec66 | 2026-11-23 05:05 | NguyenSonTung16 | P6: Stress lặp lại (stress2) lấy ảnh bậc 4/5, so sánh với lượt stress - throughput lệch < 2%, DB khớp 16438
+239406a | 2026-11-23 05:08 | NguyenSonTung16 | P4: thiết kế lượt Stress phụ không think time (10-160 VU, 5 phút), ghi yếu tố nhiễu do giỏ hàng không được xóa
+25b0e77 | 2026-11-23 05:18 | NguyenSonTung16 | Skill v1.6: sửa tràn stack khi tóm tắt jtl lớn (minOf/maxOf), thêm run-scenario --resume
+8cf654e | 2026-11-23 05:18 | NguyenSonTung16 | P6: Stress không think time - bão hòa ~1450 req/s từ 10 VU, p95 tăng theo VU, checkout là nút cổ chai, DB khớp 71981
+7927262 | 2026-11-23 05:18 | NguyenSonTung16 | P6: ghi giờ tính lại summary stress-nothink
+14e09d6 | 2026-11-23 05:20 | NguyenSonTung16 | P4: plan Spike (nền 50 VU, đỉnh +500 VU trong 5 s, View Results Tree chỉ lỗi) - chưa review, chưa chạy
+2108edb | 2026-11-23 05:23 | NguyenSonTung16 | P5: chốt plan Spike - đỉnh 200 VU không think time, định nghĩa hồi phục, smoke trước
+6aaabe9 | 2026-11-23 05:25 | NguyenSonTung16 | P6: smoke Spike - 6 login / 6 VU, nhóm đỉnh tắt think time đúng, DB khớp 3645
+fcde4a9 | 2026-11-23 05:36 | NguyenSonTung16 | P6: chạy Spike - đỉnh 1600 req/s, người dùng nền p95 4->420 ms, hồi phục <=10 s, RAM không giảm sau đỉnh, DB khớp 18360
+10e3394 | 2026-11-23 05:45 | NguyenSonTung16 | P4: plan Soak 15 phút, mặc định 300 VU theo scenario-params (75% bậc ổn định của Stress)
+e838a87 | 2026-11-23 06:06 | NguyenSonTung16 | P6: chạy Soak 15 phút 300 VU - ổn định 225 req/s p95 3-5 ms, RAM tăng nhẹ ~0.6 MB/phút, DB khớp 32396
+37e2d89 | 2026-11-23 06:11 | NguyenSonTung16 | B8: soạn 4 bug + 1 vấn đề hiệu năng (bug-reports/, docs/Bug_Report.md) kèm bằng chứng từ jtl, node-usage, DB
+9685fc9 | 2026-11-23 13:34 | NguyenSonTung16 | B9: liên kết báo cáo với GitHub Issues
+20807f9 | 2026-11-23 12:29 | NguyenSonTung16 | B9: ảnh minh chứng 5 Issue + ảnh tái hiện thủ công BUG-04 (checkout total_amount=1); AI_LOG #57-#61
+8d53cfc | 2026-11-25 03:12 | NguyenSonTung16 | C1–C4: kết quả jtl-summary, phân tích AI (P8) với bảng đối chiếu C3 và phân loại đề xuất C4
+2566da5 | 2026-11-25 03:15 | NguyenSonTung16 | C2–C4: đánh dấu hoàn thành phân tích AI và đối chiếu kết quả
+9eb48db | 2026-11-25 03:18 | NguyenSonTung16 | C5: phán quyết cuối về phân tích AI (docs/AI_Analysis_Review.md), tick C5
+5063be9 | 2026-11-25 07:25 | NguyenSonTung16 | D: đề xuất kiểm thử hiệu năng liên tục (docs/CPT_Proposal.md), tick D
+338b020 | 2026-11-25 07:29 | NguyenSonTung16 | Skill v2.0: P8 kiểm cột trên toàn file, phân loại đề xuất 4 mức, thêm P9 kiểm thử hiệu năng liên tục, quy tắc 11
+9cbc247 | 2026-11-25 07:29 | NguyenSonTung16 | E: tick skill v2, ghi AI_LOG #88
+c76fca1 | 2026-11-25 07:45 | NguyenSonTung16 | F: README, báo cáo chính, AI Critique, AI Audit Report (MD + PDF), tick F
