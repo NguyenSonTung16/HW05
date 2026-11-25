@@ -32,7 +32,7 @@ scripts/    prepare-data.mjs          tạo tài khoản test qua API (không tr
                                       sh scripts/test/reset-lockout.test.sh <database.sqlite> (chạy trên bản sao); hai test dùng sh chạy trên Linux/macOS/Git Bash
 ```
 
-## Quy trình (P1–P8). Mỗi bước ghi vào `audit/` và commit riêng
+## Quy trình (P1–P9). Mỗi bước ghi vào `audit/` và commit riêng
 **P1. Phân tích workflow.** Lập bảng: endpoint → nhóm → lý do nằm trong workflow; workflow end-to-end một VU đi qua đủ các nhóm (ví dụ: đăng nhập → xem danh sách → tìm → chi tiết → thêm giỏ → xem giỏ → đặt hàng). Ghi nhánh đặc biệt (ví dụ đăng nhập sai để đo hành vi khóa tài khoản) chạy trên tài khoản riêng. Đặt nhãn sampler có tiền tố nhóm (`AUTH`, `READ`, `TXN`) để phân tích theo nhóm. **DỪNG: gửi người dùng duyệt.**
 
 **P2. Khảo sát API.** Đọc mã nguồn/tài liệu: body, mã trạng thái thành công và từ chối, cách gửi token, dữ liệu lưu ở đâu (DB hay bộ nhớ tiến trình), cơ chế khóa tài khoản (ngưỡng, thời gian khóa, mã trả về), dữ liệu tích lũy theo tải (đơn hàng, giỏ hàng), **SUT có tự xóa/tạo lại DB khi khởi động không** (quyết định cách reset và việc có phải tạo lại tài khoản test sau mỗi lần khởi động), chỗ nối chuỗi vào SQL (dữ liệu CSV không được chứa ký tự làm hỏng câu lệnh). Ghi `audit/P2-api-survey.md`; chỗ chưa xác nhận ghi là dự đoán.
@@ -47,7 +47,9 @@ scripts/    prepare-data.mjs          tạo tài khoản test qua API (không tr
 
 **P7. Ngưỡng bền (Soak 10–15 phút).** Tải ổn định khoảng 70–80% mức tải ở điểm gãy tìm được từ Stress. Báo cáo bằng số lấy từ `jtl-summary.mjs` và `node-usage.csv`: RPS ổn định tối đa, p95, tỉ lệ lỗi, RAM đỉnh và xu hướng RAM của backend.
 
-**P8. Phân tích có kiểm chứng.** (1) Chạy `jtl-summary.mjs` → bảng giá trị đúng. (2) Cho AI phân tích `.jtl` bằng `analysis-prompt.md` trong phiên riêng, lưu nguyên văn. (3) Đối chiếu từng con số/nhận định của AI với bảng giá trị đúng và dòng `.jtl` gốc; ghi chỗ sai và vì sao. (4) Cho AI đề xuất tối ưu; phân loại khả thi / ảo tưởng dựa trên mã nguồn thật của SUT.
+**P8. Phân tích có kiểm chứng.** (1) Chạy `jtl-summary.mjs` → bảng giá trị đúng. (2) Cho AI phân tích bằng `templates/analysis-prompt.md` trong một phiên AI riêng. Lưu nguyên văn prompt và **đúng một bản** phản hồi; không dán tin nhắn trạng thái hay bản trùng, và ghi rõ nguồn nếu phản hồi không đến từ phiên riêng. Nếu chỉ đưa phần đầu `.jtl` (ví dụ 200 dòng), nói rõ điều đó trong prompt. (3) Đối chiếu từng con số và nhận định của AI với bảng giá trị đúng; mọi nhận định về **cột** (Connect, Latency, allThreads, IdleTime, success) phải được đếm lại **trên toàn file** bằng script, vì nhận định đúng trong 200 dòng đầu thường sai trên cả lượt. Công thức awk gợi ý nằm trong `templates/analysis-prompt.md`. Ghi chỗ sai và vì sao. (4) Cho AI đề xuất tối ưu và phân loại bằng mã nguồn thật của SUT theo bốn mức: *áp dụng được*, *áp dụng có điều kiện*, *không áp dụng được ngay*, *không có lợi ích* (kèm dòng mã làm căn cứ). Chỉ dùng "bịa" cho chi tiết nhắc tới thứ không tồn tại trong mã (ví dụ bước "trừ kho" khi mã không có). Với số nêu trong đề xuất, kiểm xem đó là số gì (số mẫu checkout khác số dòng bảng `orders`; dùng `--verify-db`).
+
+**P9. Kiểm thử hiệu năng liên tục (tùy chọn).** Từ kết quả P6–P8, đề xuất đưa smoke perf vào CI: lọc thay đổi, smoke ngắn, so p95 với baseline (trung vị nhiều lần), lặp 2/3 lần khi vi phạm, chạy đầy đủ khi nghi ngờ, rồi cảnh báo hoặc chặn merge. Ngưỡng lấy từ dữ liệu đo, nêu báo động giả (lượng tử hóa p95 khi p95 chỉ vài ms, máy dùng chung, trạng thái SUT) và chi phí. Ví dụ: `docs/CPT_Proposal.md`. Chỉ là đề xuất; không viết là đã triển khai.
 
 ## Quy tắc bắt buộc
 1. **Không chạy kịch bản trước khi plan được duyệt** (P1, P4 có điểm dừng).
@@ -60,6 +62,7 @@ scripts/    prepare-data.mjs          tạo tài khoản test qua API (không tr
 8. **Phân biệt** thời gian đáp ứng của mọi mẫu với của mẫu thành công; RPS cả lượt với RPS giai đoạn giữ tải; avg với p95. Ghi rõ cách tính phân vị (nearest-rank) và rằng dashboard JMeter có thể lệch nhẹ do thuật toán khác.
 9. **Nêu rõ giới hạn**: JMeter và SUT cùng máy thì tranh CPU; số liệu chỉ đúng cho phần cứng đã ghi.
 10. Commit theo từng bước; log AI theo quy ước của dự án.
+11. **Không khái quát từ mẫu nhỏ**: mọi khẳng định về dữ liệu `.jtl` phải ghi rõ phạm vi (200 dòng đầu hay toàn file) và, với khẳng định về cột, được đếm lại trên toàn file trước khi đưa vào báo cáo.
 
 ## Đầu ra
 `perf/plans/{MSSV}_{Scenario}_{YYYYMMDD}.jmx`, `perf/data/*.csv`, `perf/results/<scenario>/` (`.jtl`, `html/`, `jmeter.log`, `node-usage.csv`, `run-meta.json`, `summary.md`, `summary.json`), các file `audit/P*-*.md`.
@@ -75,3 +78,4 @@ Skill không chạy được JMeter hay trình duyệt thay người dùng khi m
 - v1.4 (2026-11-18): từ review P5 của sinh viên: template đăng nhập 1 lần/VU, mỗi VU một tài khoản riêng, think time chỉ trước xem hàng và thanh toán, mặc định 2 VU (smoke trước), nhánh đăng nhập sai bật Ignore Status; `run-scenario.mjs --verify-db`.
 - v1.5 (2026-11-23): sau lượt chạy thật đầu tiên trên Windows: `monitor-node.ps1` lưu UTF-8 có BOM (PowerShell 5.1 hiển thị sai tiếng Việt); `run-scenario.mjs` tự ghép chuỗi lệnh khi gọi `jmeter.bat` (Node 24 cảnh báo DEP0190); ẩn cảnh báo thử nghiệm của `node:sqlite`.
 - v1.6 (2026-11-23): `jtl-summary.mjs`/`run-scenario.mjs` bỏ `Math.min/max(...mảng)` (tràn stack với ~430k mẫu ở lượt không think time), thêm `minOf/maxOf` và test 500k mẫu; `run-scenario.mjs --resume` tính lại summary + đối chiếu DB cho thư mục đã chạy JMeter xong mà không chạy lại.
+- v2.0 (2026-11-25): từ Task 2 và Task 3 của HW05: P8 yêu cầu lưu đúng một bản phản hồi AI từ phiên riêng, đếm lại nhận định về cột trên toàn file (AI sai Connect, allThreads, Latency khi chỉ có 200 dòng đầu), phân loại đề xuất tối ưu bốn mức kèm dòng mã thay cho "khả thi/ảo tưởng"; thêm P9 (kiểm thử hiệu năng liên tục); thêm quy tắc 11; `templates/analysis-prompt.md` ghi rõ phạm vi dữ liệu đưa cho AI và công thức awk kiểm cột.
