@@ -132,9 +132,9 @@ HW05/
 - [ ] Video demo skill trên một nhóm endpoint trọn vẹn (đề xuất read-heavy), **(BẠN)** quay; AI soạn kịch bản `docs/Kich_ban_video_Skill.md`.
 
 ## 8. Giai đoạn F – Tài liệu và nộp bài
-- [ ] Main_Report (MD + PDF): phạm vi, workflow, tham số, kết quả 3 kịch bản, ngưỡng bền, bug, Task 2, Task 3.
-- [ ] AI_Critique 200–300 từ (MD + PDF).
-- [ ] AI_Audit_Report từ `docs/AI-02_Audit_Template.docx` → PDF, lấy dữ liệu từ `audit/AI_LOG.md`.
+- [x] Main_Report (MD + PDF): phạm vi, workflow, tham số, kết quả 3 kịch bản, ngưỡng bền, bug, Task 2, Task 3.
+- [x] AI_Critique 200–300 từ (MD + PDF).
+- [x] AI_Audit_Report từ `docs/AI-02_Audit_Template.docx` → PDF, lấy dữ liệu từ `audit/AI_LOG.md`.
 - [ ] `Git_Commit_Log.txt`, README (bảng tự chấm + test summary + link video).
 - [ ] **(BẠN)** điền điểm tự chấm, đóng gói `23120399_HW05_AI_Performance_<điểm>.zip`.
 
