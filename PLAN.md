@@ -128,7 +128,7 @@ HW05/
 - [x] Mô hình CI: webhook commit SUT → lọc thay đổi (backend/DB/route) → smoke perf ngắn → so p95 với baseline (ngưỡng % + số lần lặp) → chạy đầy đủ khi nghi ngờ → cảnh báo/chặn merge. Flow chart Mermaid, bàn đánh đổi chi phí, báo động giả, nhiễu môi trường. → `docs/CPT_Proposal.md`.
 
 ## 7. Giai đoạn E – Skill v2 và video demo skill
-- [ ] Cập nhật skill theo bài học thật (changelog v1→v2), commit riêng.
+- [x] Cập nhật skill theo bài học thật (changelog v1→v2), commit riêng.
 - [ ] Video demo skill trên một nhóm endpoint trọn vẹn (đề xuất read-heavy), **(BẠN)** quay; AI soạn kịch bản `docs/Kich_ban_video_Skill.md`.
 
 ## 8. Giai đoạn F – Tài liệu và nộp bài
