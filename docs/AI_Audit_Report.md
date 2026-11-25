@@ -264,7 +264,45 @@ node skills\jmeter-performance-testing\scripts\run-scenario.mjs --plan perf\plan
 <td>Không sửa.</td>
 </tr>
 <tr class="odd">
-<td>Artifact #7: Phân tích .jtl của AI (Task 2)<br />
+<td>Artifact #7: Bug report (4 bug + 1 vấn đề hiệu năng)<br />
+Tool: Claude (Opus 5.5)<br />
+Thời gian: 13:11 23/11/2026<br />
+Prompt:<br />
+làm đi</td>
+<td>Mình đã soạn xong các bug report, đối chiếu từng lỗi với đặc tả `eshop-sut/README.md` và bằng chứng gốc, rồi commit. Theo PLAN (mục B8), AI soạn còn **bạn đăng Issue**, nên mình chưa đăng gì lên GitHub.<br />
+<br />
+| Mã | Lỗi | Mức độ | Bằng chứng chính |<br />
+|---|---|---|---|<br />
+| BUG-01 | Checkout không xóa giỏ hàng (FR-08) | Cao | RAM không giảm sau Spike (186 MB lúc kết thúc), tăng đều trong Soak |<br />
+| BUG-02 | Thêm cùng sản phẩm tạo dòng mới thay vì tăng số lượng (FR-07) | Trung bình | `server.js` dòng 290–295, làm BUG-01 nặng thêm |<br />
+| BUG-03 | Khóa ngay sau lần sai thứ 2, khóa 180 s thay vì 30 s (FR-02) | Cao | Chuỗi 401 → 401 → **403** của lock01 trong .jtl; DB có `login_attempts = 12` sau 6 lần sai (mỗi lần +2) |<br />
+| BUG-04 | Backend nhận `total_amount` từ client (FR-08) | Nghiêm trọng | Mã nguồn + 10 mức tổng trong DB khớp đúng các tích giá × số lượng do JMeter tự tính |<br />
+| PERF-01 | Checkout là nút cổ chai khi bão hòa | Hiệu năng | p99 501 ms ở 160 VU (Stress), 540 ms lúc đỉnh Spike |<br />
+<br />
+Các lỗi SQL injection, `/api/products/:id` trả `{}` và lộ mật khẩu là lỗi bảo mật/chức năng, không do kiểm thử hiệu năng phát hiện, nên mình chỉ ghi là "ngoài phạm vi" trong `docs/Bug_Report.md`.<br />
+<br />
+**Bạn cần làm:**<br />
+1. **BUG-04 cần bạn tái hiện bằng tay** để có ảnh, vì hiện mới xác nhận qua mã nguồn. Ở PowerShell, khi backend đang chạy:<br />
+```<br />
+$t = (Invoke-RestMethod -Method Post http://localhost:3000/api/login -ContentType 'application/json' -Body '{"email":"perf001@test.local","password":"Perf@12345"}').token<br />
+Invoke-RestMethod -Method Post http://localhost:3000/api/checkout -Headers @{Authorization="Bearer $t"} -ContentType 'application/json' -Body '{"total_amount":1,"shipping_address":"HCM"}'<br />
+```<br />
+Nếu kết quả là `Checkout successful` thì chụp lại màn hình.<br />
+2. **Đăng 5 Issue** lên `NguyenSonTung16/HW05`. Tiêu đề lấy từ dòng `#` đầu file, nội dung là phần còn lại của file `bug-reports\BUG-0x.md` / `PERF-01.md`. Nếu máy có `gh`, có thể dùng:<br />
+```<br />
+gh issue create --repo NguyenSonTung16/HW05 --title "&lt;tiêu đề&gt;" --body-file bug-reports\BUG-01.md<br />
+```<br />
+3. Gửi mình số Issue sau khi đăng, mình sẽ điền vào cột "Issue" trong `docs/Bug_Report.md`.<br />
+<br />
+Trong lúc bạn đăng, mình có thể làm tiếp **Task 2** (cho AI phân tích .jtl và bắt chỗ hiểu sai). Bạn muốn mình bắt đầu luôn không?<br />
+<br />
+đã ghi audit</td>
+<td>VALID</td>
+<td>Mỗi bug có bằng chứng từ `.jtl`, DB và mã nguồn; sinh viên đăng 5 Issue kèm ảnh. ISTQB FL v4.0 §5.5 (quản lý lỗi).</td>
+<td>Không sửa nội dung; bổ sung ảnh tái hiện thủ công BUG-04 và liên kết Issue.</td>
+</tr>
+<tr class="even">
+<td>Artifact #8: Phân tích .jtl của AI (Task 2)<br />
 Tool: Claude (phiên phân tích riêng)<br />
 Thời gian: 25/11/2026<br />
 Prompt (`perf/analysis/analysis-prompt.md`):<br />
@@ -394,8 +432,8 @@ Sources: HW05/perf/results/{stress-nothink,spike,soak}/summary.md và run-meta.j
 <td>Sai: Connect, allThreads, Latency (khái quát từ 200 dòng đầu), "bảng orders 32 396 dòng", khoảng RPS. Đúng: tổng mẫu, phân vị, CPU, RAM. ISTQB FL v4.0 §5.3 (theo dõi và đo lường cần dữ liệu đầy đủ).</td>
 <td>Bảng đối chiếu C3 (27 nhận định) trong `audit/P8-ai-analysis.md` và phán quyết ở `docs/AI_Analysis_Review.md`.</td>
 </tr>
-<tr class="even">
-<td>Artifact #8: Đề xuất tối ưu của AI (Task 2)<br />
+<tr class="odd">
+<td>Artifact #9: Đề xuất tối ưu của AI (Task 2)<br />
 Tool: Claude (cùng phiên phân tích)<br />
 Thời gian: 25/11/2026<br />
 Prompt: bước 5 của prompt phân tích: "Đề xuất tối ưu hiệu năng tối đa 5 mục, xếp theo mức ưu tiên…"</td>
@@ -409,44 +447,6 @@ Prompt: bước 5 của prompt phân tích: "Đề xuất tối ưu hiệu năng
 <td>INCOMPLETE</td>
 <td>Chạy nhiều tiến trình Node không áp dụng được ngay (giỏ hàng trong bộ nhớ, `DROP TABLE` khi khởi động); gộp transaction/trừ kho không áp dụng được (checkout chỉ có một INSERT); phân trang không có lợi ích (5 sản phẩm); WAL áp dụng được. ISTQB FL v4.0 §1.3 (kiểm thử phụ thuộc ngữ cảnh).</td>
 <td>Bảng phân loại C4 dựa trên `server.js`, `database.js` trong `audit/P8-ai-analysis.md`.</td>
-</tr>
-<tr class="odd">
-<td>Artifact #9: Bug report (4 bug + 1 vấn đề hiệu năng)<br />
-Tool: Claude (Opus 5.5)<br />
-Thời gian: 13:11 23/11/2026<br />
-Prompt:<br />
-làm đi</td>
-<td>Mình đã soạn xong các bug report, đối chiếu từng lỗi với đặc tả `eshop-sut/README.md` và bằng chứng gốc, rồi commit. Theo PLAN (mục B8), AI soạn còn **bạn đăng Issue**, nên mình chưa đăng gì lên GitHub.<br />
-<br />
-| Mã | Lỗi | Mức độ | Bằng chứng chính |<br />
-|---|---|---|---|<br />
-| BUG-01 | Checkout không xóa giỏ hàng (FR-08) | Cao | RAM không giảm sau Spike (186 MB lúc kết thúc), tăng đều trong Soak |<br />
-| BUG-02 | Thêm cùng sản phẩm tạo dòng mới thay vì tăng số lượng (FR-07) | Trung bình | `server.js` dòng 290–295, làm BUG-01 nặng thêm |<br />
-| BUG-03 | Khóa ngay sau lần sai thứ 2, khóa 180 s thay vì 30 s (FR-02) | Cao | Chuỗi 401 → 401 → **403** của lock01 trong .jtl; DB có `login_attempts = 12` sau 6 lần sai (mỗi lần +2) |<br />
-| BUG-04 | Backend nhận `total_amount` từ client (FR-08) | Nghiêm trọng | Mã nguồn + 10 mức tổng trong DB khớp đúng các tích giá × số lượng do JMeter tự tính |<br />
-| PERF-01 | Checkout là nút cổ chai khi bão hòa | Hiệu năng | p99 501 ms ở 160 VU (Stress), 540 ms lúc đỉnh Spike |<br />
-<br />
-Các lỗi SQL injection, `/api/products/:id` trả `{}` và lộ mật khẩu là lỗi bảo mật/chức năng, không do kiểm thử hiệu năng phát hiện, nên mình chỉ ghi là "ngoài phạm vi" trong `docs/Bug_Report.md`.<br />
-<br />
-**Bạn cần làm:**<br />
-1. **BUG-04 cần bạn tái hiện bằng tay** để có ảnh, vì hiện mới xác nhận qua mã nguồn. Ở PowerShell, khi backend đang chạy:<br />
-```<br />
-$t = (Invoke-RestMethod -Method Post http://localhost:3000/api/login -ContentType 'application/json' -Body '{"email":"perf001@test.local","password":"Perf@12345"}').token<br />
-Invoke-RestMethod -Method Post http://localhost:3000/api/checkout -Headers @{Authorization="Bearer $t"} -ContentType 'application/json' -Body '{"total_amount":1,"shipping_address":"HCM"}'<br />
-```<br />
-Nếu kết quả là `Checkout successful` thì chụp lại màn hình.<br />
-2. **Đăng 5 Issue** lên `NguyenSonTung16/HW05`. Tiêu đề lấy từ dòng `#` đầu file, nội dung là phần còn lại của file `bug-reports\BUG-0x.md` / `PERF-01.md`. Nếu máy có `gh`, có thể dùng:<br />
-```<br />
-gh issue create --repo NguyenSonTung16/HW05 --title "&lt;tiêu đề&gt;" --body-file bug-reports\BUG-01.md<br />
-```<br />
-3. Gửi mình số Issue sau khi đăng, mình sẽ điền vào cột "Issue" trong `docs/Bug_Report.md`.<br />
-<br />
-Trong lúc bạn đăng, mình có thể làm tiếp **Task 2** (cho AI phân tích .jtl và bắt chỗ hiểu sai). Bạn muốn mình bắt đầu luôn không?<br />
-<br />
-đã ghi audit</td>
-<td>VALID</td>
-<td>Mỗi bug có bằng chứng từ `.jtl`, DB và mã nguồn; sinh viên đăng 5 Issue kèm ảnh. ISTQB FL v4.0 §5.5 (quản lý lỗi).</td>
-<td>Không sửa nội dung; bổ sung ảnh tái hiện thủ công BUG-04 và liên kết Issue.</td>
 </tr>
 <tr class="even">
 <td>Artifact #10: Đề xuất kiểm thử liên tục (Task 3)<br />
