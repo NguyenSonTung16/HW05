@@ -45,3 +45,5 @@ e838a87 | 2026-11-23 06:06 | NguyenSonTung16 | P6: chạy Soak 15 phút 300 VU -
 c76fca1 | 2026-11-25 07:45 | NguyenSonTung16 | F: README, báo cáo chính, AI Critique, AI Audit Report (MD + PDF), tick F
 3a48cf3 | 2026-11-25 07:46 | NguyenSonTung16 | F: Git_Commit_Log.txt
 56b5089 | 2026-11-25 07:51 | NguyenSonTung16 | F: AI Audit Report điền vào mẫu AI-02 (docx), PDF xuất từ docx
+79a7873 | 2026-11-25 07:51 | NguyenSonTung16 | F: cập nhật Git_Commit_Log.txt
+98c58bb | 2026-11-25 07:57 | NguyenSonTung16 | F: AI Audit Report: toàn văn output và Phụ lục A (toàn bộ AI_LOG)
