@@ -104,7 +104,7 @@ HW05/
 
 | Bước | Việc | Ai | Đầu ra |
 |---|---|---|---|
-| B0 | Báo cáo phần cứng: dxdiag + bảng cấu hình, hostname phải khớp bài trước | **(BẠN)** chụp | `evidence/hardware/` |
+| B0 ✅ đã xác nhận 16:09 | Báo cáo phần cứng: dxdiag + bảng cấu hình, hostname phải khớp bài trước | **(BẠN)** chụp | `evidence/hardware/` |
 | B1 (P1) ✅ đã duyệt 11:05 | Workflow: login (CSV) → list → search → detail → add cart → get cart → checkout; nhánh phụ đăng nhập sai trên `lock*`. **DỪNG duyệt** | AI đề xuất | `audit/P1-workflow.md` |
 | B2 (P2) ✅ | Khảo sát API chi tiết; reset = khởi động lại backend + `prepare-data --accounts-only` | AI | `audit/P2-api-survey.md` |
 | B3 (P3) ✅ 11:17 (110 tài khoản, 5 sản phẩm) | CSV + seed tài khoản (không cần snapshot DB: backend tự tạo lại DB) | AI soạn, **(BẠN)** chạy seed | `perf/data/*.csv` |
