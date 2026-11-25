@@ -28,7 +28,7 @@ SUT: EShop (Node.js/Express + SQLite). Công cụ: JMeter 5.6.3. Repo: https://g
 |---|---|
 | `docs/Main_Report.md`, `.pdf` | Báo cáo chính |
 | `docs/AI_Critique.md`, `.pdf` | AI Critique (200–300 từ) |
-| `docs/AI_Audit_Report.md`, `.pdf` | AI Audit Report (mẫu AI-02) |
+| `docs/AI_Audit_Report.docx`, `.pdf`, `.md` | AI Audit Report (điền vào mẫu AI-02, PDF xuất từ file Word) |
 | `docs/AI_Analysis_Review.md`, `docs/CPT_Proposal.md`, `docs/Bug_Report.md` | Task 2, Task 3, bug report |
 | `perf/plans/` | Test plan `23120399_{Load,Stress,Spike,Soak}_{ngày}.jmx` |
 | `perf/data/` | CSV đầu vào |
