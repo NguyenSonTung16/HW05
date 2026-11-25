@@ -55,3 +55,5 @@ cfb516d | 2026-11-25 07:58 | NguyenSonTung16 | F: cập nhật Git_Commit_Log.tx
 27402a3 | 2026-11-25 08:21 | NguyenSonTung16 | F: AI Audit Report: sắp bảng mục 3 theo thứ tự thời gian của AI_LOG
 7a71a01 | 2026-11-25 08:21 | NguyenSonTung16 | F: cập nhật Git_Commit_Log.txt
 52e2a1d | 2026-11-25 08:33 | NguyenSonTung16 | F: AI Audit Report: bảng mục 3 chép nguyên từng hàng AI_LOG theo thứ tự
+f85ecc2 | 2026-11-25 08:33 | NguyenSonTung16 | F: cập nhật Git_Commit_Log.txt
+fd0d8a3 | 2026-11-25 09:15 | NguyenSonTung16 | F: báo cáo phần cứng (evidence/hardware, cau-hinh.md); đánh dấu B0; cập nhật AI_LOG và AI Audit Report
