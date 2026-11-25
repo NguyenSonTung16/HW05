@@ -49,3 +49,5 @@ c76fca1 | 2026-11-25 07:45 | NguyenSonTung16 | F: README, báo cáo chính, AI C
 98c58bb | 2026-11-25 07:57 | NguyenSonTung16 | F: AI Audit Report: toàn văn output và Phụ lục A (toàn bộ AI_LOG)
 d21fd7a | 2026-11-25 07:57 | NguyenSonTung16 | F: cập nhật Git_Commit_Log.txt
 dba264b | 2026-11-25 07:58 | NguyenSonTung16 | F: AI Audit Report bản đầy đủ: toàn văn output và Phụ lục A (toàn bộ AI_LOG)
+cfb516d | 2026-11-25 07:58 | NguyenSonTung16 | F: cập nhật Git_Commit_Log.txt
+30b4b47 | 2026-11-25 08:14 | NguyenSonTung16 | F: AI Audit Report: Phụ lục A chép đủ AI_LOG (phần đầu, 5 cột, Quy ước); sửa prompt hàng #1
