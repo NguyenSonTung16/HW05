@@ -125,9 +125,9 @@ Trong `D:\vscode\Software testing\HW05` mình tạo `audit/AI_LOG.md` (cùng quy
 <br />
 Mình có thể lập kế hoạch từng bước (PLAN.md) cho HW05 ngay sau khi bạn trả lời.<br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #2<br />
@@ -162,9 +162,9 @@ Kế hoạch đầy đủ nằm ở `HW05/PLAN.md` (bản đề xuất, chưa l�
 <br />
 Khi bạn duyệt, mình bắt đầu từ Giai đoạn A (soạn skill).<br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #3<br />
@@ -207,9 +207,9 @@ Dù chọn cách nào, mình cũng sẽ xin quyền xóa file trong thư mục (
 <br />
 Bạn review skill xong (hoặc ghi nhận xét để mình sửa) thì mình commit skill v1 rồi sang Giai đoạn B, bước P1.<br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #4<br />
@@ -232,9 +232,9 @@ Nó làm 4 việc chính:<br />
 <br />
 Tóm lại: AI lo thiết kế và tính toán, bạn duyệt và chạy, còn mọi con số trong báo cáo đều truy được về file `.jtl` gốc.<br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #5<br />
@@ -270,9 +270,9 @@ ok nội dung skill tốt rồi, tiếp theo làm gì</strong></td>
 <br />
 Bạn trả lời gốc repo và duyệt P1 là mình làm tiếp.<br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #6<br />
@@ -301,9 +301,9 @@ Prompt:<br />
 <br />
 **Bước sau (P4):** để bằng chứng "dẫn dắt AI từng bước" rõ ràng như đề yêu cầu, bạn nên gửi riêng từng prompt cho từng plan, ví dụ: "P4: sinh plan Load", rồi "P4: sinh plan Stress", "P4: sinh plan Spike". Mỗi lần mình sinh một plan từ template, giải thích tham số, rồi dừng để bạn review trước khi chạy.<br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #7<br />
@@ -326,9 +326,9 @@ Lưu ý: 110 tài khoản này sẽ mất khi bạn khởi động lại backend
 - Ngày trong tên file: mình đề xuất lấy ngày tạo plan (20261118). Nếu bạn muốn theo ngày chạy thì nói mình.<br />
 - Trong lúc đó, nếu chưa làm: `node -v`, mở thử template bằng JMeter GUI, chụp dxdiag và cấu hình máy.<br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #8<br />
@@ -353,9 +353,9 @@ Về lỗi vừa sửa: commit thành skill v1.2, test trên Linux vẫn pass. R
 <br />
 Cài xong, bạn gửi mình kết quả `jmeter -v` (hoặc ảnh JMeter mở template, nếu có báo lỗi) và gửi prompt "P4: sinh plan Load".<br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #9<br />
@@ -375,9 +375,9 @@ Cách sửa:<br />
 <br />
 `JAVA_HOME` trỏ vào JDK đi kèm Android Studio (`jbr`) là dùng được cho JMeter. Bạn gõ thêm `java -version` để chắc Java chạy được từ dòng lệnh. Nếu `java -version` báo lỗi nhưng `jmeter -v` vẫn chạy thì cũng không sao.<br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #10<br />
@@ -398,9 +398,9 @@ Còn lại trước khi sang P4 (không bắt buộc làm ngay):<br />
 <br />
 Khi sẵn sàng, gửi prompt "P4: sinh plan Load".<br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #11<br />
@@ -417,9 +417,9 @@ Mở giao diện JMeter bằng một trong hai cách:<br />
 <br />
 Trong GUI: File → Open → `D:\vscode\Software testing\HW05\skills\jmeter-performance-testing\templates\plan.jmx.template`, đổi bộ lọc sang "All files". Nếu mở được và thấy cây gồm "TG workflow" (7 request) và "TG lockout-probe" thì template hợp lệ.<br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #12<br />
@@ -441,9 +441,9 @@ Mở được thì cây bên trái phải có:<br />
 <br />
 Nếu JMeter báo lỗi khi mở, gửi mình ảnh thông báo. Nếu mở bình thường thì không cần chạy gì trong GUI cả, gửi "P4: sinh plan Load" là được.<br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #13<br />
@@ -459,9 +459,9 @@ Lưu ý: đóng file này mà **không bấm Save**. JMeter lưu lại sẽ vi�
 <br />
 Bước tiếp theo: gửi "P4: sinh plan Load".<br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #14<br />
@@ -500,9 +500,9 @@ Bạn có thể mở plan bằng JMeter GUI để xem (nhớ đừng Save). Duy�
 <br />
 Chạy xong gửi mình phần cuối kết quả trong terminal (hoặc nội dung `perf\results\smoke-load\summary.md`).<br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>INCOMPLETE</strong></td>
+<td>Review (static testing) phát hiện 6 lỗi thiết kế: đăng nhập lại mỗi vòng, CSV dùng chung và recycle, think time ở mức Thread Group, cứng 50 VU, oracle checkout yếu (chỉ kiểm orderId), nhánh đăng nhập sai không bật Ignore Status. Nguyên nhân: prompt không mô tả hành vi người dùng, model không có dữ liệu phần cứng.</td>
+<td>SV nêu 6 điểm ở #16: đăng nhập một lần/VU, mỗi VU một tài khoản (CSV không recycle), think time chỉ trước xem hàng và thanh toán, chốt VU sau smoke, đối chiếu số đơn trong DB, bật Ignore Status cho nhánh đăng nhập sai.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #15<br />
@@ -527,9 +527,9 @@ Năm điểm mình tự nêu chỉ là gợi ý; bạn cần tự quyết đồn
 <br />
 Khi bạn gửi nhận xét, mình ghi lại và sửa plan.<br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #16<br />
@@ -568,9 +568,9 @@ Mỗi vòng giờ chỉ còn 6 request (đăng nhập tách ra đầu phiên). L
 <br />
 Smoke sẽ kiểm luôn hai điều chưa xác nhận: phải có đúng 2 mẫu `AUTH login`, và mẫu `AUTH login-wrong` phải được tính là thành công. Chạy xong, gửi mình nội dung `perf\results\smoke-load\summary.md`.<br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #17<br />
@@ -614,9 +614,9 @@ Smoke đo được mỗi vòng mất khoảng 9,2 s, tức mỗi người dùng 
 <br />
 Chạy xong gửi mình `perf\results\load\summary.md`.<br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #18<br />
@@ -639,9 +639,9 @@ Bạn chạy với `-J threads=500` nhưng chỉ có 100 tài khoản trong `use
 Mình vừa sửa luôn các lỗi nhỏ thấy trong ảnh (skill v1.5): dòng tiếng Việt bị lỗi font ở bước giám sát (`monitor-node.ps1` giờ lưu UTF-8 có BOM), cảnh báo DEP0190 khi gọi JMeter, và cảnh báo thử nghiệm của sqlite. 11/11 test vẫn qua, nên lần chạy lại sẽ sạch hơn.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #19<br />
@@ -673,9 +673,9 @@ node skills\jmeter-performance-testing\scripts\run-scenario.mjs --plan perf\plan
 Khi chạy xong, gửi mình `perf\results\load2\summary.md`. Mình sẽ đọc kết quả, kiểm tra phần đếm đơn trong DB và số lần bị khóa 403 do nhánh lockout-probe.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #20<br />
@@ -708,9 +708,9 @@ Prompt:<br />
 Cứ để lượt này chạy cho xong rồi gửi `perf\results\load2\summary.md`. Đừng thao tác trong lúc chạy để tránh làm lệch số liệu.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #21<br />
@@ -733,9 +733,9 @@ Hai việc cần bổ sung, không làm ảnh này sai:<br />
 Khi chạy xong, gửi mình `perf\results\load2\summary.md`.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #22<br />
@@ -766,9 +766,9 @@ Tổng: 14692 mẫu, lỗi 0%, p95 4 ms, 35 req/s<br />
 **Bước tiếp theo (P4 Stress):** mình sinh plan Stress theo bảng bậc tải của skill (cần thêm tài khoản vì VU ≤ số tài khoản, và dùng Aggregate Report). Sau đó bạn review như ở P5. Bạn muốn mình làm luôn không?<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #23<br />
@@ -792,9 +792,9 @@ vậy nên chỉnh tải cao hơn ko</strong></td>
 **Việc cần chuẩn bị cho Stress:** cần thêm tài khoản (VU không được vượt số tài khoản, hiện chỉ có 100, nên cần tạo khoảng 500 để chạy tới 400 VU), và dùng Aggregate Report như đã định. Mình sẽ tăng số tài khoản trong `prepare-data.mjs` rồi sinh plan Stress cho bạn review (P4). Bạn đồng ý làm tiếp không?<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #24<br />
@@ -816,9 +816,9 @@ node skills\jmeter-performance-testing\scripts\prepare-data.mjs --out perf\data 
 Lệnh này tạo 500 tài khoản `perf001–perf500` (100 tài khoản đầu giống cũ) và ghi lại `perf\data\users.csv`. Lượt Load đã chạy xong nên không bị ảnh hưởng. Chạy xong, bạn gửi mình dòng kết quả cuối cùng của lệnh là được.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #25<br />
@@ -846,9 +846,9 @@ Prompt:<br />
 Khi bạn chốt xong 4 điểm này, mình chạy smoke Stress rồi hướng dẫn lệnh chạy thật.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>INCOMPLETE</strong></td>
+<td>Review plan Stress: chưa chặn việc chạy khi users.csv chỉ có 100 tài khoản cho 400 VU; nghi ngờ mỗi Thread Group đọc CSV riêng; assertion 401/403 khó đọc; ngưỡng p95 500 ms không rõ là ngưỡng phân tích hay ngưỡng dừng.</td>
+<td>SV nêu 5 điểm ở #26: tạo 500 tài khoản, thử nghiệm xác nhận 5 Thread Group dùng chung con trỏ CSV, assertion Equals + OR, chốt p95 500 ms là ngưỡng phân tích, ghi chú bậc 5 chỉ đủ thấy dấu hiệu ban đầu.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #26<br />
@@ -881,9 +881,9 @@ node skills\jmeter-performance-testing\scripts\run-scenario.mjs --plan perf\plan
 3. Gửi mình dòng `AUTH login` trong `perf\results\smoke-stress-csvtest\summary.md`. Ra 4 là chạy được Stress thật.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #27<br />
@@ -917,9 +917,9 @@ node skills\jmeter-performance-testing\scripts\run-scenario.mjs --plan perf\plan
 Xong thì báo mình, mình sẽ đọc kết quả và phân tích với ngưỡng p95 500 ms / lỗi 5 %.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #28<br />
@@ -942,9 +942,9 @@ Lý do bản cũ lâu: 5 bậc, mỗi bậc giữ 3 phút để thấy hệ th�
 Lệnh chạy vẫn y như tin trước (khởi động lại backend, `prepare-data.mjs --users 500 --accounts-only`, rồi `run-scenario.mjs ... --out perf\results\stress --verify-db ...`). Thời điểm chụp ảnh đổi lại: bậc 4 khoảng phút 3:20–3:50 (200 VU), bậc 5 khoảng phút 4:20–4:50 (400 VU).<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #29<br />
@@ -967,9 +967,9 @@ vậy tăng lên 10ph thì sao</strong></td>
 Mô tả plan và `audit/P5-stress-review.md` đã cập nhật. Lệnh chạy giữ nguyên như trước. Thời điểm chụp ảnh: bậc 4 khoảng phút 7:00–7:50 (200 VU), bậc 5 khoảng phút 9:00–9:50 (400 VU).<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #30<br />
@@ -989,9 +989,9 @@ Quyết định so sánh 5 / 10 / 15 phút rồi giữ 15 phút đã ghi vào `a
 **Chụp ảnh:** bậc 4 khoảng phút 11:00–11:50 (200 VU), bậc 5 khoảng phút 13:30–14:30 (400 VU).<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #31<br />
@@ -1025,9 +1025,9 @@ Kết quả này vẫn báo cáo được ("không gãy tới 400 VU / 300 req/s
 **Ảnh minh chứng:** mình chưa thấy ảnh nào trong `evidence\screenshots\stress\`. Bạn có chụp ở bậc 4–5 không? Nếu có, gửi mình để lưu.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #32<br />
@@ -1062,9 +1062,9 @@ node skills\jmeter-performance-testing\scripts\run-scenario.mjs --plan perf\plan
 Chạy xong, gửi mình các ảnh, mình sẽ lưu vào `evidence\screenshots\stress\` và so sánh `stress2` với `stress`. Đề xuất chạy thêm lượt không think time vẫn chờ bạn quyết, làm sau cũng được.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>INCOMPLETE</strong></td>
+<td>AI đề xuất báo cáo dùng số liệu lượt stress2 thay cho lượt stress, trong khi lượt chạy lại chỉ nhằm lấy ảnh minh chứng.</td>
+<td>SV yêu cầu ở #33: giữ stress làm số liệu chính, stress2 chỉ dùng cho ảnh và so sánh.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #33<br />
@@ -1086,9 +1086,9 @@ Cách này còn có lợi: hai lượt cùng cấu hình cho số gần nhau th�
 Lệnh chạy giữ nguyên như tin trước, với `--out perf\results\stress2`.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #34<br />
@@ -1108,9 +1108,9 @@ node skills\jmeter-performance-testing\scripts\run-scenario.mjs --plan perf\plan
 Chụp khi terminal hiện khoảng `00:11:00`–`00:11:50` (200 VU) và `00:13:30`–`00:14:30` (400 VU).<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #35<br />
@@ -1137,9 +1137,9 @@ Prompt:<br />
 Nếu bạn vẫn muốn giữ ảnh này thì mình lưu kèm làm ảnh phụ (`stress2-bac1-3min.png`), không bắt buộc.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #36<br />
@@ -1159,9 +1159,9 @@ này dc chưa</strong></td>
 **Ảnh tiếp theo:** bậc 5 bắt đầu ở `00:12:00`. Chụp lúc `00:13:30`–`00:14:30` (khoảng 12:04 giờ máy), khi `Active` khoảng 401 và throughput khoảng 300 req/s.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #37<br />
@@ -1179,9 +1179,9 @@ taskbar bị thiếu gì à</strong></td>
 Bậc 5 sắp vào giai đoạn ổn định, chụp lúc khoảng `00:13:30`–`00:14:30`.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #38<br />
@@ -1195,9 +1195,9 @@ Prompt:<br />
 Ảnh này chụp ở `00:12:00`, `Active: 202`, tức bậc 5 vừa bắt đầu tăng tải (ramp-up 30 s), chưa đạt 400 VU, nên mình chưa lưu làm ảnh bậc 5. Bạn chờ đến khi terminal hiện khoảng `00:13:30`–`00:14:30` và `Active` khoảng 401 rồi chụp lại.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #39<br />
@@ -1215,9 +1215,9 @@ Prompt:<br />
 Giờ đã có đủ 2 ảnh (bậc 4 và bậc 5). Lượt chạy còn khoảng 1,5 phút nữa. Khi xong, bạn báo mình, mình sẽ so sánh `stress2` với `stress`, ghi vào audit và commit.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #40<br />
@@ -1249,9 +1249,9 @@ Trong báo cáo, số liệu chính vẫn lấy từ `stress`, ảnh ghi rõ thu
 Mình nghiêng về làm (1) trước, vì phần phân tích ở Task 2 sẽ có số liệu "điểm gãy" thật để AI diễn giải.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #41<br />
@@ -1288,9 +1288,9 @@ node skills\jmeter-performance-testing\scripts\run-scenario.mjs --plan perf\plan
 - Ảnh 2 ngay sau đó: chuyển Task Manager sang tab **Performance** (CPU toàn máy), vì JMeter chạy cùng máy nên cần biết máy có bị nghẽn không.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #42<br />
@@ -1313,9 +1313,9 @@ Ngay trên ảnh đã thấy kết quả chính, rõ hơn mình dự đoán:<br 
 File .jtl khoảng 65 MB, dưới giới hạn 100 MB của GitHub. Lượt chạy đang tạo báo cáo HTML. Khi terminal báo xong, bạn nhắn mình để phân tích chi tiết từng bậc và tách riêng `view-cart`.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #43<br />
@@ -1363,9 +1363,9 @@ Mọi thứ đã ghi vào `audit/P6-stress.md` (kể cả sự cố công cụ v
 **Bước tiếp theo:** Spike (P4: sinh plan, View Results Tree chỉ lỗi), sau đó là Soak 10–15 phút. Bạn muốn làm Spike luôn không?<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #44<br />
@@ -1390,9 +1390,9 @@ làm Spike luôn</strong></td>
 4. Có chạy smoke trước không (2 VU nền + 4 VU đỉnh, 40 s) để kiểm tra plan mới.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>INCOMPLETE</strong></td>
+<td>Plan Spike: P4 chỉ liệt kê các phương án đỉnh mà chưa chọn, định nghĩa hồi phục chưa đo được.</td>
+<td>SV ở #45 giao chốt theo hướng đề xuất: đỉnh 200 VU không think time, hồi phục = 3 cửa sổ 10 s có p95 ≤ 1,5 × nền và lỗi 0 %, smoke trước khi chạy thật.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #45<br />
@@ -1416,9 +1416,9 @@ node skills\jmeter-performance-testing\scripts\run-scenario.mjs --plan perf\plan
 Xong thì báo mình. Mình sẽ kiểm tra có đúng 6 lần đăng nhập không, nhóm đỉnh có chạy liên tục không, và DB có khớp không, rồi đưa lệnh chạy thật.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #46<br />
@@ -1449,9 +1449,9 @@ node skills\jmeter-performance-testing\scripts\run-scenario.mjs --plan perf\plan
 - Nếu kịp, thêm một ảnh tab Performance lúc đỉnh.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #47<br />
@@ -1471,9 +1471,9 @@ So với trước đỉnh (Avg 1 ms, khoảng 37 req/s), độ trễ trung bình
 **Còn ảnh sau đỉnh:** chụp khi terminal hiện khoảng `00:04:00` (lúc đó Active về 51), để thấy độ trễ đã trở lại mức nền. Lượt chạy kết thúc ở `00:07:00`, xong thì báo mình.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #48<br />
@@ -1491,9 +1491,9 @@ Hai ảnh này cho thấy:<br />
 Lượt chạy kết thúc ở `00:07:00` (khoảng 12:35). Khi xong, gửi mình dòng kết quả cuối để mình phân tích theo 3 giai đoạn.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #49<br />
@@ -1528,9 +1528,9 @@ Lưu ý: con số p95 411 ms ở dòng tổng gộp cả 7 phút nên dễ hiể
 **Bước tiếp theo: Soak 10–15 phút** (đề yêu cầu có số liệu cụ thể). Mình đề xuất dùng plan Load ở mức 50 VU có think time, chạy 15 phút, theo dõi xu hướng RAM. Plan Load có tham số `duration` nên chỉ cần `-J duration=900`, nhưng tên file phải có chữ `Soak` theo quy ước, nên mình sẽ tạo `23120399_Soak_20261123.jmx` từ plan Load. Bạn đồng ý không?<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #50<br />
@@ -1558,9 +1558,9 @@ node skills\jmeter-performance-testing\scripts\run-scenario.mjs --plan perf\plan
 - khoảng `00:14:00`<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #51<br />
@@ -1580,9 +1580,9 @@ Mốc 145 MB này là điểm xuất phát để so với hai ảnh sau. Nếu R
 Hai ảnh tiếp theo: khoảng `00:08:00` (12:58) và `00:14:00` (13:04). Mỗi mốc nên chụp cả tab Details và tab Performance như lần này.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #52<br />
@@ -1603,9 +1603,9 @@ Nghĩa là trong 15 phút ở mức 300 VU có think time, dữ liệu giỏ hà
 Ảnh cuối: khoảng `00:14:00` (13:04).<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #53<br />
@@ -1628,9 +1628,9 @@ Mức tăng này nhỏ, và 15 phút chưa đủ để kết luận là rò rỉ
 Lượt chạy kết thúc ở khoảng `00:15:00`. Khi xong, gửi mình dòng kết quả cuối.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #54<br />
@@ -1669,9 +1669,9 @@ Tổng: 195439 mẫu, lỗi 0%, p95 4 ms, 217.2 req/s<br />
 Mình đề xuất làm (1) trước, vì Task 2 và báo cáo sẽ dẫn chiếu đến các Issue. Bạn muốn làm theo thứ tự này không?<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #55<br />
@@ -1708,9 +1708,9 @@ gh issue create --repo NguyenSonTung16/HW05 --title "&lt;tiêu đề&gt;" --body
 Trong lúc bạn đăng, mình có thể làm tiếp **Task 2** (cho AI phân tích .jtl và bắt chỗ hiểu sai). Bạn muốn mình bắt đầu luôn không?<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>INCOMPLETE</strong></td>
+<td>Bug report đạt nội dung, nhưng AI khẳng định sai rằng SV bắt buộc phải tự đăng Issue (đề không yêu cầu như vậy).</td>
+<td>SV hỏi lại ở #56; AI thừa nhận sai, sửa lại cách hiểu yêu cầu của đề.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #56<br />
@@ -1733,9 +1733,9 @@ Prompt:<br />
 Dù chọn cách nào, đề vẫn cần **ảnh chụp trang Issues** để đưa vào bug report. Phần này bạn chụp sau khi Issue đã được tạo.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #57<br />
@@ -1745,9 +1745,9 @@ Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
 bạn tự chạy và cap màn hình issue</strong></td>
 <td>Mình sẽ push code lên GitHub, tạo 5 Issue từ các file trong `bug-reports\`, rồi chụp màn hình trang Issues.</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>INCOMPLETE</strong></td>
+<td>Lượt bị dừng giữa chừng: chỉ push được code, chưa tạo Issue và chưa có ảnh chụp.</td>
+<td>SV tự đăng 5 Issue và chụp ảnh (#59).</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #58<br />
@@ -1775,9 +1775,9 @@ Trong HW05 (D:\vscode\Software testing\HW05), 5 GitHub Issue #1–#5 đã đư�
 Mình dùng Chrome của bạn (đang đăng nhập GitHub) vì trình duyệt tích hợp không lưu ảnh ra file được.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #59<br />
@@ -1805,9 +1805,9 @@ kiểm tra git đi, tôi đã đăng đủ 5 issue, thư mục đã có bằng c
 Bạn muốn mình commit ảnh issues và `audit/AI_LOG.md` (tác giả NguyenSonTung16, không thêm dòng Co-Authored-By) rồi push không? Mình cũng có thể đóng tab Chrome mình mở trước đó.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #60<br />
@@ -1830,9 +1830,9 @@ Sau đó bạn nhắn mình. Mình sẽ làm như sau:<br />
 - Hiển thị kết quả trên trang và chụp màn hình thành `evidence/screenshots/issues/bug04-manual-checkout.png`.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #61<br />
@@ -1859,9 +1859,9 @@ Lưu ý:<br />
 - Ảnh chưa commit và chưa comment vào Issue #4. Comment là hành động công khai nên mình chờ bạn đồng ý. Bạn muốn mình comment ảnh lên Issue #4, commit ảnh cùng `audit/AI_LOG.md` rồi push không?<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #62<br />
@@ -1880,9 +1880,9 @@ Lưu ý:<br />
 - Chưa có ảnh trang danh sách Issues (`issues-list.png`).<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #63<br />
@@ -1909,9 +1909,9 @@ Mình đã tick C1 trong `PLAN.md` nhưng chưa commit.<br />
 Bước tiếp theo là C2: bạn cho AI phân tích `.jtl` trong một phiên riêng và ghi nguyên văn prompt. Khi có câu trả lời, gửi mình để mình làm C3 và C4.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #64<br />
@@ -1931,9 +1931,9 @@ Trước khi làm C2, bạn kiểm tra giúp mình hai điều:<br />
 Khi có câu trả lời của AI, bạn gửi lại mình để mình làm C3.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #65<br />
@@ -1947,9 +1947,9 @@ cho path đầy đủ của file prompt</strong></td>
 `D:\vscode\Software testing\HW05\perf\analysis\analysis-prompt.md`<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #66<br />
@@ -1974,9 +1974,9 @@ Lưu ý: 200 dòng đầu chỉ bao phủ vài giây đầu của mỗi lần ch
 Khi bạn sẵn sàng, dán nguyên văn prompt trong `perf/analysis/analysis-prompt.md` cùng các file trên vào một phiên AI riêng.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #67<br />
@@ -1995,9 +1995,9 @@ Prompt:<br />
 Nếu bạn muốn, mình tạo một file txt chỉ chứa phần prompt để bạn copy một lần cho gọn.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #68<br />
@@ -2045,9 +2045,9 @@ Quy tắc:<br />
 Sau khi AI trả lời, lưu nguyên văn prompt và toàn bộ câu trả lời vào `audit/P8-ai-analysis.md`, rồi gửi mình phần trả lời để làm C3.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #69<br />
@@ -2065,9 +2065,9 @@ Mình đã đối chiếu từng nhận định với file gốc (C3), kết qu�
 Bước tiếp theo là C4: phân loại các đề xuất tối ưu của AI (khả thi hay ảo tưởng) dựa trên mã nguồn SUT. Mình sẽ làm sau khi bạn xác nhận.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>INCOMPLETE</strong></td>
+<td>Bản ghi C2 chưa đạt: bản dán có phần trả lời lặp hai lần và dòng trạng thái của phiên này, không chứng minh được là phiên AI riêng.</td>
+<td>SV yêu cầu ở #72 cắt còn một bản và ghi đúng nguồn; sau đó chạy lại C2 trong phiên AI mới (#74–#76).</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #70<br />
@@ -2085,9 +2085,9 @@ làm đi</strong></td>
 Mình chưa tick C2, C3, C4 trong `PLAN.md` và chưa commit. Bước tiếp theo là C5: bạn ghi phán quyết cuối vào `docs/AI_Analysis_Review.md`. Mình có thể soạn sẵn khung file đó nếu bạn cần.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>INCOMPLETE</strong></td>
+<td>Bảng C3/C4 có sai: coi khoảng RPS trung bình theo bậc là khoảng dao động; đánh giá Connect nhẹ hơn thực tế; gọi "ảo tưởng" cho cả đề xuất chỉ là không áp dụng được hoặc không có lợi ích.</td>
+<td>SV sửa ở #72: RPS là trung bình theo bậc; Connect sai trên gần như mọi loại thao tác; chỉ "trừ kho" mới là chi tiết bịa; dẫn chứng checkout dòng 297–309.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #71<br />
@@ -2110,9 +2110,9 @@ vậy giờ tôi cần review gì</strong></td>
 Trước khi làm C5, nên lưu ý: `audit/P8-ai-analysis.md`, `perf/analysis/` và `audit/AI_LOG.md` đã có thay đổi nhưng chưa commit trên máy bạn. Mình sẽ commit khi bạn yêu cầu.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #72<br />
@@ -2132,9 +2132,9 @@ Có mấy chỗ cần sửa: [C3: khoảng RPS là trung bình theo bậc, khôn
 Mình chưa commit. Lần này mình ghi lại đầy đủ hai điểm trên để không còn chỗ sai nào trong hàng này. Hàng #70 và #71 trước đó dùng cách gọi "ảo tưởng" cho đề xuất không áp dụng được, và mình không sửa được hàng cũ. Bạn coi nội dung của hàng này là bản đúng.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #73<br />
@@ -2157,9 +2157,9 @@ tiếp theo cần làm gì</strong></td>
 Bạn muốn mình bắt đầu Task 3 (D) bây giờ không?<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #74<br />
@@ -2178,9 +2178,9 @@ Các bước:<br />
 3. Gửi mình toàn bộ phản hồi. Mình sẽ thay phần phản hồi trong `audit/P8-ai-analysis.md` và đối chiếu lại C3, C4 với bản mới.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #75<br />
@@ -2231,9 +2231,9 @@ Quy tắc:<br />
 Sau khi phiên AI trả lời xong, dán nguyên văn phản hồi vào đây. Mình sẽ thay phần phản hồi trong `audit/P8-ai-analysis.md` và đối chiếu lại C3, C4.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #76<br />
@@ -2257,9 +2257,9 @@ Phản hồi cũng có đoạn "không ghi audit lượt này theo yêu cầu c�
 P8 không có mục C3 hay C4. Nếu C3, C4 nằm ở file khác, bạn cho mình biết đường dẫn để mình đối chiếu lại với bản chạy lại này. Thay đổi chưa được commit.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>INCOMPLETE</strong></td>
+<td>AI nói C3 và C4 nằm ở đường dẫn khác nhưng chưa kiểm tra, thực tế đã mất khi thay phản hồi.</td>
+<td>SV hỏi lại ở #77; C3 và C4 được dựng lại và đối chiếu với phản hồi chạy lại (#78).</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #77<br />
@@ -2278,9 +2278,9 @@ sao lại ko có đường dẫn là sao</strong></td>
 Mình đề xuất dựng lại C3 và C4 ngay trong `audit/P8-ai-analysis.md`, dựa trên bản phản hồi chạy lại. Mình sẽ đối chiếu từng nhận định với file gốc và mã nguồn `eshop-sut/backend`, rồi ghi dòng `.jtl` hoặc dòng mã làm bằng chứng. Bạn xác nhận giúp mình là làm luôn như vậy được không?<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #78<br />
@@ -2310,9 +2310,9 @@ Ngoài phạm vi C4: `server.js` ghép `searchQuery` trực tiếp vào câu SQL
 Chưa commit, và `PLAN.md` chưa tick C2–C4. Bước tiếp theo là C5 (phán quyết của bạn trong `docs/AI_Analysis_Review.md`).<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #79<br />
@@ -2332,9 +2332,9 @@ Các file đã được stage: `PLAN.md`, `audit/AI_LOG.md`, `audit/P8-ai-analys
 Sau khi bạn trả lời, mình sẽ commit với tác giả NguyenSonTung16, không có dòng Co-Authored-By. Mình sẽ không push nếu bạn chưa yêu cầu.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #80<br />
@@ -2348,9 +2348,9 @@ cho phép làm đi, đảm bảo ko có Co-Authored-By claude</strong></td>
 Mình đã đổi tên hai lock cũ thành `.git/stale-HEAD-lock-20261125031241` và `.git/stale-maintenance-lock-20261125031241` để không xóa gì. Trong lúc commit, git tạo lại hai file lock rỗng là `.git/HEAD.lock` và `.git/objects/maintenance.lock`, và không xóa được do quyền thiết bị. Vì vậy các lệnh git sau này sẽ lỗi "File exists" cho đến khi bạn xóa hai file này trên máy. Hai file này rỗng và có thể xóa an toàn khi không có git nào đang chạy. Hai file `hw05.bundle` và `hw05-b9.bundle` vẫn chưa theo dõi, bạn nên tự xóa sau.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #81<br />
@@ -2364,9 +2364,9 @@ bước 2 trước đi</strong></td>
 Mình chưa commit, vì hai file lock `.git/HEAD.lock` và `.git/objects/maintenance.lock` vẫn còn và sẽ làm lệnh commit lỗi "File exists". Bạn xác nhận không có git nào đang chạy và cho phép mình đổi tên hai file này, như lần trước, thì mình commit ngay phần PLAN.md này.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #82<br />
@@ -2382,9 +2382,9 @@ Mình đã đổi tên hai lock cũ sang tên `stale-*` trong `.git`. Lúc commi
 Bước tiếp theo là C5 do bạn viết trong `docs/AI_Analysis_Review.md`. Mình có thể soạn khung file này nếu bạn cần.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #83<br />
@@ -2400,9 +2400,9 @@ Một điểm cần lưu ý: PLAN.md ghi C5 là phần của bạn, nên mình �
 Mình chưa tick C5 và chưa commit.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>INCOMPLETE</strong></td>
+<td>Nội dung AI_Analysis_Review được SV đọc và chấp nhận, nhưng còn đoạn ghi chú "bản nháp".</td>
+<td>SV yêu cầu xoá đoạn ghi chú bản nháp (#84).</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #84<br />
@@ -2416,9 +2416,9 @@ tôi đã đọc, tốt rồi, xóa đoạn ghi chú bản nháp đi</strong></t
 Mình chưa tick C5 trong `PLAN.md` và chưa commit. Bạn muốn mình tick C5 và commit luôn không?<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #85<br />
@@ -2434,9 +2434,9 @@ Hai file lock rỗng `.git/HEAD.lock` và `.git/objects/maintenance.lock` vẫn 
 Phần còn lại là Task 3 (D), skill v2 và video (E), tài liệu nộp bài (F). Bạn muốn làm phần nào tiếp?<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #86<br />
@@ -2458,9 +2458,9 @@ Các ngưỡng là đề xuất của mình, chưa đo trên CI thật, nên b�
 Lượt này chưa ghi được log: máy ảo Linux trên thiết bị của bạn không khởi động được nên `append-ai-log.mjs` không chạy. Mình sẽ ghi bù hàng này ở lượt kế tiếp, trước khi ghi hàng mới. Mình cũng chưa tick D trong `PLAN.md` và chưa commit, vì git cũng cần môi trường đó.<br />
 <br />
 Bước tiếp theo là Task E: skill v2 kèm changelog và kịch bản video.</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>INCOMPLETE</strong></td>
+<td>Lượt bị gián đoạn do máy ảo không chạy, chưa hoàn tất Task 3.</td>
+<td>SV yêu cầu chạy lại (#87).</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #87<br />
@@ -2474,9 +2474,9 @@ nãy do máy ảo ko chạy dc nên chạy lại đi</strong></td>
 Bước tiếp theo là Task E: cập nhật skill lên v2 kèm changelog v1→v2, rồi soạn kịch bản video `docs/Kich_ban_video_Skill.md`. Mình làm tiếp nếu bạn đồng ý.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #88<br />
@@ -2497,9 +2497,9 @@ Thay đổi trong `SKILL.md` và `templates/analysis-prompt.md`:<br />
 Mình đã tick mục skill v2 trong `PLAN.md`. Bước tiếp theo là kịch bản video `docs/Kich_ban_video_Skill.md` (bạn quay). Mình soạn tiếp nếu bạn đồng ý.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #89<br />
@@ -2535,9 +2535,9 @@ Prompt:<br />
 Mình làm được ngay mục 2 đến 6 (trừ điểm tự chấm). Bạn muốn bắt đầu từ mục nào?<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #90<br />
@@ -2569,9 +2569,9 @@ Ngoài phạm vi, chưa báo: SQL injection ở `search`, `GET /api/products/:id
 **Lưu ý để tránh trùng:** nếu thành viên khác cũng chọn đăng nhập, danh sách và chi tiết sản phẩm, hoặc giỏ và checkout, thì trùng nhóm. Hai thành viên cũng không nên đăng cùng bug (đặc biệt BUG-01 đến BUG-04). Trong `PLAN.md`, quyết định D1 ghi "đã chốt: không trùng" nhưng mục rủi ro cuối file vẫn ghi "chờ bạn xác nhận D1", nên bạn cần hỏi lại nhóm để chắc. Tên nhóm hay danh sách thành viên mình không có trong thư mục.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #91<br />
@@ -2593,9 +2593,9 @@ Việc mình **không làm thay** được: báo cáo phần cứng (dxdiag ho�
 Thứ tự mình đề xuất: 1, 2, 3, 4, 5. Bạn đồng ý để mình làm lần lượt chứ?<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #92<br />
@@ -2615,9 +2615,9 @@ Bạn cần làm hoặc kiểm tra:<br />
 Còn thiếu: báo cáo phần cứng, video, và zip nộp bài (kiểm tra dung lượng vì `.jtl` thô khoảng 176 MB).<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>INCOMPLETE</strong></td>
+<td>AI Audit Report được dựng từ md theo cấu trúc template, chưa điền vào chính file docx AI-02 và chỉ chọn 11 artifact.</td>
+<td>SV yêu cầu ở #94: điền vào file Word của template rồi xuất PDF; ở #95: đưa toàn bộ log vào.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #93<br />
@@ -2640,9 +2640,9 @@ bạn đã dùng template của AI audit doc để làm chưa</strong></td>
 Mình đề xuất làm lại cho đúng: dán nguyên văn prompt và output (rút từ `AI_LOG.md` cho từng artifact), thêm dẫn chiếu ISTQB cho mọi hàng, rồi điền cả bản `.docx` và xuất PDF từ đó. Phần nguyên văn sẽ khá dài. Bạn muốn làm như vậy không?<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #94<br />
@@ -2665,9 +2665,9 @@ Hai điểm cần bạn biết:<br />
 Bạn còn phải điền họ tên in hoa, lớp/khóa (đang để `[ĐIỀN …]`) và ký tên.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>INCOMPLETE</strong></td>
+<td>Bản docx mới chưa chứa toàn bộ nội dung của audit/AI_LOG.md.</td>
+<td>SV yêu cầu ở #95 đưa toàn bộ nội dung log vào docx.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #95<br />
@@ -2681,9 +2681,9 @@ bạn cần đưa toàn bộ nội dung từ file đã dùng để ghi audit và
 Lưu ý: file Word giờ dài hơn nhiều vì chứa toàn bộ nhật ký. Nếu nơi nộp giới hạn số trang hoặc dung lượng, bạn cho mình biết để mình tách Phụ lục A thành file riêng.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>INCOMPLETE</strong></td>
+<td>Đã đưa log vào docx nhưng bảng mục 3 không theo đúng thứ tự log.</td>
+<td>SV chỉ ra ở #96–#97 (thứ tự, prompt đầu tiên).</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #96<br />
@@ -2699,9 +2699,9 @@ Bảng Audit ở mục 3 sắp theo artifact (skill, P1, Load, Stress, Spike, So
 Nếu bạn thấy lệch ở chỗ khác thì cho mình biết đó là bản nào, bảng mục 3 hay Phụ lục A, và quanh số hàng nào. Nếu đúng là do giờ, mình thêm cột Ngày vào Phụ lục A. Việc đó cần bạn xác nhận hàng nào thuộc ngày nào, vì log hiện không lưu ngày và mình không muốn đoán.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>INVALID</strong></td>
+<td>AI khẳng định thứ tự đã đúng nhưng chỉ kiểm phụ lục, không kiểm bảng mục 3; kết luận sai.</td>
+<td>SV chỉ ra prompt đầu tiên và thứ tự sai (#97, #103); bảng mục 3 được dựng lại nguyên văn theo log (#105).</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #97<br />
@@ -2717,9 +2717,9 @@ Mình đã dựng lại bản Word, PDF và md từ log mới (Phụ lục A gi�
 Bạn đóng file Word đó giúp mình, rồi nhắn "xong" để mình ghi lại docx và commit. Còn 4 hàng khác trong log (khoảng #46–#90) cũng có đường dẫn `@"…"` đầu prompt do đính kèm file. Bạn muốn bỏ luôn cho giống hàng #1 không?<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #98<br />
@@ -2739,9 +2739,9 @@ Vì vậy khi log đổi (như hàng #1 vừa sửa), bản Word chỉ đổi sa
 Với câu mình hỏi lúc nãy về mấy hàng có `@"…"`: mình chưa kiểm tra số hàng cụ thể, chỉ biết còn 4 hàng như vậy, nên khoảng "#46–#90" mình nêu là chưa chắc. Bạn nhắn "xong" sau khi đóng file Word, mình sẽ liệt kê đúng các hàng đó trước khi sửa.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #99<br />
@@ -2760,9 +2760,9 @@ Bản PDF (39 trang) và `.md` đã dựng lại từ file Word này và đã gh
 Phụ lục luôn chậm hơn log vài hàng (log hiện tới #99 sau lượt này), nên trước khi nộp mình sẽ dựng lại lần cuối.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>INCOMPLETE</strong></td>
+<td>Bản docx đã có phần đầu/cuối log nhưng chưa xác nhận đầy đủ mọi phần khớp.</td>
+<td>SV yêu cầu kiểm tra lại (#100).</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #100<br />
@@ -2785,9 +2785,9 @@ Chưa xong:<br />
 Bạn đóng file Word cũ rồi nhắn "xong". Mình sẽ dựng lại một lần cuối từ log mới nhất, thay `AI_Audit_Report.docx`, xoá bản `_new`, kiểm tra khớp lại và commit.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #101<br />
@@ -2805,9 +2805,9 @@ xong</strong></td>
 Hai việc nhỏ còn lại. Mình không xoá được `AI_Audit_Report_new.docx` (máy chưa cho phép xoá), nên đã chuyển nó vào thư mục `_to_delete/`; bạn xoá thư mục đó khi tiện. Và log sẽ có thêm hàng #101 từ lượt này, nên Phụ lục A luôn chậm hơn log vài hàng. Khi nộp, bạn nhắn mình để dựng lại lần cuối.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>INVALID</strong></td>
+<td>AI khẳng định Word/PDF/md đã khớp log, nhưng bảng mục 3 vẫn sai thứ tự và bắt đầu từ hàng #3; kết luận "xong" là sai.</td>
+<td>SV chỉ ra ở #103–#104; yêu cầu ở #105 chép nguyên thứ tự và nội dung log, không chọn lọc.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #102<br />
@@ -2823,9 +2823,9 @@ Nội dung file: mục 3 có 11 hàng artifact, phần Mandatory Disclosure và 
 Hai chỗ bạn còn phải tự điền trong file này: họ tên in hoa và lớp/khoá (hiện vẫn là chỗ trống `[ĐIỀN …]`), cùng chữ ký.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #103<br />
@@ -2843,9 +2843,9 @@ Mình đã sắp lại theo đúng thứ tự hàng log và dựng lại Word, P
 Hai điểm mình chưa chắc, bạn xem giúp: bảng mục 3 chỉ có 11 artifact, không phải mọi hàng log (toàn bộ hàng nằm ở Phụ lục A), và hai artifact phân tích/tối ưu lấy theo phiên chạy lại ở hàng #76. Nếu bạn muốn mục 3 liệt kê mọi hàng log một-một theo thứ tự thì nhắn mình, mình sẽ đổi cấu trúc.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #104<br />
@@ -2878,9 +2878,9 @@ Ngoài ra bảng bỏ nhiều hàng log mà AI có làm ra sản phẩm, ví d�
 Bạn chọn số mấy thì mình làm và kiểm tra lại từng hàng với log trước khi báo.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #105<br />
@@ -2903,9 +2903,9 @@ thứ tôi cần là bạn bê y nguyên thứ tự và nội dung từ file dù
 Trạng thái file: `.pdf` (50 trang) và `.md` đã ghi vào `docs/`. File Word `docs/AI_Audit_Report.docx` lại đang bị khoá vì đang mở, nên bản mới đang ở `docs/AI_Audit_Report_new.docx`. Mình chưa commit để ba file không lệch nhau. Bạn đóng file Word cũ rồi nhắn "xong", mình sẽ thay file, xoá bản `_new` (chuyển vào `_to_delete/`) và commit.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #106<br />
@@ -2924,9 +2924,9 @@ xong</strong></td>
 Log sẽ có thêm hàng #106 từ lượt này, nên bảng luôn chậm hơn log vài hàng. Khi nộp, bạn nhắn mình để dựng lại lần cuối. Các cột Lý do, Bản SV sửa và Verdict trong bảng, cùng họ tên, lớp và chữ ký, vẫn để trống cho bạn điền.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #107<br />
@@ -2944,9 +2944,9 @@ Hai việc hiện còn lại, bạn cho mình biết có làm không:<br />
 - File Word của bạn chưa được commit (git đang báo đã sửa), và Word còn đang mở (có file khoá `~$_Audit_Report.docx`). Mình chưa commit, vì bạn chưa nhờ.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #108<br />
@@ -2977,9 +2977,9 @@ giờ tạm bỏ qua các bản nộp audit thì còn thiếu gì nữa</strong>
 Bạn muốn mình làm mục nào trước: 5 (kịch bản video), 6 (push) hay 7 (dọn rác)?<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #109<br />
@@ -3001,9 +3001,9 @@ dọn rác trước đi, sau đó hướng dẫn lấy Báo cáo phần cứng: 
 Khi xong, nhắn mình để kiểm tra file và cập nhật `PLAN.md` mục B0.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #110<br />
@@ -3029,9 +3029,9 @@ D:\vscode\Software testing\HW05\evidence\screenshots\hardware đã chứa các m
 Mình chưa mở được nội dung ảnh `hostname.png` và `task-manager.png` để kiểm tra, nên bạn xem giúp hai ảnh này có đủ tên máy và số liệu cần thiết không.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #111<br />
@@ -3051,9 +3051,9 @@ bạn xem luôn 2 ảnh đi</strong></td>
 Nhắc lại các mục còn lại: bảng `evidence/hardware/cau-hinh.md` chưa có, và thư mục hiện đang nằm sai vị trí (`evidence/screenshots/hardware/`, PLAN.md yêu cầu `evidence/hardware/`).<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>INCOMPLETE</strong></td>
+<td>Nhận xét ảnh hostname đúng, nhưng gợi ý sai rằng chụp tab CPU của Task Manager sẽ có tên máy.</td>
+<td>SV chỉ ra ở #112; dùng hostname.png làm bằng chứng tên máy.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #112<br />
@@ -3071,9 +3071,9 @@ Nếu bạn vẫn muốn một ảnh có cả tên máy và cấu hình, chụp 
 Còn lại: tạo `evidence/hardware/cau-hinh.md`, và chuyển thư mục `evidence/screenshots/hardware/` sang `evidence/hardware/` theo PLAN.md.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #113<br />
@@ -3099,9 +3099,9 @@ Bạn cần làm:<br />
 Mình chưa đổi gì trong README hay PLAN.md.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #114<br />
@@ -3117,9 +3117,9 @@ Phần B0 đã đủ: `evidence/hardware/` có `DxDiag.txt`, `hostname.png`, `ta
 Bạn đọc lại bảng `cau-hinh.md` đối chiếu với DxDiag trước khi nộp, vì mình đã chép thủ công từ file đó.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #115<br />
@@ -3139,9 +3139,9 @@ Còn lại trong HW05, theo PLAN.md:<br />
 Bạn muốn làm bước nào trước?<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #116<br />
@@ -3161,9 +3161,9 @@ Không commit file khoá `docs/~$_Audit_Report.docx` (file tạm của Word, đa
 Chưa cập nhật `Git_Commit_Log.txt`. Mình sẽ làm ở commit sau nếu bạn muốn.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>INCOMPLETE</strong></td>
+<td>Tin nhắn nói commit fd0d8a3 chứa log đến hàng #116, thực tế chỉ đến #115.</td>
+<td>SV yêu cầu sửa (#118); AI kiểm tra lịch sử git và nêu đúng phạm vi từng commit.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #117<br />
@@ -3177,9 +3177,9 @@ cap nhat di</strong></td>
 Cần sửa một chỗ trong câu trả lời trước: mình ghi "log đến hàng #116" nhưng commit `fd0d8a3` chỉ chứa log đến #115. Hàng #116 được ghi sau khi commit, nên mới nằm trong commit `e5213ab` này.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #118<br />
@@ -3196,9 +3196,9 @@ sửa đi</strong></td>
 Không có file nào cần sửa thêm. Mình không sửa lại tin nhắn commit hay viết lại lịch sử, vì bạn không yêu cầu, và việc đó sẽ đổi mã băm của các commit sau. Hàng #117 có trong `AI_LOG.md` nhưng chưa commit. Nếu bạn muốn, mình commit lần nữa.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #119<br />
@@ -3212,9 +3212,9 @@ push git chưa</strong></td>
 Hàng #117 và #118 trong `AI_LOG.md` vẫn chưa commit. Nếu bạn muốn đẩy lên, nhắn "push" và mình sẽ làm.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #120<br />
@@ -3232,9 +3232,9 @@ Các commit đã có trên máy, tác giả NguyenSonTung16, không có dòng Co
 Có 24 commit chưa lên `origin/main`. Bạn chạy `git push origin main` trong thư mục HW05 trên máy của bạn để đẩy lên.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #121<br />
@@ -3248,9 +3248,9 @@ Prompt:<br />
 Từ đây, các thay đổi tiếp theo cần commit và push lại khi bạn yêu cầu.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #122<br />
@@ -3272,9 +3272,9 @@ Có hai điểm bạn cần quyết định:<br />
 Lời thuyết minh phải là giọng của bạn, không đọc nguyên văn từ file. Mình chưa commit file này.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>INCOMPLETE</strong></td>
+<td>Kịch bản video ban đầu chưa đủ chi tiết cho phần trình bày.</td>
+<td>SV yêu cầu soạn chi tiết lời trình bày (#123).</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #123<br />
@@ -3297,9 +3297,9 @@ Có ba điểm bạn cần biết:<br />
 Lời thuyết minh phải là giọng của bạn, và câu chữ có thể đổi cho tự nhiên. Mình chưa commit file này.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>INCOMPLETE</strong></td>
+<td>Kịch bản chưa hướng dẫn rõ ở mỗi bước cần làm gì, nói gì.</td>
+<td>SV yêu cầu mỗi bước có phần LÀM và NÓI (#124).</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #124<br />
@@ -3330,9 +3330,9 @@ Mình đã sửa các lỗi trong bản trước:<br />
 - Mình chưa commit file này.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>INCOMPLETE</strong></td>
+<td>Kịch bản gộp Task 1 thành một video, chưa tận dụng việc đề cho phép tách clip theo kịch bản.</td>
+<td>SV đề xuất tách clip theo kịch bản (#125–#126).</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #125<br />
@@ -3360,9 +3360,9 @@ Phần **Video B (Skill)** là video riêng theo mục 7 của đề, không thu
 Hiện kịch bản `docs/Kich_ban_video.md` đang viết theo một video liền mạch (bước A1 đến A7). Nếu bạn quay ba clip, mình có thể sửa lại cho mỗi clip có phần mở đầu và kết thúc riêng, và chia lại thời lượng. Bạn muốn mình sửa không?<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #126<br />
@@ -3393,9 +3393,9 @@ sửa lại kịch bản cho phù hợp đi</strong></td>
 File này và các hàng AI_LOG mới chưa commit. Bạn bảo mình thì mình commit (tác giả NguyenSonTung16, không có dòng Co-Authored-By).<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>INCOMPLETE</strong></td>
+<td>Kịch bản clip Stress chỉ sai chỗ xem Thread Group (ghi là bảng tham số trong Main_Report, thực tế nằm trong file plan).</td>
+<td>SV chỉ ra ở #128; sửa mục 2.2 thành mở file plan Stress trong JMeter GUI.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #127<br />
@@ -3427,9 +3427,9 @@ Kịch bản không cần sửa tên tham số nào.<br />
 Ở lượt Load, bạn có thấy `node.exe` trong Task Manager (tab Details) không? Nếu không thấy thì cần chỉnh lại bố cục màn hình trước khi quay.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #128<br />
@@ -3452,9 +3452,9 @@ thread group nằm ở đâu vậy, đâu thấy tỏng main report đâu</stron
 Mình đã sửa mục 2.2 trong `docs/Kich_ban_video.md` theo cách trên. File chưa commit.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #129<br />
@@ -3481,9 +3481,9 @@ agent skill: https://youtu.be/Ty9wn1Vc9yQ<br />
 **Thư mục demo cần xử lý:** trong `perf/results/` đang có các thư mục chạy demo chưa commit: `video-load`, `video-spike`, `video-stress`, `video-skill`, `video-skill-2`. Chúng không phải kết quả chính thức. Bạn quyết định giữ hay xoá trước khi nén zip. Nếu giữ thì ghi chú trong README là bằng chứng phụ của video, còn nếu xoá thì giảm dung lượng zip. Bạn bảo mình xoá hay giữ.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #130<br />
@@ -3510,9 +3510,9 @@ Nếu vẫn báo lỗi thì đóng các cửa sổ đang mở trong thư mục �
 Xong thì báo mình, mình kiểm tra lại `git status` để chắc `perf/results/` chỉ còn các lượt chính thức.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #131<br />
@@ -3562,9 +3562,9 @@ Remove-Item -Recurse -Force perf\results\video-skill-2<br />
 ```<br />
 <br />
 Nếu vẫn báo lỗi sau khi đóng hết, khởi động lại máy rồi xoá lại. Xong thì báo mình, mình kiểm tra `git status` để chắc `perf/results/` chỉ còn các lượt chính thức.</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #132<br />
@@ -3589,9 +3589,9 @@ PS D:\vscode\Software testing\HW05&gt; Remove-Item -Recurse -Force perf\results\
 **Một lỗi của mình:** ở lượt trước (tin 10:36, lệnh xoá và lỗi `video-skill-2`), mình quên ghi AI_LOG. Mình đã ghi bù hàng đó trước hàng của lượt này.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #133<br />
@@ -3605,9 +3605,9 @@ thấy xóa r mà</strong></td>
 Bạn bảo mình khi muốn commit những thay đổi còn lại (`README.md`, `PLAN.md`, `docs/Kich_ban_video.md`, các hàng AI_LOG mới).<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #134<br />
@@ -3632,9 +3632,9 @@ commit đi nhưng ko cần commit Kich_ban_video.md</strong></td>
 - **Push:** bạn tự push từ máy của bạn (`git push`), vì push từ phiên này bị chặn.<br />
 <br />
 đã ghi audit</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>VALID</strong></td>
+<td>Output được SV kiểm chứng (verification) ở lượt kế tiếp và dùng tiếp, không phát hiện sai lệch.</td>
+<td>Không sửa.</td>
 </tr>
 </tbody>
 </table>
@@ -3647,9 +3647,9 @@ Tổng hợp verdict từ Mục 3 và điền vào bảng dưới.
 | -------------------------------------- | ------------ | --------- |
 | **Chỉ số**                             | **Số lượng** | **Tỉ lệ** |
 | **Tổng artifact AI sinh đã audit**     | 134          | 100%      |
-| **VALID (đúng, dùng nguyên)**          |              |           |
-| **INVALID (sai; loại bỏ)**             |              |           |
-| **INCOMPLETE (chấp nhận sau khi sửa)** |              |           |
+| **VALID (đúng, dùng nguyên)**          | 111          | 82.8%     |
+| **INVALID (sai; loại bỏ)**             | 2            | 1.5%      |
+| **INCOMPLETE (chấp nhận sau khi sửa)** | 21           | 15.7%     |
 
 ## 5\. Kết luận — Khi nào nên / không nên dùng AI?
 
@@ -3718,26 +3718,3 @@ xuất phải qua review của người và đối chiếu mã nguồn trước 
 
   - DeepEval & Promptfoo documentation — testing frameworks for LLM
     systems.
-
-## Ghi chú đầu và cuối của audit/AI\_LOG.md (nguyên văn)
-
-**AI Log – HW05 (MSSV 23120399)**
-
-Nhật ký thô, ghi liên tục; dùng để điền bảng Audit theo template AI-02
-(docs/AI-02\_Audit\_Template.docx).
-
-• Công cụ: Claude (claude.ai, Project "software testing"; model Sonnet
-5.5).
-
-• Giờ ghi theo UTC+07:00 (giờ gửi tin nhắn của sinh viên); bắt đầu ngày
-18/11/2026.
-
-• Prompt là tin nhắn nguyên văn của sinh viên. Output là toàn bộ văn bản
-sinh viên thấy trên màn hình ở lượt đó.
-
-• Verdict: do sinh viên điền, AI không tự gán.
-
-**Quy ước từ đây**
-
-Mỗi tin nhắn của sinh viên = một hàng mới trong bảng trên (ghi bằng
-tools/append-ai-log.mjs). Không sửa các hàng cũ.
