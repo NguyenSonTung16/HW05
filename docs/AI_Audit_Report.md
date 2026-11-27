@@ -48,6 +48,13 @@ Phần mềm.*
 
 ## 3\. Bảng Audit — 1 hàng / artifact
 
+Ngày của từng hàng: audit/AI\_LOG.md chỉ ghi giờ (HH:MM, UTC+07:00).
+Ngày được xác định từ lịch sử git của audit/AI\_LOG.md (mỗi commit cho
+biết các hàng đã có tại thời điểm commit) và thứ tự giờ tăng dần trong
+một ngày; mỗi đoạn chỉ có đúng một ngày khớp: \#1–\#16 ngày
+18/11/2026, \#17–\#62 ngày 23/11/2026, \#63–\#127 ngày 25/11/2026,
+\#128–\#134 ngày 27/11/2026.
+
 <table>
 <tbody>
 <tr class="odd">
@@ -59,6 +66,7 @@ Phần mềm.*
 </tr>
 <tr class="even">
 <td><strong>Hàng log #1<br />
+Ngày: 18/11/2026<br />
 Giờ: 10:19<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -123,6 +131,7 @@ Mình có thể lập kế hoạch từng bước (PLAN.md) cho HW05 ngay sau kh
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #2<br />
+Ngày: 18/11/2026<br />
 Giờ: 10:24 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -159,6 +168,7 @@ Khi bạn duyệt, mình bắt đầu từ Giai đoạn A (soạn skill).<br />
 </tr>
 <tr class="even">
 <td><strong>Hàng log #3<br />
+Ngày: 18/11/2026<br />
 Giờ: 10:43 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -203,6 +213,7 @@ Bạn review skill xong (hoặc ghi nhận xét để mình sửa) thì mình co
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #4<br />
+Ngày: 18/11/2026<br />
 Giờ: 10:50 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -227,6 +238,7 @@ Tóm lại: AI lo thiết kế và tính toán, bạn duyệt và chạy, còn m
 </tr>
 <tr class="even">
 <td><strong>Hàng log #5<br />
+Ngày: 18/11/2026<br />
 Giờ: 10:59 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -264,6 +276,7 @@ Bạn trả lời gốc repo và duyệt P1 là mình làm tiếp.<br />
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #6<br />
+Ngày: 18/11/2026<br />
 Giờ: 11:11 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -294,6 +307,7 @@ Prompt:<br />
 </tr>
 <tr class="even">
 <td><strong>Hàng log #7<br />
+Ngày: 18/11/2026<br />
 Giờ: 11:18 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -318,6 +332,7 @@ Lưu ý: 110 tài khoản này sẽ mất khi bạn khởi động lại backend
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #8<br />
+Ngày: 18/11/2026<br />
 Giờ: 11:23 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -344,6 +359,7 @@ Cài xong, bạn gửi mình kết quả `jmeter -v` (hoặc ảnh JMeter mở t
 </tr>
 <tr class="even">
 <td><strong>Hàng log #9<br />
+Ngày: 18/11/2026<br />
 Giờ: 11:31 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -365,6 +381,7 @@ Cách sửa:<br />
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #10<br />
+Ngày: 18/11/2026<br />
 Giờ: 11:36 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -387,6 +404,7 @@ Khi sẵn sàng, gửi prompt "P4: sinh plan Load".<br />
 </tr>
 <tr class="even">
 <td><strong>Hàng log #11<br />
+Ngày: 18/11/2026<br />
 Giờ: 11:39 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -405,6 +423,7 @@ Trong GUI: File → Open → `D:\vscode\Software testing\HW05\skills\jmeter-perf
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #12<br />
+Ngày: 18/11/2026<br />
 Giờ: 11:44 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -428,6 +447,7 @@ Nếu JMeter báo lỗi khi mở, gửi mình ảnh thông báo. Nếu mở bìn
 </tr>
 <tr class="even">
 <td><strong>Hàng log #13<br />
+Ngày: 18/11/2026<br />
 Giờ: 11:45 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -445,6 +465,7 @@ Bước tiếp theo: gửi "P4: sinh plan Load".<br />
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #14<br />
+Ngày: 18/11/2026<br />
 Giờ: 11:48 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -485,6 +506,7 @@ Chạy xong gửi mình phần cuối kết quả trong terminal (hoặc nội d
 </tr>
 <tr class="even">
 <td><strong>Hàng log #15<br />
+Ngày: 18/11/2026<br />
 Giờ: 11:50 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -511,6 +533,7 @@ Khi bạn gửi nhận xét, mình ghi lại và sửa plan.<br />
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #16<br />
+Ngày: 18/11/2026<br />
 Giờ: 12:04 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -551,6 +574,7 @@ Smoke sẽ kiểm luôn hai điều chưa xác nhận: phải có đúng 2 mẫu
 </tr>
 <tr class="even">
 <td><strong>Hàng log #17<br />
+Ngày: 23/11/2026<br />
 Giờ: 10:09 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -596,6 +620,7 @@ Chạy xong gửi mình `perf\results\load\summary.md`.<br />
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #18<br />
+Ngày: 23/11/2026<br />
 Giờ: 10:19<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -620,6 +645,7 @@ Mình vừa sửa luôn các lỗi nhỏ thấy trong ảnh (skill v1.5): dòng 
 </tr>
 <tr class="even">
 <td><strong>Hàng log #19<br />
+Ngày: 23/11/2026<br />
 Giờ: 10:21<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -653,6 +679,7 @@ Khi chạy xong, gửi mình `perf\results\load2\summary.md`. Mình sẽ đọc 
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #20<br />
+Ngày: 23/11/2026<br />
 Giờ: 10:28<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -687,6 +714,7 @@ Cứ để lượt này chạy cho xong rồi gửi `perf\results\load2\summary.
 </tr>
 <tr class="even">
 <td><strong>Hàng log #21<br />
+Ngày: 23/11/2026<br />
 Giờ: 10:31<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -711,6 +739,7 @@ Khi chạy xong, gửi mình `perf\results\load2\summary.md`.<br />
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #22<br />
+Ngày: 23/11/2026<br />
 Giờ: 10:34<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -743,6 +772,7 @@ Tổng: 14692 mẫu, lỗi 0%, p95 4 ms, 35 req/s<br />
 </tr>
 <tr class="even">
 <td><strong>Hàng log #23<br />
+Ngày: 23/11/2026<br />
 Giờ: 10:35<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -768,6 +798,7 @@ vậy nên chỉnh tải cao hơn ko</strong></td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #24<br />
+Ngày: 23/11/2026<br />
 Giờ: 10:43<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -791,6 +822,7 @@ Lệnh này tạo 500 tài khoản `perf001–perf500` (100 tài khoản đầu 
 </tr>
 <tr class="even">
 <td><strong>Hàng log #25<br />
+Ngày: 23/11/2026<br />
 Giờ: 10:44<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -820,6 +852,7 @@ Khi bạn chốt xong 4 điểm này, mình chạy smoke Stress rồi hướng d
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #26<br />
+Ngày: 23/11/2026<br />
 Giờ: 10:54 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -854,6 +887,7 @@ node skills\jmeter-performance-testing\scripts\run-scenario.mjs --plan perf\plan
 </tr>
 <tr class="even">
 <td><strong>Hàng log #27<br />
+Ngày: 23/11/2026<br />
 Giờ: 10:58 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -889,6 +923,7 @@ Xong thì báo mình, mình sẽ đọc kết quả và phân tích với ngư�
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #28<br />
+Ngày: 23/11/2026<br />
 Giờ: 10:59 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -913,6 +948,7 @@ Lệnh chạy vẫn y như tin trước (khởi động lại backend, `prepare-
 </tr>
 <tr class="even">
 <td><strong>Hàng log #29<br />
+Ngày: 23/11/2026<br />
 Giờ: 11:00 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -937,6 +973,7 @@ Mô tả plan và `audit/P5-stress-review.md` đã cập nhật. Lệnh chạy g
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #30<br />
+Ngày: 23/11/2026<br />
 Giờ: 11:02 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -958,6 +995,7 @@ Quyết định so sánh 5 / 10 / 15 phút rồi giữ 15 phút đã ghi vào `a
 </tr>
 <tr class="even">
 <td><strong>Hàng log #31<br />
+Ngày: 23/11/2026<br />
 Giờ: 11:46 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -993,6 +1031,7 @@ Kết quả này vẫn báo cáo được ("không gãy tới 400 VU / 300 req/s
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #32<br />
+Ngày: 23/11/2026<br />
 Giờ: 11:47 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1029,6 +1068,7 @@ Chạy xong, gửi mình các ảnh, mình sẽ lưu vào `evidence\screenshots\
 </tr>
 <tr class="even">
 <td><strong>Hàng log #33<br />
+Ngày: 23/11/2026<br />
 Giờ: 11:48 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1052,6 +1092,7 @@ Lệnh chạy giữ nguyên như tin trước, với `--out perf\results\stress2
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #34<br />
+Ngày: 23/11/2026<br />
 Giờ: 11:49 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1073,6 +1114,7 @@ Chụp khi terminal hiện khoảng `00:11:00`–`00:11:50` (200 VU) và `00:13:
 </tr>
 <tr class="even">
 <td><strong>Hàng log #35<br />
+Ngày: 23/11/2026<br />
 Giờ: 11:53 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1101,6 +1143,7 @@ Nếu bạn vẫn muốn giữ ảnh này thì mình lưu kèm làm ảnh phụ 
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #36<br />
+Ngày: 23/11/2026<br />
 Giờ: 12:01 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1122,6 +1165,7 @@ này dc chưa</strong></td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #37<br />
+Ngày: 23/11/2026<br />
 Giờ: 12:02 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1141,6 +1185,7 @@ Bậc 5 sắp vào giai đoạn ổn định, chụp lúc khoảng `00:13:30`–
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #38<br />
+Ngày: 23/11/2026<br />
 Giờ: 12:02 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1156,6 +1201,7 @@ Prompt:<br />
 </tr>
 <tr class="even">
 <td><strong>Hàng log #39<br />
+Ngày: 23/11/2026<br />
 Giờ: 12:03 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1175,6 +1221,7 @@ Giờ đã có đủ 2 ảnh (bậc 4 và bậc 5). Lượt chạy còn khoảng
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #40<br />
+Ngày: 23/11/2026<br />
 Giờ: 12:06 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1208,6 +1255,7 @@ Mình nghiêng về làm (1) trước, vì phần phân tích ở Task 2 sẽ c�
 </tr>
 <tr class="even">
 <td><strong>Hàng log #41<br />
+Ngày: 23/11/2026<br />
 Giờ: 12:09 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1246,6 +1294,7 @@ node skills\jmeter-performance-testing\scripts\run-scenario.mjs --plan perf\plan
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #42<br />
+Ngày: 23/11/2026<br />
 Giờ: 12:15 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1270,6 +1319,7 @@ File .jtl khoảng 65 MB, dưới giới hạn 100 MB của GitHub. Lượt ch�
 </tr>
 <tr class="even">
 <td><strong>Hàng log #43<br />
+Ngày: 23/11/2026<br />
 Giờ: 12:18 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1319,6 +1369,7 @@ Mọi thứ đã ghi vào `audit/P6-stress.md` (kể cả sự cố công cụ v
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #44<br />
+Ngày: 23/11/2026<br />
 Giờ: 12:20 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1345,6 +1396,7 @@ làm Spike luôn</strong></td>
 </tr>
 <tr class="even">
 <td><strong>Hàng log #45<br />
+Ngày: 23/11/2026<br />
 Giờ: 12:23 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1370,6 +1422,7 @@ Xong thì báo mình. Mình sẽ kiểm tra có đúng 6 lần đăng nhập kh�
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #46<br />
+Ngày: 23/11/2026<br />
 Giờ: 12:25 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1402,6 +1455,7 @@ node skills\jmeter-performance-testing\scripts\run-scenario.mjs --plan perf\plan
 </tr>
 <tr class="even">
 <td><strong>Hàng log #47<br />
+Ngày: 23/11/2026<br />
 Giờ: 12:31 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1423,6 +1477,7 @@ So với trước đỉnh (Avg 1 ms, khoảng 37 req/s), độ trễ trung bình
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #48<br />
+Ngày: 23/11/2026<br />
 Giờ: 12:32 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1442,6 +1497,7 @@ Lượt chạy kết thúc ở `00:07:00` (khoảng 12:35). Khi xong, gửi mìn
 </tr>
 <tr class="even">
 <td><strong>Hàng log #49<br />
+Ngày: 23/11/2026<br />
 Giờ: 12:37 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1478,6 +1534,7 @@ Lưu ý: con số p95 411 ms ở dòng tổng gộp cả 7 phút nên dễ hiể
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #50<br />
+Ngày: 23/11/2026<br />
 Giờ: 12:45 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1507,6 +1564,7 @@ node skills\jmeter-performance-testing\scripts\run-scenario.mjs --plan perf\plan
 </tr>
 <tr class="even">
 <td><strong>Hàng log #51<br />
+Ngày: 23/11/2026<br />
 Giờ: 12:52 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1528,6 +1586,7 @@ Hai ảnh tiếp theo: khoảng `00:08:00` (12:58) và `00:14:00` (13:04). Mỗi
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #52<br />
+Ngày: 23/11/2026<br />
 Giờ: 12:58 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1550,6 +1609,7 @@ Nghĩa là trong 15 phút ở mức 300 VU có think time, dữ liệu giỏ hà
 </tr>
 <tr class="even">
 <td><strong>Hàng log #53<br />
+Ngày: 23/11/2026<br />
 Giờ: 13:04 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1574,6 +1634,7 @@ Lượt chạy kết thúc ở khoảng `00:15:00`. Khi xong, gửi mình dòng 
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #54<br />
+Ngày: 23/11/2026<br />
 Giờ: 13:06 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1614,6 +1675,7 @@ Mình đề xuất làm (1) trước, vì Task 2 và báo cáo sẽ dẫn chiế
 </tr>
 <tr class="even">
 <td><strong>Hàng log #55<br />
+Ngày: 23/11/2026<br />
 Giờ: 13:11 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1652,6 +1714,7 @@ Trong lúc bạn đăng, mình có thể làm tiếp **Task 2** (cho AI phân t�
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #56<br />
+Ngày: 23/11/2026<br />
 Giờ: 13:13 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1676,6 +1739,7 @@ Dù chọn cách nào, đề vẫn cần **ảnh chụp trang Issues** để đ�
 </tr>
 <tr class="even">
 <td><strong>Hàng log #57<br />
+Ngày: 23/11/2026<br />
 Giờ: 13:17 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1687,6 +1751,7 @@ bạn tự chạy và cap màn hình issue</strong></td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #58<br />
+Ngày: 23/11/2026<br />
 Giờ: 13:31 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1716,6 +1781,7 @@ Mình dùng Chrome của bạn (đang đăng nhập GitHub) vì trình duyệt t
 </tr>
 <tr class="even">
 <td><strong>Hàng log #59<br />
+Ngày: 23/11/2026<br />
 Giờ: 19:14 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1745,6 +1811,7 @@ Bạn muốn mình commit ảnh issues và `audit/AI_LOG.md` (tác giả NguyenS
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #60<br />
+Ngày: 23/11/2026<br />
 Giờ: 19:16 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1769,6 +1836,7 @@ Sau đó bạn nhắn mình. Mình sẽ làm như sau:<br />
 </tr>
 <tr class="even">
 <td><strong>Hàng log #61<br />
+Ngày: 23/11/2026<br />
 Giờ: 19:21 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1797,6 +1865,7 @@ Lưu ý:<br />
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #62<br />
+Ngày: 23/11/2026<br />
 Giờ: 19:29 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1817,6 +1886,7 @@ Lưu ý:<br />
 </tr>
 <tr class="even">
 <td><strong>Hàng log #63<br />
+Ngày: 25/11/2026<br />
 Giờ: 09:23 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1845,6 +1915,7 @@ Bước tiếp theo là C2: bạn cho AI phân tích `.jtl` trong một phiên r
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #64<br />
+Ngày: 25/11/2026<br />
 Giờ: 09:25 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1866,6 +1937,7 @@ Khi có câu trả lời của AI, bạn gửi lại mình để mình làm C3.<
 </tr>
 <tr class="even">
 <td><strong>Hàng log #65<br />
+Ngày: 25/11/2026<br />
 Giờ: 09:26 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1881,6 +1953,7 @@ cho path đầy đủ của file prompt</strong></td>
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #66<br />
+Ngày: 25/11/2026<br />
 Giờ: 09:27 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1907,6 +1980,7 @@ Khi bạn sẵn sàng, dán nguyên văn prompt trong `perf/analysis/analysis-pr
 </tr>
 <tr class="even">
 <td><strong>Hàng log #67<br />
+Ngày: 25/11/2026<br />
 Giờ: 09:31 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1927,6 +2001,7 @@ Nếu bạn muốn, mình tạo một file txt chỉ chứa phần prompt để 
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #68<br />
+Ngày: 25/11/2026<br />
 Giờ: 09:31 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1976,6 +2051,7 @@ Sau khi AI trả lời, lưu nguyên văn prompt và toàn bộ câu trả lời
 </tr>
 <tr class="even">
 <td><strong>Hàng log #69<br />
+Ngày: 25/11/2026<br />
 Giờ: 09:38 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -1995,6 +2071,7 @@ Bước tiếp theo là C4: phân loại các đề xuất tối ưu của AI (k
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #70<br />
+Ngày: 25/11/2026<br />
 Giờ: 09:40 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2014,6 +2091,7 @@ Mình chưa tick C2, C3, C4 trong `PLAN.md` và chưa commit. Bước tiếp the
 </tr>
 <tr class="even">
 <td><strong>Hàng log #71<br />
+Ngày: 25/11/2026<br />
 Giờ: 09:41 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2038,6 +2116,7 @@ Trước khi làm C5, nên lưu ý: `audit/P8-ai-analysis.md`, `perf/analysis/` 
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #72<br />
+Ngày: 25/11/2026<br />
 Giờ: 09:50 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2059,6 +2138,7 @@ Mình chưa commit. Lần này mình ghi lại đầy đủ hai điểm trên đ
 </tr>
 <tr class="even">
 <td><strong>Hàng log #73<br />
+Ngày: 25/11/2026<br />
 Giờ: 09:51 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2083,6 +2163,7 @@ Bạn muốn mình bắt đầu Task 3 (D) bây giờ không?<br />
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #74<br />
+Ngày: 25/11/2026<br />
 Giờ: 09:53 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2103,6 +2184,7 @@ Các bước:<br />
 </tr>
 <tr class="even">
 <td><strong>Hàng log #75<br />
+Ngày: 25/11/2026<br />
 Giờ: 09:54 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2155,6 +2237,7 @@ Sau khi phiên AI trả lời xong, dán nguyên văn phản hồi vào đây. M
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #76<br />
+Ngày: 25/11/2026<br />
 Giờ: 09:59 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2180,6 +2263,7 @@ P8 không có mục C3 hay C4. Nếu C3, C4 nằm ở file khác, bạn cho mìn
 </tr>
 <tr class="even">
 <td><strong>Hàng log #77<br />
+Ngày: 25/11/2026<br />
 Giờ: 10:03 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2200,6 +2284,7 @@ Mình đề xuất dựng lại C3 và C4 ngay trong `audit/P8-ai-analysis.md`, 
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #78<br />
+Ngày: 25/11/2026<br />
 Giờ: 10:05 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2231,6 +2316,7 @@ Chưa commit, và `PLAN.md` chưa tick C2–C4. Bước tiếp theo là C5 (phá
 </tr>
 <tr class="even">
 <td><strong>Hàng log #79<br />
+Ngày: 25/11/2026<br />
 Giờ: 10:11 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2252,6 +2338,7 @@ Sau khi bạn trả lời, mình sẽ commit với tác giả NguyenSonTung16, k
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #80<br />
+Ngày: 25/11/2026<br />
 Giờ: 10:13 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2267,6 +2354,7 @@ Mình đã đổi tên hai lock cũ thành `.git/stale-HEAD-lock-20261125031241`
 </tr>
 <tr class="even">
 <td><strong>Hàng log #81<br />
+Ngày: 25/11/2026<br />
 Giờ: 10:14 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2282,6 +2370,7 @@ Mình chưa commit, vì hai file lock `.git/HEAD.lock` và `.git/objects/mainten
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #82<br />
+Ngày: 25/11/2026<br />
 Giờ: 10:15 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2299,6 +2388,7 @@ Bước tiếp theo là C5 do bạn viết trong `docs/AI_Analysis_Review.md`. M
 </tr>
 <tr class="even">
 <td><strong>Hàng log #83<br />
+Ngày: 25/11/2026<br />
 Giờ: 10:16<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2316,6 +2406,7 @@ Mình chưa tick C5 và chưa commit.<br />
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #84<br />
+Ngày: 25/11/2026<br />
 Giờ: 10:17<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2331,6 +2422,7 @@ Mình chưa tick C5 trong `PLAN.md` và chưa commit. Bạn muốn mình tick C5
 </tr>
 <tr class="even">
 <td><strong>Hàng log #85<br />
+Ngày: 25/11/2026<br />
 Giờ: 10:18<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2348,6 +2440,7 @@ Phần còn lại là Task 3 (D), skill v2 và video (E), tài liệu nộp bài
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #86<br />
+Ngày: 25/11/2026<br />
 Giờ: 14:13<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2371,6 +2464,7 @@ Bước tiếp theo là Task E: skill v2 kèm changelog và kịch bản video.<
 </tr>
 <tr class="even">
 <td><strong>Hàng log #87<br />
+Ngày: 25/11/2026<br />
 Giờ: 14:25<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2386,6 +2480,7 @@ Bước tiếp theo là Task E: cập nhật skill lên v2 kèm changelog v1→v
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #88<br />
+Ngày: 25/11/2026<br />
 Giờ: 14:28<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2408,6 +2503,7 @@ Mình đã tick mục skill v2 trong `PLAN.md`. Bước tiếp theo là kịch b
 </tr>
 <tr class="even">
 <td><strong>Hàng log #89<br />
+Ngày: 25/11/2026<br />
 Giờ: 14:32<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2445,6 +2541,7 @@ Mình làm được ngay mục 2 đến 6 (trừ điểm tự chấm). Bạn mu�
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #90<br />
+Ngày: 25/11/2026<br />
 Giờ: 14:32<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2478,6 +2575,7 @@ Ngoài phạm vi, chưa báo: SQL injection ở `search`, `GET /api/products/:id
 </tr>
 <tr class="even">
 <td><strong>Hàng log #91<br />
+Ngày: 25/11/2026<br />
 Giờ: 14:36<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2501,6 +2599,7 @@ Thứ tự mình đề xuất: 1, 2, 3, 4, 5. Bạn đồng ý để mình làm 
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #92<br />
+Ngày: 25/11/2026<br />
 Giờ: 14:45<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2522,6 +2621,7 @@ Còn thiếu: báo cáo phần cứng, video, và zip nộp bài (kiểm tra dun
 </tr>
 <tr class="even">
 <td><strong>Hàng log #93<br />
+Ngày: 25/11/2026<br />
 Giờ: 14:47<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2546,6 +2646,7 @@ Mình đề xuất làm lại cho đúng: dán nguyên văn prompt và output (r
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #94<br />
+Ngày: 25/11/2026<br />
 Giờ: 14:51<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2570,6 +2671,7 @@ Bạn còn phải điền họ tên in hoa, lớp/khóa (đang để `[ĐIỀN �
 </tr>
 <tr class="even">
 <td><strong>Hàng log #95<br />
+Ngày: 25/11/2026<br />
 Giờ: 14:56<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2585,6 +2687,7 @@ Lưu ý: file Word giờ dài hơn nhiều vì chứa toàn bộ nhật ký. N�
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #96<br />
+Ngày: 25/11/2026<br />
 Giờ: 15:02<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2602,6 +2705,7 @@ Nếu bạn thấy lệch ở chỗ khác thì cho mình biết đó là bản n
 </tr>
 <tr class="even">
 <td><strong>Hàng log #97<br />
+Ngày: 25/11/2026<br />
 Giờ: 15:04<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2619,6 +2723,7 @@ Bạn đóng file Word đó giúp mình, rồi nhắn "xong" để mình ghi l�
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #98<br />
+Ngày: 25/11/2026<br />
 Giờ: 15:06<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2640,6 +2745,7 @@ Với câu mình hỏi lúc nãy về mấy hàng có `@"…"`: mình chưa ki�
 </tr>
 <tr class="even">
 <td><strong>Hàng log #99<br />
+Ngày: 25/11/2026<br />
 Giờ: 15:09<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2660,6 +2766,7 @@ Phụ lục luôn chậm hơn log vài hàng (log hiện tới #99 sau lượt n
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #100<br />
+Ngày: 25/11/2026<br />
 Giờ: 15:12<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2684,6 +2791,7 @@ Bạn đóng file Word cũ rồi nhắn "xong". Mình sẽ dựng lại một l�
 </tr>
 <tr class="even">
 <td><strong>Hàng log #101<br />
+Ngày: 25/11/2026<br />
 Giờ: 15:14<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2703,6 +2811,7 @@ Hai việc nhỏ còn lại. Mình không xoá được `AI_Audit_Report_new.doc
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #102<br />
+Ngày: 25/11/2026<br />
 Giờ: 15:18<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2720,6 +2829,7 @@ Hai chỗ bạn còn phải tự điền trong file này: họ tên in hoa và l
 </tr>
 <tr class="even">
 <td><strong>Hàng log #103<br />
+Ngày: 25/11/2026<br />
 Giờ: 15:21<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2739,6 +2849,7 @@ Hai điểm mình chưa chắc, bạn xem giúp: bảng mục 3 chỉ có 11 art
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #104<br />
+Ngày: 25/11/2026<br />
 Giờ: 15:25<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2773,6 +2884,7 @@ Bạn chọn số mấy thì mình làm và kiểm tra lại từng hàng với 
 </tr>
 <tr class="even">
 <td><strong>Hàng log #105<br />
+Ngày: 25/11/2026<br />
 Giờ: 15:29<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2797,6 +2909,7 @@ Trạng thái file: `.pdf` (50 trang) và `.md` đã ghi vào `docs/`. File Word
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #106<br />
+Ngày: 25/11/2026<br />
 Giờ: 15:33<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2817,6 +2930,7 @@ Log sẽ có thêm hàng #106 từ lượt này, nên bảng luôn chậm hơn l
 </tr>
 <tr class="even">
 <td><strong>Hàng log #107<br />
+Ngày: 25/11/2026<br />
 Giờ: 15:46<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2836,6 +2950,7 @@ Hai việc hiện còn lại, bạn cho mình biết có làm không:<br />
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #108<br />
+Ngày: 25/11/2026<br />
 Giờ: 15:52 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2868,6 +2983,7 @@ Bạn muốn mình làm mục nào trước: 5 (kịch bản video), 6 (push) ha
 </tr>
 <tr class="even">
 <td><strong>Hàng log #109<br />
+Ngày: 25/11/2026<br />
 Giờ: 15:55 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2891,6 +3007,7 @@ Khi xong, nhắn mình để kiểm tra file và cập nhật `PLAN.md` mục B0
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #110<br />
+Ngày: 25/11/2026<br />
 Giờ: 16:01 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2918,6 +3035,7 @@ Mình chưa mở được nội dung ảnh `hostname.png` và `task-manager.png`
 </tr>
 <tr class="even">
 <td><strong>Hàng log #111<br />
+Ngày: 25/11/2026<br />
 Giờ: 16:02 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2939,6 +3057,7 @@ Nhắc lại các mục còn lại: bảng `evidence/hardware/cau-hinh.md` chưa
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #112<br />
+Ngày: 25/11/2026<br />
 Giờ: 16:04 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2958,6 +3077,7 @@ Còn lại: tạo `evidence/hardware/cau-hinh.md`, và chuyển thư mục `evid
 </tr>
 <tr class="even">
 <td><strong>Hàng log #113<br />
+Ngày: 25/11/2026<br />
 Giờ: 16:05 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -2985,6 +3105,7 @@ Mình chưa đổi gì trong README hay PLAN.md.<br />
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #114<br />
+Ngày: 25/11/2026<br />
 Giờ: 16:09 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -3002,6 +3123,7 @@ Bạn đọc lại bảng `cau-hinh.md` đối chiếu với DxDiag trước khi
 </tr>
 <tr class="even">
 <td><strong>Hàng log #115<br />
+Ngày: 25/11/2026<br />
 Giờ: 16:09 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -3023,6 +3145,7 @@ Bạn muốn làm bước nào trước?<br />
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #116<br />
+Ngày: 25/11/2026<br />
 Giờ: 16:15 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -3044,6 +3167,7 @@ Chưa cập nhật `Git_Commit_Log.txt`. Mình sẽ làm ở commit sau nếu b�
 </tr>
 <tr class="even">
 <td><strong>Hàng log #117<br />
+Ngày: 25/11/2026<br />
 Giờ: 18:18 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -3059,6 +3183,7 @@ Cần sửa một chỗ trong câu trả lời trước: mình ghi "log đến h
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #118<br />
+Ngày: 25/11/2026<br />
 Giờ: 18:20 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -3077,6 +3202,7 @@ Không có file nào cần sửa thêm. Mình không sửa lại tin nhắn comm
 </tr>
 <tr class="even">
 <td><strong>Hàng log #119<br />
+Ngày: 25/11/2026<br />
 Giờ: 18:22 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -3092,6 +3218,7 @@ Hàng #117 và #118 trong `AI_LOG.md` vẫn chưa commit. Nếu bạn muốn đ�
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #120<br />
+Ngày: 25/11/2026<br />
 Giờ: 18:26 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -3111,6 +3238,7 @@ Có 24 commit chưa lên `origin/main`. Bạn chạy `git push origin main` tron
 </tr>
 <tr class="even">
 <td><strong>Hàng log #121<br />
+Ngày: 25/11/2026<br />
 Giờ: 18:28 (Haiku 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -3126,6 +3254,7 @@ Từ đây, các thay đổi tiếp theo cần commit và push lại khi bạn y
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #122<br />
+Ngày: 25/11/2026<br />
 Giờ: 18:31 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -3149,6 +3278,7 @@ Lời thuyết minh phải là giọng của bạn, không đọc nguyên văn t
 </tr>
 <tr class="even">
 <td><strong>Hàng log #123<br />
+Ngày: 25/11/2026<br />
 Giờ: 18:36 (Opus 5.5)<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -3173,6 +3303,7 @@ Lời thuyết minh phải là giọng của bạn, và câu chữ có thể đ�
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #124<br />
+Ngày: 25/11/2026<br />
 Giờ: 18:41<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -3205,6 +3336,7 @@ Mình đã sửa các lỗi trong bản trước:<br />
 </tr>
 <tr class="even">
 <td><strong>Hàng log #125<br />
+Ngày: 25/11/2026<br />
 Giờ: 18:46<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -3234,6 +3366,7 @@ Hiện kịch bản `docs/Kich_ban_video.md` đang viết theo một video liề
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #126<br />
+Ngày: 25/11/2026<br />
 Giờ: 18:50<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -3266,6 +3399,7 @@ File này và các hàng AI_LOG mới chưa commit. Bạn bảo mình thì mình
 </tr>
 <tr class="even">
 <td><strong>Hàng log #127<br />
+Ngày: 25/11/2026<br />
 Giờ: 19:08<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -3299,6 +3433,7 @@ Kịch bản không cần sửa tên tham số nào.<br />
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #128<br />
+Ngày: 27/11/2026<br />
 Giờ: 08:34<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -3323,6 +3458,7 @@ Mình đã sửa mục 2.2 trong `docs/Kich_ban_video.md` theo cách trên. File
 </tr>
 <tr class="even">
 <td><strong>Hàng log #129<br />
+Ngày: 27/11/2026<br />
 Giờ: 10:28<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -3351,6 +3487,7 @@ agent skill: https://youtu.be/Ty9wn1Vc9yQ<br />
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #130<br />
+Ngày: 27/11/2026<br />
 Giờ: 10:31<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -3379,6 +3516,7 @@ Xong thì báo mình, mình kiểm tra lại `git status` để chắc `perf/res
 </tr>
 <tr class="even">
 <td><strong>Hàng log #131<br />
+Ngày: 27/11/2026<br />
 Giờ: 10:36<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -3430,6 +3568,7 @@ Nếu vẫn báo lỗi sau khi đóng hết, khởi động lại máy rồi xo�
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #132<br />
+Ngày: 27/11/2026<br />
 Giờ: 10:37<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -3456,6 +3595,7 @@ PS D:\vscode\Software testing\HW05&gt; Remove-Item -Recurse -Force perf\results\
 </tr>
 <tr class="even">
 <td><strong>Hàng log #133<br />
+Ngày: 27/11/2026<br />
 Giờ: 10:40<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -3471,6 +3611,7 @@ Bạn bảo mình khi muốn commit những thay đổi còn lại (`README.md`,
 </tr>
 <tr class="odd">
 <td><strong>Hàng log #134<br />
+Ngày: 27/11/2026<br />
 Giờ: 10:43<br />
 Công cụ: Claude (claude.ai)<br />
 Prompt:<br />
@@ -3526,6 +3667,13 @@ xuất phải qua review của người và đối chiếu mã nguồn trước 
 
 ## 6\. Mandatory Disclosure (dán nguyên văn)
 
+> I use AI tools for the following tasks: thiết kế và sinh test plan
+> JMeter theo từng bước, viết script của Agent Skill, phân tích log .jtl
+> và đề xuất tối ưu, soạn bản nháp báo cáo, đề xuất kiểm thử hiệu năng
+> liên tục và kịch bản video. Công cụ: Claude (Anthropic) trên
+> claude.ai, các model Opus 5.5, Sonnet 5.5, Haiku 5.5. Tên công cụ,
+> ngày giờ, prompt và output của từng lần dùng nằm ở Mục 3.
+> 
 > Các artifact (test plan JMeter, script của Agent Skill, báo cáo phân
 > tích, đề xuất kiểm thử liên tục, bản nháp tài liệu nộp) trong HW05
 > được sinh phiên bản đầu bởi Claude (Anthropic); tôi đã rà soát và

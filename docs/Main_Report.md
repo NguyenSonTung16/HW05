@@ -21,9 +21,11 @@ Mỗi người dùng ảo đăng nhập một lần bằng tài khoản riêng, 
 | Máy (hostname) | MSI |
 | CPU | AMD Ryzen 5 5600H, 12 luồng logic |
 | RAM | 15,4 GB |
-| Hệ điều hành | Windows 10.0.26300 x64 |
+| Hệ điều hành | Windows 11 Home Single Language 64-bit, build 26300 (10.0.26300) |
 | Node.js / JMeter | v24.11.1 / 5.6.3 |
 | Cách chạy | JMeter và SUT cùng một máy (localhost:3000); giám sát CPU/RAM tiến trình `node` mỗi giây (`node-usage.csv`) |
+
+Báo cáo phần cứng: `evidence/hardware/` (ảnh DxDiag và `DxDiag.txt`, `hostname.png` với lệnh `hostname`/`whoami`, ảnh Task Manager, bảng cấu hình `cau-hinh.md`).
 
 Hạn chế: JMeter và SUT tranh CPU trên cùng máy nên số liệu chỉ đúng cho phần cứng này.
 
@@ -31,11 +33,13 @@ Hạn chế: JMeter và SUT tranh CPU trên cùng máy nên số liệu chỉ đ
 
 Mỗi plan được AI sinh theo từng bước (P1 workflow, P2 khảo sát API, P3 dữ liệu, P4 sinh plan), rồi sinh viên review (P5) trước khi chạy (P6). Phát hiện chính của review, nằm trong `audit/P5-*.md`:
 
-| Plan | AI sai hoặc thiếu | Cách sửa |
-|---|---|---|
-| Load | Đăng nhập lại mỗi vòng; CSV dùng chung và recycle; think time đặt mức Thread Group; cứng 50 VU; assertion checkout chỉ kiểm `orderId`; nhánh đăng nhập sai không bật Ignore Status | Đăng nhập một lần/VU, mỗi VU một tài khoản, think time chỉ trước xem hàng và thanh toán, chốt VU sau smoke, đối chiếu DB, bật Ignore Status |
-| Stress | Assertion 401/403, CSV bị đọc riêng ở từng Thread Group, cần 500 tài khoản cho 400 VU | Sửa assertion (Equals + OR), chia sẻ CSV giữa các bậc, tạo 500 tài khoản |
-| Spike | Tham số đỉnh và định nghĩa hồi phục chưa rõ | Đỉnh 200 VU không think time, hồi phục tính theo p95 về mức nền |
+| Plan | AI sai hoặc thiếu | Vì sao AI sai hoặc bỏ sót | Cách sửa |
+|---|---|---|---|
+| Load | Đăng nhập lại mỗi vòng; CSV dùng chung và recycle; think time đặt mức Thread Group; cứng 50 VU; assertion checkout chỉ kiểm `orderId`; nhánh đăng nhập sai không bật Ignore Status | **Chất lượng prompt:** prompt "sinh plan Load" không mô tả hành vi người dùng, nên AI dùng mẫu JMeter phổ biến (mỗi vòng một phiên, một timer chung). **Đặc tính endpoint:** P2 đã ghi giỏ hàng lưu theo user trong bộ nhớ nhưng AI không nối vào cấu hình CSV. **Giới hạn model:** không có dữ liệu phần cứng nên đoán số VU; oracle chỉ kiểm phản hồi HTTP, không kiểm dữ liệu lưu; không biết JMeter tự đánh lỗi mẫu 4xx nếu không bật Ignore Status vì chưa kiểm bằng chạy thật | Đăng nhập một lần/VU, mỗi VU một tài khoản, think time chỉ trước xem hàng và thanh toán, chốt VU sau smoke, đối chiếu DB, bật Ignore Status |
+| Stress | Không chặn việc chạy khi chỉ có 100 tài khoản cho 400 VU; assertion 401/403 viết bằng regex khó đọc; ngưỡng p95 500 ms không rõ là ngưỡng phân tích hay ngưỡng dừng | AI có nêu thiếu tài khoản ở P4 nhưng chỉ như một câu hỏi, không coi là điều kiện bắt buộc; dùng cách viết assertion quen thuộc thay vì cách dễ review; prompt không yêu cầu chốt ngưỡng trước khi chạy | Tạo 500 tài khoản; thử nghiệm xác nhận 5 Thread Group dùng chung một con trỏ CSV (`smoke-stress-csvtest`); assertion Equals + OR; chốt p95 500 ms là ngưỡng phân tích |
+| Spike | Chỉ liệt kê phương án đỉnh mà không chọn; định nghĩa hồi phục chưa đo được | Prompt không nêu năng lực bão hòa đo được ở Stress và không yêu cầu tiêu chí hồi phục có số | Đỉnh 200 VU không think time (vượt mức bão hòa ~1 450 req/s), hồi phục = 3 cửa sổ 10 s liên tiếp có p95 ≤ 1,5 × p95 nền và lỗi 0 %, smoke trước khi chạy thật |
+
+Chi tiết từng điểm: `audit/P5-review-findings.md`, `audit/P5-stress-review.md`, `audit/P5-spike-review.md`.
 
 ## 4. Tham số và kết quả ba kịch bản bắt buộc
 
@@ -50,13 +54,26 @@ Số liệu lấy từ `perf/results/<lượt>/summary.md` do `jtl-summary.mjs` 
 
 Plan: `23120399_Load_20261118.jmx` (Load), `23120399_Stress_20261123.jmx` (cả hai lượt Stress), `23120399_Spike_20261123.jmx` (Spike).
 
+Report view: mỗi plan bật đúng một listener và không lặp kiểu: Load dùng **Summary Report**, Stress dùng **Aggregate Report**, Spike dùng **View Results Tree** (chỉ ghi mẫu lỗi). Hai listener còn lại trong mỗi plan để ở trạng thái tắt. Ngoài ra mỗi lượt đều có báo cáo HTML của JMeter (`-e -o`) trong `perf/results/<lượt>/html/`.
+
 Nhận xét:
 
 - **Load 50 VU:** không có áp lực, 42/42 cửa sổ khỏe.
 - **Stress có think time đến 400 VU:** không gãy (p95 3 ms, 90/90 cửa sổ khỏe), vì think time 1–3 s giữ tải thực chỉ khoảng 300 req/s. Vì vậy mình chạy thêm lượt **không think time** để tìm điểm bão hòa: throughput phẳng quanh 1 400–1 500 req/s từ bậc 10 VU đến 160 VU, trong khi p95 tăng gần tuyến tính theo số VU (bậc 160 VU: p95 cửa sổ 296–400 ms). CPU của tiến trình Node chỉ khoảng 8–11% trên 12 lõi, tức khoảng một lõi, phù hợp với việc Node xử lý trên một luồng. Checkout là thao tác chậm nhất (p95 373 ms).
 - **Spike:** đỉnh 120–180 s đạt 1 452–1 777 req/s, p95 tăng từ 264 lên 476 ms, không có lỗi. Cửa sổ 180–190 s đã về p95 4 ms và 37 req/s, tức hồi phục trong vòng 10 s. Phần đỉnh thực chất là một đợt stress ngắn vì nhóm đỉnh tắt think time.
 
-Bằng chứng: `.jtl` thô và thư mục `html/` của từng lượt trong `perf/results/`; ảnh JMeter và Task Manager trong `evidence/screenshots/<kịch bản>/`. Lượt `load` đầu (`threads=500`) hỏng vì `users.csv` chỉ có 100 tài khoản, được giữ lại làm bằng chứng và không dùng để báo cáo.
+Bằng chứng: `.jtl` thô và thư mục `html/` của từng lượt trong `perf/results/`; ảnh JMeter và Task Manager trong `evidence/screenshots/<kịch bản>/`. Lượt `load` đầu (`threads=500`) hỏng vì `users.csv` chỉ có 100 tài khoản, được giữ lại làm bằng chứng và không dùng để báo cáo. Ảnh Stress có think time được chụp ở lượt `stress2`: sinh viên quên chụp ở lượt `stress`, nên chạy lại đúng plan và cấu hình; throughput hai lượt lệch dưới 2 % (99 999 mẫu, lỗi 0 %, p95 5 ms; xem `audit/P6-stress.md`). Số liệu trong bảng trên vẫn lấy từ lượt `stress`.
+
+### Reset khóa tài khoản giữa các lượt
+
+Theo mã nguồn, mỗi lần đăng nhập sai cộng 2 vào bộ đếm và khóa khi đạt 3, nên tài khoản bị khóa ngay sau lần sai thứ 2, trong 180 s (BUG-03). Mỗi plan có nhóm `TG lockout-probe` cố ý đăng nhập sai trên tài khoản `lock01`–`lock10`, nên sau mỗi lượt Stress/Spike các tài khoản này đã bị khóa. Tài khoản workflow (`perf*`) không bao giờ bị nhập sai mật khẩu. Các bước reset giữa hai lượt:
+
+1. Dừng backend (`Ctrl+C` ở cửa sổ chạy `node server.js`), rồi khởi động lại trong `eshop-sut/backend`. Khi khởi động, `database.js` xóa và tạo lại mọi bảng, nên trạng thái khóa, đơn hàng và giỏ hàng (lưu trong bộ nhớ) đều về sạch.
+2. Chờ `GET http://localhost:3000/api/products` trả 200.
+3. Tạo lại tài khoản test vì chúng mất cùng DB cũ: `node skills\jmeter-performance-testing\scripts\prepare-data.mjs --accounts-only`.
+4. Chạy lượt kế tiếp bằng `run-scenario.mjs`, ghi vào một thư mục kết quả mới.
+
+Khi cần chạy tiếp mà không khởi động lại backend, dùng `node skills\jmeter-performance-testing\scripts\reset-lockout.mjs --db "<đường dẫn>\eshop-sut\backend\database.sqlite"`. Chạy trước với `--dry-run` để xem danh sách tài khoản sẽ mở khóa. Script chỉ mở khóa tài khoản test theo mẫu email `perf*`/`lock*`. Quy trình gốc: `audit/P2-api-survey.md`, mục "Quy trình reset giữa các lượt".
 
 ## 5. Ngưỡng bền (Soak 15 phút)
 
@@ -109,4 +126,4 @@ Skill `skills/jmeter-performance-testing/` (v2.0) đóng gói quy trình P1–P9
 
 ## 10. Tuân thủ
 
-Tên plan đúng `{MSSV}_{Scenario}_{YYYYMMDD}`, `.jtl` thô nộp đầy đủ, hostname trong `run-meta.json` là MSI. Toàn bộ quá trình dùng AI được ghi trong `audit/AI_LOG.md` và tổng hợp trong AI Audit Report. Báo cáo này được AI soạn bản nháp từ số liệu trong repo, sinh viên đã đối chiếu số liệu với `summary.md` và `.jtl`.
+Tên plan đúng `{MSSV}_{Scenario}_{YYYYMMDD}`, `.jtl` thô nộp đầy đủ, hostname trong `run-meta.json` là MSI. Khai báo dùng AI: *I use AI tools for the following tasks:* thiết kế và sinh test plan JMeter theo từng bước, viết script của Agent Skill, phân tích log `.jtl` và đề xuất tối ưu, soạn bản nháp báo cáo, đề xuất kiểm thử hiệu năng liên tục và kịch bản video. Công cụ: Claude (Anthropic) trên claude.ai, các model Opus 5.5, Sonnet 5.5 và Haiku 5.5. Toàn bộ quá trình dùng AI được ghi trong `audit/AI_LOG.md` (tên công cụ, ngày giờ, prompt, output) và tổng hợp trong AI Audit Report. Báo cáo này được AI soạn bản nháp từ số liệu trong repo, sinh viên đã đối chiếu số liệu với `summary.md` và `.jtl`.
