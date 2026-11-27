@@ -20,7 +20,15 @@ SUT: EShop (Node.js/Express + SQLite). Công cụ: JMeter 5.6.3. Repo: https://g
 - **Nhóm endpoint:** auth-heavy (`POST /api/login`), read-heavy (`GET /api/products`, `?search=`, `/:id`), transactional (`POST/GET /api/cart`, `POST /api/checkout`). Một workflow 7 bước dùng chung cho mọi kịch bản.
 - **Ngưỡng bền (Soak 15 phút, 300 VU có think time):** ổn định tối đa 229,8 req/s (cửa sổ 10 s; sau ramp dao động 219,7–229,8), p95 4 ms, p99 6 ms, lỗi 0%, RAM Node 70,2 → 176,8 MB (đỉnh 179,6 MB). Không think time, backend bão hòa khoảng 1 400–1 500 req/s.
 - **Bug và vấn đề hiệu năng:** 5 mục (4 bug và 1 vấn đề hiệu năng): [#1](https://github.com/NguyenSonTung16/HW05/issues/1) giỏ không bị xóa sau checkout, [#2](https://github.com/NguyenSonTung16/HW05/issues/2) thêm trùng sản phẩm tạo dòng mới, [#3](https://github.com/NguyenSonTung16/HW05/issues/3) khóa tài khoản sai quy tắc, [#4](https://github.com/NguyenSonTung16/HW05/issues/4) `total_amount` do client gửi, [#5](https://github.com/NguyenSonTung16/HW05/issues/5) checkout là nút cổ chai.
-- **Video demo:** *(điền link YouTube unlisted)*
+- **Video demo (YouTube unlisted):**
+
+  | Video | Nội dung | Link |
+  |---|---|---|
+  | Load test | Kịch bản Load | https://youtu.be/w_qHinh6TRc |
+  | Stress test | Kịch bản Stress | https://youtu.be/e0WDSPOYQGo |
+  | Spike test | Kịch bản Spike | https://youtu.be/TzEymSSx7Po |
+  | Soak test | Ngưỡng bền (Soak) | https://youtu.be/Bg4aLzWKOrU |
+  | Agent Skill | Demo skill `jmeter-performance-testing` (mục 7 của đề) | https://youtu.be/Ty9wn1Vc9yQ |
 
 ## Cấu trúc thư mục
 

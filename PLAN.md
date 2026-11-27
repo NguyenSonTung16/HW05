@@ -129,7 +129,7 @@ HW05/
 
 ## 7. Giai đoạn E – Skill v2 và video demo skill
 - [x] Cập nhật skill theo bài học thật (changelog v1→v2), commit riêng.
-- [ ] Video demo skill trên một nhóm endpoint trọn vẹn (đề xuất read-heavy), **(BẠN)** quay; AI soạn kịch bản `docs/Kich_ban_video_Skill.md`.
+- [x] Video demo skill trên một nhóm endpoint trọn vẹn (đề xuất read-heavy), **(BẠN)** quay; AI soạn kịch bản `docs/Kich_ban_video_Skill.md`.
 
 ## 8. Giai đoạn F – Tài liệu và nộp bài
 - [x] Main_Report (MD + PDF): phạm vi, workflow, tham số, kết quả 3 kịch bản, ngưỡng bền, bug, Task 2, Task 3.
