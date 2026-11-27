@@ -59,3 +59,5 @@ f85ecc2 | 2026-11-25 08:33 | NguyenSonTung16 | F: cập nhật Git_Commit_Log.tx
 fd0d8a3 | 2026-11-25 09:15 | NguyenSonTung16 | F: báo cáo phần cứng (evidence/hardware, cau-hinh.md); đánh dấu B0; cập nhật AI_LOG và AI Audit Report
 e5213ab | 2026-11-25 11:17 | NguyenSonTung16 | F: cập nhật Git_Commit_Log.txt và AI_LOG
 0d21ac0 | 2026-11-25 11:25 | NguyenSonTung16 | F: cập nhật AI_LOG (đến hàng #119)
+57f9cc7 | 2026-11-25 11:26 | NguyenSonTung16 | F: cập nhật Git_Commit_Log.txt
+1edf240 | 2026-11-27 03:42 | NguyenSonTung16 | H: link 5 video demo (Load, Stress, Spike, Soak, Agent Skill), tick PLAN, AI_LOG đến #133
