@@ -6,13 +6,13 @@ SUT: EShop (Node.js/Express + SQLite). Công cụ: JMeter 5.6.3. Repo: https://g
 
 | No. | Tiêu chí | Điểm tối đa | Tự chấm |
 |---|---|---|---|
-| 1 | Task 1 – Load testing | 30 | |
-| 2 | Task 1 – Stress testing | 20 | |
-| 3 | Task 1 – Spike testing | 20 | |
-| 4 | Task 2 – Phân tích AI và săn lỗi diễn giải (số đúng lấy từ log thô) | 10 | |
-| 5 | Task 3 – Đề xuất kiểm thử hiệu năng liên tục | 10 | |
-| 6 | Agent Skills | 10 | |
-| | **Tổng** | **100** | |
+| 1 | Task 1 – Load testing | 30 | 28 |
+| 2 | Task 1 – Stress testing | 20 | 18 |
+| 3 | Task 1 – Spike testing | 20 | 18 |
+| 4 | Task 2 – Phân tích AI và săn lỗi diễn giải (số đúng lấy từ log thô) | 10 | 9 |
+| 5 | Task 3 – Đề xuất kiểm thử hiệu năng liên tục | 10 | 9 |
+| 6 | Agent Skills | 10 | 9 |
+| | **Tổng** | **100** | **91** |
 
 ## Test summary
 
